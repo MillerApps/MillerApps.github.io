@@ -5,3 +5,5 @@ permalink: /about/
 ---
 
 Hello, My name is Tyler Miller. I am an iOS developer, I like to work with new and exciting technologies. I am the owner(founder)/lead developer at Miller Apps. 
+
+![Miller Apps Logo]({{ site.url }}/assets/miller_apps.png)
