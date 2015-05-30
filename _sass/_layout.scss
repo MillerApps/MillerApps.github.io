@@ -41,11 +41,11 @@
         }
     }
 
-@include media-query($on-laptop) {
+
 	.page-link {
 	color: white;
 	}
-}
+
     @include media-query($on-palm) {
         position: absolute;
         top: 9px;
