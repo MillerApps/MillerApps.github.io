@@ -64,10 +64,10 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #2a7ae2;
+  color: #FF8B43;
   text-decoration: none; }
   a:visited {
-    color: #1756a9; }
+    color: #f55e00; }
   a:hover {
     color: #111;
     text-decoration: underline; }
@@ -170,6 +170,8 @@ pre {
     line-height: 1.5; }
     .site-nav .page-link:not(:first-child) {
       margin-left: 20px; }
+  .site-nav .page-link {
+    color: white; }
   @media screen and (max-width: 600px) {
     .site-nav {
       position: absolute;
@@ -200,7 +202,8 @@ pre {
         padding-bottom: 5px; }
       .site-nav .page-link {
         display: block;
-        padding: 5px 10px; } }
+        padding: 5px 10px;
+        color: black; } }
 
 /**
  * Site footer
@@ -447,3 +450,35 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+.site-header {
+  background-color: #FD5000;
+  border-top: #FF8B43;
+  position: relative; }
+
+.site-header img {
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 120px;
+  height: 150px; }
+
+.site-title {
+  color: white; }
+
+.site-title:visited {
+  color: white; }
+
+.image-work {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 30px 10px 0; }
+
+#center ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.apps li {
+  float: left; }

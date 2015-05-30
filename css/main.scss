@@ -77,12 +77,20 @@ $on-laptop:        800px;
 .image-work {
 	width: 150px;
 	height: 150px;
+	display: block;
+	margin: 0 30px 10px 0;
 	
 }
 
-.apps ol, ul{
+#center ul {
+	margin: 0;
+	padding: 0;
 	list-style: none;
-	display: inline-block;
-	padding: 15px;
+	
+}
+
+.apps li{
+	float: left;
+	
 	
 }
