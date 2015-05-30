@@ -54,11 +54,14 @@ $on-laptop:        800px;
 .site-header {
 	background-color: #FD5000;
 	border-top: #FF8B43;
+	position: relative;
 	
 }
 
 .site-header img {
 	 float: left;
+	 padding-top: 10px;
+	 padding-bottom: 10px;
 }
 
 .site-title {
