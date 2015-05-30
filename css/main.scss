@@ -67,11 +67,14 @@ $on-laptop:        800px;
 }
 
 .site-title {
-	border-color: white;
+	color: white;
 }
 
+.site-title:visited {
+	color: white;
+}
 
 .site-nav .page-link {
-	border-color: white;
+	color: white;
 }
 
