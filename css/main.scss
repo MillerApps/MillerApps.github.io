@@ -73,8 +73,9 @@ $on-laptop:        800px;
 .site-title:visited {
 	color: white;
 }
-
-.site-nav .page-link {
+@include media-query($on-laptop) {
+	.site-nav .page-link {
 	color: white;
+	}
 }
 
