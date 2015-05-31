@@ -68,6 +68,7 @@ $on-laptop:        800px;
 
 .site-title {
 	color: white;
+	margin-top: 30px;
 }
 
 .site-title:visited {
@@ -76,10 +77,14 @@ $on-laptop:        800px;
 
 .image-work {
 	width: 150px;
-	height: 150px;
+	height: 119px;
 	display: block;
 	margin: 0 30px 10px 0;
 	
+}
+
+.site-nav {
+	margin-top: 30px;
 }
 
 #center ul {

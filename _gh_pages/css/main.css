@@ -464,16 +464,20 @@ pre {
   height: 150px; }
 
 .site-title {
-  color: white; }
+  color: white;
+  margin-top: 30px; }
 
 .site-title:visited {
   color: white; }
 
 .image-work {
   width: 150px;
-  height: 150px;
+  height: 119px;
   display: block;
   margin: 0 30px 10px 0; }
+
+.site-nav {
+  margin-top: 30px; }
 
 #center ul {
   margin: 0;
