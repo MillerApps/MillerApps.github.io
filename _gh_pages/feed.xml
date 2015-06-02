@@ -6,9 +6,21 @@
 </description>
     <link>http://tylermiller.me/</link>
     <atom:link href="http://tylermiller.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 Jun 2015 09:46:40 -0400</pubDate>
-    <lastBuildDate>Mon, 01 Jun 2015 09:46:40 -0400</lastBuildDate>
+    <pubDate>Tue, 02 Jun 2015 09:46:27 -0400</pubDate>
+    <lastBuildDate>Tue, 02 Jun 2015 09:46:27 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>New Stickers</title>
+        <description>&lt;p&gt;I just ordered some custom stickers and would like to offer the opportunity for anyone to purchase one. If you are interested in purchasing one you can do so &lt;a href=&quot;https://www.stickermule.com/marketplace/5743-miller-apps&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 02 Jun 2015 05:14:55 -0400</pubDate>
+        <link>http://tylermiller.me/2015/06/02/stickers.html</link>
+        <guid isPermaLink="true">http://tylermiller.me/2015/06/02/stickers.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Dodging Asteroids (my first app/game)</title>
