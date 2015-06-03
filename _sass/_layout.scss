@@ -22,17 +22,6 @@
 }
 
 
-@include media-query($on-laptop) {
-	.site-header img {
-	 float: none;
-	 padding-top: 0px;
-	 padding-bottom: 0px;
-	
-	}
-}
-
-
-
 .site-title {
     font-size: 26px;
     line-height: 56px;
@@ -128,23 +117,35 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
+    border-top: 1px solid #FF8B43;
     padding: $spacing-unit 0;
 }
 
 .footer-heading {
     font-size: 18px;
     margin-bottom: $spacing-unit / 2;
+    text-align: center;
+}
+
+.me-img {
+	width: 150px;
+    height: 150px;
+	border-radius: 100%;
+	border: 5px solid #FF8B43;
+	display: block;
+	margin: 0 auto 30px;
 }
 
 .contact-list,
 .social-media-list {
     list-style: none;
     margin-left: 0;
+    text-align: center;
 }
 
 .footer-col-wrapper {
     font-size: 15px;
+    text-align: center;
     color: $grey-color;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
