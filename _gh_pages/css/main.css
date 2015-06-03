@@ -146,18 +146,17 @@ pre {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
+  border-top: 5px solid #FD5000;
+  border-bottom: 3px solid #FD5000;
   min-height: 56px;
-  background-color: #FD5000;
-  border-top: #FF8B43;
+  background-color: #FF8B43;
   position: relative; }
 
 .site-header img {
   float: left;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 120px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 150px;
   height: 150px; }
 
 .site-title {
