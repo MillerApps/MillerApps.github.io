@@ -310,6 +310,11 @@ pre {
 /**
  * Posts
  */
+.feat-img {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: block; }
+
 .post-header {
   margin-bottom: 30px; }
 
