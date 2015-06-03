@@ -181,6 +181,8 @@ pre {
       border: 1px solid #e8e8e8;
       border-radius: 5px;
       text-align: right; }
+      .site-nav .is_hidden_moblie {
+        visibility: hidden; }
       .site-nav .menu-icon {
         display: block;
         float: right;

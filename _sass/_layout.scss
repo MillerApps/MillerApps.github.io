@@ -54,6 +54,10 @@
         border: 1px solid $grey-color-light;
         border-radius: 5px;
         text-align: right;
+        
+        .is_hidden_moblie {
+			visibility: hidden;
+		}
 
         .menu-icon {
             display: block;

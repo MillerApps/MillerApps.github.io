@@ -6,8 +6,8 @@
 </description>
     <link>http://tylermiller.me/</link>
     <atom:link href="http://tylermiller.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 02 Jun 2015 09:46:27 -0400</pubDate>
-    <lastBuildDate>Tue, 02 Jun 2015 09:46:27 -0400</lastBuildDate>
+    <pubDate>Wed, 03 Jun 2015 17:50:02 -0400</pubDate>
+    <lastBuildDate>Wed, 03 Jun 2015 17:50:02 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -16,8 +16,8 @@
 
 </description>
         <pubDate>Tue, 02 Jun 2015 05:14:55 -0400</pubDate>
-        <link>http://tylermiller.me/2015/06/02/stickers.html</link>
-        <guid isPermaLink="true">http://tylermiller.me/2015/06/02/stickers.html</guid>
+        <link>http://tylermiller.me/stickers</link>
+        <guid isPermaLink="true">http://tylermiller.me/stickers</guid>
         
         
       </item>
@@ -29,13 +29,11 @@
 &lt;p&gt;Now for a little about the app, it is a game set in space with a simple goal to dodge the asteroids for as long as possible. Along the way spacemen will spawn on occasion that will provide the player you to gain an extra life (up to 3) and 5 extra points. If you would like to check Dodging Asteroids it is available on the &lt;a href=&quot;https://itunes.apple.com/us/app/dodging-asteriods/id969815744?mt=8&quot;&gt;App Store&lt;/a&gt; today!&lt;/p&gt;
 </description>
         <pubDate>Mon, 11 May 2015 07:56:55 -0400</pubDate>
-        <link>http://tylermiller.me/jekyll/update/2015/05/11/my-first-game.html</link>
-        <guid isPermaLink="true">http://tylermiller.me/jekyll/update/2015/05/11/my-first-game.html</guid>
+        <link>http://tylermiller.me/dodging-asteroids</link>
+        <guid isPermaLink="true">http://tylermiller.me/dodging-asteroids</guid>
         
         
-        <category>jekyll</category>
-        
-        <category>update</category>
+        <category>app</category>
         
       </item>
     

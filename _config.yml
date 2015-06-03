@@ -11,3 +11,4 @@ twitter_username: TylerMiller4793
 
 # Build settings
 markdown: kramdown
+permlinks: /:title
