@@ -7,6 +7,10 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
+  
+  {% if page.image %}
+  <img class="feat-img" src="/assets/{{ page.image }}" alt="Miller Apps logo">
+  {% endif %}
 
   <article class="post-content">
     {{ content }}

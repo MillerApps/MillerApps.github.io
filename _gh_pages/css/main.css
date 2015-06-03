@@ -301,6 +301,12 @@ pre {
   display: block;
   font-size: 24px; }
 
+.miller-apps-image {
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+  display: block; }
+
 /**
  * Posts
  */
