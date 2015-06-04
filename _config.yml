@@ -1,6 +1,6 @@
 # Site settings
 title: Tyler Miller | iOS Developer
-email: tyemiller4@gmail.com
+email: tyler@tylermiller.me
 description: > # this means to ignore newlines until "baseurl:"
  A site to display some of my work and share some thoughts!
 baseurl: "" # the subpath of your site, e.g. /blog/
