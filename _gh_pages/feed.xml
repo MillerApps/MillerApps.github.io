@@ -6,9 +6,28 @@
 </description>
     <link>http://tylermiller.me/</link>
     <atom:link href="http://tylermiller.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 03 Jun 2015 23:16:03 -0400</pubDate>
-    <lastBuildDate>Wed, 03 Jun 2015 23:16:03 -0400</lastBuildDate>
+    <pubDate>Fri, 05 Jun 2015 01:57:24 -0400</pubDate>
+    <lastBuildDate>Fri, 05 Jun 2015 01:57:24 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Jekyll My Thoughts</title>
+        <description>&lt;p&gt;To begin I am new to Jekyll and I have not done any web development since 2013 ish. To elaborate a little more, I primarily focus on iOS development and really only dabbled in web (not my favorite thing). I recently found out about Jekyll and decided to give it a shot, after all I kind of needed a website. So I began with the setup and created my first Jekyll project, I found the whole setup process to be very simple in fact even enjoyable. Next came the customization of my new site, armed with my limited knowledge of CSS I began the process of making the site my own. Along the way I found myself wondering about a few things and luckily the answers were always in reach thanks to many blogs talking about Jekyll. After a few days of twaeking, I finally had something I enjoyed and for no cost other than time and domain names.&lt;/p&gt;
+
+&lt;p&gt;I must say Jekyll made the task of creating a website that much easier while maintaining full customizability. Overall I think Jekyll is a great tool for any developer or blogger that wants more control but also doesn’t want the headache of maintenance.&lt;/p&gt;
+
+&lt;p&gt;Jekyll has got me interested in web again and I hope to dive deeper into both.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 05 Jun 2015 00:00:00 -0400</pubDate>
+        <link>http://tylermiller.me/jekyll-my-thoughts</link>
+        <guid isPermaLink="true">http://tylermiller.me/jekyll-my-thoughts</guid>
+        
+        
+        <category>app,</category>
+        
+        <category>jekyll</category>
+        
+      </item>
     
       <item>
         <title>New Stickers</title>
