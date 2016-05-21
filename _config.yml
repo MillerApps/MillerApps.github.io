@@ -4,7 +4,7 @@ email: tyemiller4@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
  A site to display some of my work and share some thoughts!
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://tylermiller.me" # the base hostname & protocol for your site
+url: "http://miller47.github.io" # the base hostname & protocol for your site
 destination: _gh_pages
 twitter_username: TylerMiller4793
 # github_username:  jekyll
