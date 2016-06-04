@@ -500,3 +500,10 @@ pre {
 
 .apps li {
   float: left; }
+
+.image-holder img {
+  height: 300px;
+  width: 300px;
+  float: right;
+  display: block;
+  padding: 10px; }
