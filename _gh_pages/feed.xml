@@ -4,11 +4,28 @@
     <title>Tyler Miller | iOS Developer</title>
     <description>A site to display some of my work and share some thoughts!
 </description>
-    <link>http://tylermiller.me/</link>
-    <atom:link href="http://tylermiller.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 09 Jun 2015 22:03:13 -0400</pubDate>
-    <lastBuildDate>Tue, 09 Jun 2015 22:03:13 -0400</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <link>http://miller47.github.io/</link>
+    <atom:link href="http://miller47.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 03 Jun 2016 20:31:31 -0400</pubDate>
+    <lastBuildDate>Fri, 03 Jun 2016 20:31:31 -0400</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Shotty Bird</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://itunes.apple.com/app/id1114259560?ls=1&amp;amp;mt=8&quot;&gt;Shotty Bird&lt;/a&gt; is a free iOS game developed by &lt;a href=&quot;http://jorgetapia.net/&quot;&gt;Jorge Tapia&lt;/a&gt; which was released earlier today. Shotty Bird provides the user with a simple and familiar feeling game that keeps us entertained in times of boredom while still providing a challenge. During my time playing Shotty Bird I achieved a score of 31, which took a fair amount of time.&lt;img src=&quot;/assets/MillerApps_2016-Jun-03.jpg&quot; alt=&quot;My High Score&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once I learned the mechanics the game became a little easier while remaining challenging. Throughout the entire game you will be delighted to a great little melody and wonderful visuals. I urge everyone to give Shotty Bird a try.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 03 Jun 2016 00:00:00 -0400</pubDate>
+        <link>http://miller47.github.io/shotty-bird</link>
+        <guid isPermaLink="true">http://miller47.github.io/shotty-bird</guid>
+        
+        
+        <category>app,</category>
+        
+        <category>game</category>
+        
+      </item>
     
       <item>
         <title>Jekyll My Thoughts</title>
@@ -19,13 +36,13 @@
 &lt;p&gt;Jekyll has got me interested in web again and I hope to dive deeper into both.&lt;/p&gt;
 </description>
         <pubDate>Fri, 05 Jun 2015 00:00:00 -0400</pubDate>
-        <link>http://tylermiller.me/jekyll-my-thoughts</link>
-        <guid isPermaLink="true">http://tylermiller.me/jekyll-my-thoughts</guid>
+        <link>http://miller47.github.io/jekyll-my-thoughts</link>
+        <guid isPermaLink="true">http://miller47.github.io/jekyll-my-thoughts</guid>
         
         
         <category>app,</category>
         
-        <category>jekyll</category>
+        <category>Jekyll</category>
         
       </item>
     
@@ -35,8 +52,8 @@
 
 </description>
         <pubDate>Tue, 02 Jun 2015 05:14:55 -0400</pubDate>
-        <link>http://tylermiller.me/stickers</link>
-        <guid isPermaLink="true">http://tylermiller.me/stickers</guid>
+        <link>http://miller47.github.io/stickers</link>
+        <guid isPermaLink="true">http://miller47.github.io/stickers</guid>
         
         
       </item>
@@ -48,8 +65,8 @@
 &lt;p&gt;Now for a little about the app, it is a game set in space with a simple goal to dodge the asteroids for as long as possible. Along the way spacemen will spawn on occasion that will provide the player you to gain an extra life (up to 3) and 5 extra points. If you would like to check Dodging Asteroids it is available on the &lt;a href=&quot;https://itunes.apple.com/us/app/dodging-asteriods/id969815744?mt=8&quot;&gt;App Store&lt;/a&gt; today!&lt;/p&gt;
 </description>
         <pubDate>Mon, 11 May 2015 07:56:55 -0400</pubDate>
-        <link>http://tylermiller.me/dodging-asteroids</link>
-        <guid isPermaLink="true">http://tylermiller.me/dodging-asteroids</guid>
+        <link>http://miller47.github.io/dodging-asteroids</link>
+        <guid isPermaLink="true">http://miller47.github.io/dodging-asteroids</guid>
         
         
         <category>app</category>

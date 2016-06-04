@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>My Work</title>
-  <meta name="description" content="A site to display some of my work and share some thoughts!
-">
+  <title>Shotty Bird</title>
+  <meta name="description" content="[Shotty Bird](https://itunes.apple.com/app/id1114259560?ls=1&mt=8) is a free iOS game developed by [Jorge Tapia](http://jorgetapia.net/) which was released e...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://miller47.github.io/work/">
+  <link rel="canonical" href="http://miller47.github.io/shotty-bird">
   <link rel="alternate" type="application/rss+xml" title="Tyler Miller | iOS Developer" href="http://miller47.github.io/feed.xml" />
 </head>
 
@@ -72,25 +71,36 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">My Work</h1>
+    <h1 class="post-title">Shotty Bird</h1>
+    <p class="post-meta">Jun 3, 2016 • Tyler Miller</p>
   </header>
+  
+  
+  <img class="feat-img" src="/assets/shotty-bird.jpeg" alt="Miller Apps logo">
+  
 
   <article class="post-content">
-    <div id="center">
- <ul class="apps">
-    <li>
-      <a href="https://itunes.apple.com/us/app/dodging-asteriods/id969815744?mt=8" rel="external nofollow" title="Dodging Asteroids">
-        <img src="/assets/asteroids.png" alt="Dodging Asteroids" class="image-work">
-        <span>Dodging Asteroids</span>
-      </a>
-    </li>
-  </ul>
-</div>
+    [Shotty Bird](https://itunes.apple.com/app/id1114259560?ls=1&mt=8) is a free iOS game developed by [Jorge Tapia](http://jorgetapia.net/) which was released earlier today. Shotty Bird provides the user with a simple and familar feeling game that keeps us entertained in times of boredom while still providing a challange. During my time playing Shotty Bird I achieved a score of 31, which took a fair ammount of time.![My High Scoret](http://miller47.github.io/assets/MillerApps_2016-Jun-03.jpg)
+ Once I learned the mecanhics the game became a little easier while remaining challenging. Throughout the entire game you will be delighted to a great little melody and wonderful visuals. I urge everyone to give Shotty Bird a try.
   </article>
 
 </div>
 
         
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'tylermiller';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
       </div>
     </div>
 	
