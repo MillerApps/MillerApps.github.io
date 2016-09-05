@@ -7,7 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://millerapps.github.io" # the base hostname & protocol for your site
 destination: _gh_pages
 twitter_username: MillerApps
-# github_username:  jekyll
+github_username:  MillerApps
 
 # Build settings
 markdown: kramdown
