@@ -40,7 +40,7 @@ Tyler Miller
 
 #### License
 
-MARoundButton is available under the MIT license. See the LICENSE file for more info.
+MARoundButton is available under the MIT license. See the LICENSE [file](https://github.com/MillerApps/MARoundButton/blob/master/LICENSE) for more info.
 
 #### Info 
 [![CI Status](http://img.shields.io/travis/MillerApps/MARoundButton.svg?style=flat)](https://travis-ci.org/Miller47/MARoundButton)
