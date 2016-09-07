@@ -29,7 +29,7 @@
     margin-top: 30px;
     color: white;
     float: left;
-    
+
 
     &,
     &:visited {
@@ -46,8 +46,8 @@
      @include media-query($on-palm) {
 	     margin-top: 30px;
 	     }
-    
-    
+
+
 
     .menu-icon {
         display: none;
@@ -62,7 +62,7 @@
             margin-left: 20px;
         }
     }
-  
+
 
 
 
@@ -78,8 +78,8 @@
         border: 1px solid $grey-color-light;
         border-radius: 5px;
         text-align: right;
-        
-      
+
+
 
         .menu-icon {
             display: block;
@@ -89,7 +89,7 @@
             line-height: 0;
             padding-top: 10px;
             text-align: center;
-           
+
 
             > svg {
                 width: 18px;
@@ -97,7 +97,7 @@
 
                 path {
                     fill: $grey-color-dark;
-                    
+
                 }
             }
         }
@@ -207,9 +207,9 @@
 /**
  * Page content
  */
-.page-content {
-    padding: $spacing-unit 0;
-}
+// .page-content {
+//     padding: $spacing-unit 0;
+// }
 
 .page-heading {
     font-size: 20px;
@@ -246,7 +246,7 @@
 	height: 150px;
 	display: block;
 	margin: 0 30px 10px 0;
-	
+
 }
 
 
@@ -255,7 +255,7 @@
 /**
  * Posts
  */
- 
+
 .feat-img {
 	margin: 0 auto;
 	margin-bottom: 10px;
