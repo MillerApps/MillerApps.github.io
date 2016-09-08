@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="14T0GEUZ0SniruVDG6_qViMRDA3FOTDh3T74bLoWKaY" />
 
-  <title>Jekyll My Thoughts</title>
-  <meta name="description" content="To begin I am new to Jekyll and I have not done any web development since 2013 ish. To elaborate a little more, I primarily focus on iOS development and real...">
+  <title>MARoundButton</title>
+  <meta name="description" content="MARoundButtonMARoundButton is a simple UIButton subclass written in Swift 2.2 that allows for easy rounding of UIButtons. MARoundButton supports Interface Bu...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="https://millerapps.github.io/jekyll-my-thoughts" />
+  <link rel="canonical" href="https://millerapps.github.io/maroundbutton" />
   <link rel="alternate" type="application/rss+xml" title="Tyler Miller | iOS Developer" href="https://millerapps.github.io/feed.xml" />
 </head>
 
@@ -76,20 +76,56 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Jekyll My Thoughts</h1>
-    <p class="post-meta">Jun 5, 2015 • Tyler Miller</p>
+    <h1 class="post-title">MARoundButton</h1>
+    <p class="post-meta">Sep 6, 2016 • Tyler Miller</p>
   </header>
   
   
-  <img class="feat-img" src="/assets/jekyll-logo.png" alt="Miller Apps logo">
-  
 
   <article class="post-content">
-    <p>To begin I am new to Jekyll and I have not done any web development since 2013 ish. To elaborate a little more, I primarily focus on iOS development and really only dabbled in web (not my favorite thing). I recently found out about Jekyll and decided to give it a shot, after all I kind of needed a website. So I began with the setup and created my first Jekyll project, I found the whole setup process to be very simple in fact even enjoyable. Next came the customization of my new site, armed with my limited knowledge of CSS I began the process of making the site my own. Along the way I found myself wondering about a few things and luckily the answers were always in reach thanks to many blogs talking about Jekyll. After a few days of twaeking, I finally had something I enjoyed and for no cost other than time and domain names.</p>
+    <h3 id="maroundbutton">MARoundButton</h3>
+<p>MARoundButton is a simple UIButton subclass written in Swift 2.2 that allows for easy rounding of UIButtons. MARoundButton supports Interface Builder as well as directly through code. MARoundButton is my first open sourced project, albeit a simple one. If you are interested in using MARoundButton it can be found on <a href="https://github.com/MillerApps/MARoundButton">Github</a>.</p>
 
-<p>I must say Jekyll made the task of creating a website that much easier while maintaining full customizability. Overall I think Jekyll is a great tool for any developer or blogger that wants more control but also doesn’t want the headache of maintenance.</p>
+<h4 id="installation">Installation</h4>
 
-<p>Jekyll has got me interested in web again and I hope to dive deeper into both.</p>
+<p>MARoundButton is available through <a href="http://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">pod</span> <span class="s1">'MARoundButton'</span>
+</code></pre>
+</div>
+
+<h4 id="how-to-use">How To Use</h4>
+
+<p>MARoundButton can be used through StoryBoards by adding a UIButton to the View and under the identity inspector select MARoundButton as the class and the module. All the properties can be changed within the attributes inspector tab.</p>
+
+<p>MARoundButton can also be used through code just like a normal UIButton. Just remember to set the Round button properties.</p>
+
+<h4 id="storyboard-example">StoryBoard Example</h4>
+
+<p><img src="http://g.recordit.co/wiUK3mqQ1Z.gif" alt="StoryBoard" /></p>
+
+<h4 id="todo">TODO</h4>
+<ul>
+  <li>Finish documentation</li>
+  <li>Add a demo project</li>
+  <li>Add code demo for Swift and Objective-C</li>
+</ul>
+
+<h4 id="author">Author</h4>
+
+<p>Tyler Miller</p>
+
+<h4 id="license">License</h4>
+
+<p>MARoundButton is available under the MIT license. See the LICENSE <a href="https://github.com/MillerApps/MARoundButton/blob/master/LICENSE">file</a> for more info.</p>
+
+<h4 id="info">Info</h4>
+<p><a href="https://travis-ci.org/Miller47/MARoundButton"><img src="http://img.shields.io/travis/MillerApps/MARoundButton.svg?style=flat" alt="CI Status" /></a>
+<a href="http://cocoapods.org/pods/MARoundButton"><img src="https://img.shields.io/cocoapods/v/MARoundButton.svg?style=flat" alt="Version" /></a>
+<a href="http://cocoapods.org/pods/MARoundButton"><img src="https://img.shields.io/cocoapods/l/MARoundButton.svg?style=flat" alt="License" /></a>
+<a href="http://cocoapods.org/pods/MARoundButton"><img src="https://img.shields.io/cocoapods/p/MARoundButton.svg?style=flat" alt="Platform" /></a></p>
+
 
   </article>
 
