@@ -8,7 +8,7 @@ author: Tyler Miller
 permalink: maroundbutton
 ---
 ### MARoundButton 
-MARoundButton is a simple UIButton subclass written in Swift 2.2 that allows for easy rounding of UIButtons. MARoundButton supports Interface Builder as well as directly through code. MARoundButton is my first open sourced project, albeit a simple one. If you are interested in using MARoundButton it can be found on [Github](https://github.com/MillerApps/MARoundButton). 
+MARoundButton is a simple UIButton subclass written in ~~Swift 2.2~~ Swift 3.0 that allows for easy rounding of UIButtons. MARoundButton supports Interface Builder as well as directly through code. MARoundButton is my first open sourced project, albeit a simple one. If you are interested in using MARoundButton it can be found on [Github](https://github.com/MillerApps/MARoundButton). 
 
 #### Installation
 
