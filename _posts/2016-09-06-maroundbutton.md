@@ -7,6 +7,9 @@ comments: True
 author: Tyler Miller
 permalink: maroundbutton
 ---
+
+**Updated**
+
 ### MARoundButton 
 MARoundButton is a simple UIButton subclass written in ~~Swift 2.2~~ Swift 3.0 that allows for easy rounding of UIButtons. MARoundButton supports Interface Builder as well as directly through code. MARoundButton is my first open sourced project, albeit a simple one. If you are interested in using MARoundButton it can be found on [Github](https://github.com/MillerApps/MARoundButton). 
 
@@ -29,10 +32,35 @@ MARoundButton can also be used through code just like a normal UIButton. Just re
 
 ![StoryBoard](http://g.recordit.co/wiUK3mqQ1Z.gif)
 
-#### TODO
+***New content***
+#### Swift Example
+
+First import MARoundButton
+
+```swift
+import MARoundButton
+```
+Next setup a button similar to the following:
+
+```swift
+let btn = MARoundButton(frame: CGRect(x: 20, y: 40, width: 50, height: 50))
+btn.backgroundColor = UIColor.brown
+btn.setTitle("BTN", for: .normal)
+btn.tintColor = UIColor.white
+        
+// MARoundButton
+btn.borderColor = UIColor.black
+btn.border = 2
+btn.corner = 23
+btn.borderAlpha = 0.5
+        
+self.view.addSubview(btn)
+```
+
+## TODO
 * Finish documentation
 * Add a demo project
-* Add code demo for Swift and Objective-C
+* Add code demo for Objective-C
 	 
 #### Author
 
