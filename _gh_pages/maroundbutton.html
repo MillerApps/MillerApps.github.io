@@ -8,7 +8,7 @@
   <meta name="google-site-verification" content="14T0GEUZ0SniruVDG6_qViMRDA3FOTDh3T74bLoWKaY" />
 
   <title>MARoundButton</title>
-  <meta name="description" content="MARoundButtonMARoundButton is a simple UIButton subclass written in Swift 2.2 that allows for easy rounding of UIButtons. MARoundButton supports Interface Bu...">
+  <meta name="description" content="Updated">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="https://millerapps.github.io/maroundbutton" />
@@ -83,8 +83,10 @@
   
 
   <article class="post-content">
-    <h3 id="maroundbutton">MARoundButton</h3>
-<p>MARoundButton is a simple UIButton subclass written in Swift 2.2 that allows for easy rounding of UIButtons. MARoundButton supports Interface Builder as well as directly through code. MARoundButton is my first open sourced project, albeit a simple one. If you are interested in using MARoundButton it can be found on <a href="https://github.com/MillerApps/MARoundButton">Github</a>.</p>
+    <p><strong>Updated</strong></p>
+
+<h3 id="maroundbutton">MARoundButton</h3>
+<p>MARoundButton is a simple UIButton subclass written in ~~Swift 2.2~~ Swift 3.0 that allows for easy rounding of UIButtons. MARoundButton supports Interface Builder as well as directly through code. MARoundButton is my first open sourced project, albeit a simple one. If you are interested in using MARoundButton it can be found on <a href="https://github.com/MillerApps/MARoundButton">Github</a>.</p>
 
 <h4 id="installation">Installation</h4>
 
@@ -105,11 +107,37 @@ it, simply add the following line to your Podfile:</p>
 
 <p><img src="http://g.recordit.co/wiUK3mqQ1Z.gif" alt="StoryBoard" /></p>
 
-<h4 id="todo">TODO</h4>
+<p><strong><em>New content</em></strong></p>
+
+<h4 id="swift-example">Swift Example</h4>
+
+<p>First import MARoundButton</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">MARoundButton</span>
+</code></pre>
+</div>
+<p>Next setup a button similar to the following:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">btn</span> <span class="o">=</span> <span class="kt">MARoundButton</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">50</span><span class="p">))</span>
+<span class="n">btn</span><span class="o">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">brown</span>
+<span class="n">btn</span><span class="o">.</span><span class="nf">setTitle</span><span class="p">(</span><span class="s">"BTN"</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="o">.</span><span class="n">normal</span><span class="p">)</span>
+<span class="n">btn</span><span class="o">.</span><span class="n">tintColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span>
+        
+<span class="c1">// MARoundButton</span>
+<span class="n">btn</span><span class="o">.</span><span class="n">borderColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">black</span>
+<span class="n">btn</span><span class="o">.</span><span class="n">border</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">btn</span><span class="o">.</span><span class="n">corner</span> <span class="o">=</span> <span class="mi">23</span>
+<span class="n">btn</span><span class="o">.</span><span class="n">borderAlpha</span> <span class="o">=</span> <span class="mf">0.5</span>
+        
+<span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">btn</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h2 id="todo">TODO</h2>
 <ul>
   <li>Finish documentation</li>
   <li>Add a demo project</li>
-  <li>Add code demo for Swift and Objective-C</li>
+  <li>Add code demo for Objective-C</li>
 </ul>
 
 <h4 id="author">Author</h4>
@@ -121,7 +149,7 @@ it, simply add the following line to your Podfile:</p>
 <p>MARoundButton is available under the MIT license. See the LICENSE <a href="https://github.com/MillerApps/MARoundButton/blob/master/LICENSE">file</a> for more info.</p>
 
 <h4 id="info">Info</h4>
-<p><a href="https://travis-ci.org/Miller47/MARoundButton"><img src="http://img.shields.io/travis/MillerApps/MARoundButton.svg?style=flat" alt="CI Status" /></a>
+<p><a href="https://travis-ci.org/MillerApps/MARoundButton"><img src="http://img.shields.io/travis/MillerApps/MARoundButton.svg?style=flat" alt="CI Status" /></a>
 <a href="http://cocoapods.org/pods/MARoundButton"><img src="https://img.shields.io/cocoapods/v/MARoundButton.svg?style=flat" alt="Version" /></a>
 <a href="http://cocoapods.org/pods/MARoundButton"><img src="https://img.shields.io/cocoapods/l/MARoundButton.svg?style=flat" alt="License" /></a>
 <a href="http://cocoapods.org/pods/MARoundButton"><img src="https://img.shields.io/cocoapods/p/MARoundButton.svg?style=flat" alt="Platform" /></a></p>

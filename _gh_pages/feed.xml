@@ -6,14 +6,16 @@
 </description>
     <link>https://millerapps.github.io/</link>
     <atom:link href="https://millerapps.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Sep 2016 21:20:25 -0400</pubDate>
-    <lastBuildDate>Mon, 12 Sep 2016 21:20:25 -0400</lastBuildDate>
+    <pubDate>Thu, 22 Sep 2016 14:46:00 -0400</pubDate>
+    <lastBuildDate>Thu, 22 Sep 2016 14:46:00 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>MARoundButton</title>
-        <description>&lt;h3 id=&quot;maroundbutton&quot;&gt;MARoundButton&lt;/h3&gt;
-&lt;p&gt;MARoundButton is a simple UIButton subclass written in Swift 2.2 that allows for easy rounding of UIButtons. MARoundButton supports Interface Builder as well as directly through code. MARoundButton is my first open sourced project, albeit a simple one. If you are interested in using MARoundButton it can be found on &lt;a href=&quot;https://github.com/MillerApps/MARoundButton&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;&lt;strong&gt;Updated&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;maroundbutton&quot;&gt;MARoundButton&lt;/h3&gt;
+&lt;p&gt;MARoundButton is a simple UIButton subclass written in ~~Swift 2.2~~ Swift 3.0 that allows for easy rounding of UIButtons. MARoundButton supports Interface Builder as well as directly through code. MARoundButton is my first open sourced project, albeit a simple one. If you are interested in using MARoundButton it can be found on &lt;a href=&quot;https://github.com/MillerApps/MARoundButton&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;installation&quot;&gt;Installation&lt;/h4&gt;
 
@@ -34,11 +36,37 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://g.recordit.co/wiUK3mqQ1Z.gif&quot; alt=&quot;StoryBoard&quot; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;todo&quot;&gt;TODO&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;New content&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;swift-example&quot;&gt;Swift Example&lt;/h4&gt;
+
+&lt;p&gt;First import MARoundButton&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MARoundButton&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Next setup a button similar to the following:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;btn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MARoundButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CGRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backgroundColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;brown&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;BTN&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tintColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;white&lt;/span&gt;
+        
+&lt;span class=&quot;c1&quot;&gt;// MARoundButton&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;borderColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;black&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;corner&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;borderAlpha&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;
+        
+&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addSubview&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;todo&quot;&gt;TODO&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Finish documentation&lt;/li&gt;
   &lt;li&gt;Add a demo project&lt;/li&gt;
-  &lt;li&gt;Add code demo for Swift and Objective-C&lt;/li&gt;
+  &lt;li&gt;Add code demo for Objective-C&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;author&quot;&gt;Author&lt;/h4&gt;
@@ -50,7 +78,7 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
 &lt;p&gt;MARoundButton is available under the MIT license. See the LICENSE &lt;a href=&quot;https://github.com/MillerApps/MARoundButton/blob/master/LICENSE&quot;&gt;file&lt;/a&gt; for more info.&lt;/p&gt;
 
 &lt;h4 id=&quot;info&quot;&gt;Info&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://travis-ci.org/Miller47/MARoundButton&quot;&gt;&lt;img src=&quot;http://img.shields.io/travis/MillerApps/MARoundButton.svg?style=flat&quot; alt=&quot;CI Status&quot; /&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;https://travis-ci.org/MillerApps/MARoundButton&quot;&gt;&lt;img src=&quot;http://img.shields.io/travis/MillerApps/MARoundButton.svg?style=flat&quot; alt=&quot;CI Status&quot; /&gt;&lt;/a&gt;
 &lt;a href=&quot;http://cocoapods.org/pods/MARoundButton&quot;&gt;&lt;img src=&quot;https://img.shields.io/cocoapods/v/MARoundButton.svg?style=flat&quot; alt=&quot;Version&quot; /&gt;&lt;/a&gt;
 &lt;a href=&quot;http://cocoapods.org/pods/MARoundButton&quot;&gt;&lt;img src=&quot;https://img.shields.io/cocoapods/l/MARoundButton.svg?style=flat&quot; alt=&quot;License&quot; /&gt;&lt;/a&gt;
 &lt;a href=&quot;http://cocoapods.org/pods/MARoundButton&quot;&gt;&lt;img src=&quot;https://img.shields.io/cocoapods/p/MARoundButton.svg?style=flat&quot; alt=&quot;Platform&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
