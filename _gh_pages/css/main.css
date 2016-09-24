@@ -110,16 +110,16 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(800px - (30px * 2));
-  max-width: calc(800px - (30px * 2));
+  max-width: -webkit-calc(1000px - (30px * 2));
+  max-width: calc(1000px - (30px * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 30px;
   padding-left: 30px; }
   @media screen and (max-width: 800px) {
     .wrapper {
-      max-width: -webkit-calc(800px - (30px));
-      max-width: calc(800px - (30px));
+      max-width: -webkit-calc(1000px - (30px));
+      max-width: calc(1000px - (30px));
       padding-right: 15px;
       padding-left: 15px; } }
 
@@ -130,8 +130,8 @@ pre {
   padding-left: 30px; }
   @media screen and (max-width: 800px) {
     .shop {
-      max-width: -webkit-calc(800px - (30px));
-      max-width: calc(800px - (30px));
+      max-width: -webkit-calc(1000px - (30px));
+      max-width: calc(1000px - (30px));
       padding-right: 15px;
       padding-left: 15px; } }
 
@@ -171,21 +171,11 @@ pre {
   width: 300px;
   height: 250px; }
 
-.site-title {
-  font-size: 26px;
-  line-height: 56px;
-  letter-spacing: -1px;
-  margin-bottom: 0;
-  margin-top: 30px;
-  color: white;
-  float: right; }
-  .site-title, .site-title:visited {
-    color: white; }
-
 .site-nav {
   float: right;
   line-height: 56px;
-  margin-top: 100px; }
+  margin-top: 180px;
+  font-size: 120%; }
   @media screen and (max-width: 600px) {
     .site-nav {
       margin-top: 30px; } }

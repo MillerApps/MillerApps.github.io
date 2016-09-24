@@ -21,28 +21,14 @@
 }
 
 
-.site-title {
-    font-size: 26px;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    margin-top: 30px;
-    color: white;
-    float: right;
-
-
-    &,
-    &:visited {
-       color: white;
-    }
-}
 
 
 
 .site-nav {
     float: right;
     line-height: 56px;
-    margin-top: 100px;
+    margin-top: 180px;
+    font-size: 120%;
      @include media-query($on-palm) {
 	     margin-top: 30px;
 	     }
