@@ -11,11 +11,11 @@ permalink: maroundbutton
 **Updated**
 
 ### MARoundButton 
-MARoundButton is a simple UIButton subclass written in ~~Swift 2.2~~ Swift 3.0 that allows for easy rounding of UIButtons. MARoundButton supports Interface Builder as well as directly through code. MARoundButton is my first open sourced project, albeit a simple one. If you are interested in using MARoundButton it can be found on [Github](https://github.com/MillerApps/MARoundButton). 
+MARoundButton is a simple UIButton subclass written in ~~Swift 2.2~~ Swift 3.0 that allows for easy rounding of UIButtons. MARoundButton supports Interface Builder as well as directly through code. MARoundButton is my first open sourced project, albeit a simple one. If you are interested in using MARoundButton it can be found on [Github](https://github.com/MillerApps/MARoundButton){:target="_blank"}. 
 
 #### Installation
 
-MARoundButton is available through [CocoaPods](http://cocoapods.org). To install
+MARoundButton is available through [CocoaPods](http://cocoapods.org){:target="_blank"}. To install
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -69,13 +69,13 @@ Tyler Miller
 
 #### License
 
-MARoundButton is available under the MIT license. See the LICENSE [file](https://github.com/MillerApps/MARoundButton/blob/master/LICENSE) for more info.
+MARoundButton is available under the MIT license. See the LICENSE [file](https://github.com/MillerApps/MARoundButton/blob/master/LICENSE){:target="_blank"} for more info.
 
 #### Info 
-[![CI Status](http://img.shields.io/travis/MillerApps/MARoundButton.svg?style=flat)](https://travis-ci.org/MillerApps/MARoundButton)
-[![Version](https://img.shields.io/cocoapods/v/MARoundButton.svg?style=flat)](http://cocoapods.org/pods/MARoundButton)
-[![License](https://img.shields.io/cocoapods/l/MARoundButton.svg?style=flat)](http://cocoapods.org/pods/MARoundButton)
-[![Platform](https://img.shields.io/cocoapods/p/MARoundButton.svg?style=flat)](http://cocoapods.org/pods/MARoundButton)
+[![CI Status](http://img.shields.io/travis/MillerApps/MARoundButton.svg?style=flat)](https://travis-ci.org/MillerApps/MARoundButton){:target="_blank"}
+[![Version](https://img.shields.io/cocoapods/v/MARoundButton.svg?style=flat)](http://cocoapods.org/pods/MARoundButton){:target="_blank"}
+[![License](https://img.shields.io/cocoapods/l/MARoundButton.svg?style=flat)](http://cocoapods.org/pods/MARoundButton){:target="_blank"}
+[![Platform](https://img.shields.io/cocoapods/p/MARoundButton.svg?style=flat)](http://cocoapods.org/pods/MARoundButton){:target="_blank"}
 
 
 
