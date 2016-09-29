@@ -510,3 +510,7 @@ pre {
   float: right;
   display: block;
   padding: 10px; }
+
+.center-image {
+  margin: 0 auto;
+  display: block; }

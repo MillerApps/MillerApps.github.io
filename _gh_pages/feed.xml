@@ -6,9 +6,33 @@
 </description>
     <link>https://millerapps.github.io/</link>
     <atom:link href="https://millerapps.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 26 Sep 2016 23:31:04 -0400</pubDate>
-    <lastBuildDate>Mon, 26 Sep 2016 23:31:04 -0400</lastBuildDate>
+    <pubDate>Thu, 29 Sep 2016 13:33:38 -0400</pubDate>
+    <lastBuildDate>Thu, 29 Sep 2016 13:33:38 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Finding Work</title>
+        <description>&lt;p&gt;Lets talk about finding work today as a new iOS Developer with little experience. It seems to be a very large challenge to get into the industry with out having vast amounts of knowledge and experience, in my experience it only leads to frustration and let down.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://gif.co/tgFZ.gif&quot; alt=&quot;Why!!&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After a year of trying to find a place in the mobile industry and failing, the only option left is to just keep trying. Its just a little discouraging to always hear you need more experience. I’m just at a loss as to how gain the professional experience needed to get my start.&lt;/p&gt;
+
+&lt;p&gt;This post hasn’t really provided any useful information on how to overcome this obstacle, rather it was more of a way to express my feelings and share my experience. I hope you enjoyed it anyways!&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 28 Sep 2016 21:25:45 -0400</pubDate>
+        <link>https://millerapps.github.io/finding-work</link>
+        <guid isPermaLink="true">https://millerapps.github.io/finding-work</guid>
+        
+        
+        <category>work,</category>
+        
+        <category>life,</category>
+        
+        <category>software</category>
+        
+      </item>
     
       <item>
         <title>MARoundButton</title>
