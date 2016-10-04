@@ -149,8 +149,8 @@ pre {
  */
 .icon > svg {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 30px;
+  height: 30px;
   vertical-align: middle; }
   .icon > svg path {
     fill: #828282; }
@@ -246,7 +246,7 @@ pre {
 .social-media-list {
   list-style: none;
   margin-left: 0;
-  text-align: center; }
+  text-align: left; }
 
 .footer-col-wrapper {
   font-size: 15px;

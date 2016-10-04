@@ -6,17 +6,17 @@
 </description>
     <link>https://millerapps.github.io/</link>
     <atom:link href="https://millerapps.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Oct 2016 13:15:31 -0400</pubDate>
-    <lastBuildDate>Mon, 03 Oct 2016 13:15:31 -0400</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <pubDate>Mon, 03 Oct 2016 23:05:57 -0400</pubDate>
+    <lastBuildDate>Mon, 03 Oct 2016 23:05:57 -0400</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>Finding Work</title>
-        <description>&lt;p&gt;Lets talk about finding work today as a new iOS Developer with little experience. It seems to be a very large challenge to get into the industry with out having vast amounts of knowledge and experience, in my experience it only leads to frustration and let down.&lt;/p&gt;
+        <description>&lt;p&gt;Let us talk about finding work today as a new iOS Developer with little experience. It seems to be a very large challenge to get into the industry without having vast amounts of knowledge and experience, in my experience, it only leads to frustration and let down.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://gif.co/tgFZ.gif&quot; alt=&quot;Why!!&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;After a year of trying to find a place in the mobile industry and failing, the only option left is to just keep trying. Its just a little discouraging to always hear you need more experience. I’m just at a loss as to how gain the professional experience needed to get my start.&lt;/p&gt;
+&lt;p&gt;After a year of trying to find a place in the mobile industry and failing, the only option left is to just keep trying. It’s just a little discouraging to always hear you need more experience. I’m just at a loss as to how to gain the professional experience needed to get my start.&lt;/p&gt;
 
 &lt;p&gt;This post hasn’t really provided any useful information on how to overcome this obstacle, rather it was more of a way to express my feelings and share my experience. I hope you enjoyed it anyways!&lt;/p&gt;
 
@@ -46,7 +46,7 @@
 &lt;p&gt;MARoundButton is available through &lt;a href=&quot;http://cocoapods.org&quot; target=&quot;_blank&quot;&gt;CocoaPods&lt;/a&gt;. To install
 it, simply add the following line to your Podfile:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;MARoundButton&#39;&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'MARoundButton'&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 

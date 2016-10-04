@@ -124,7 +124,7 @@
 
 .me-img {
 	width: 150px;
-    height: 150px;
+  height: 150px;
 	border-radius: 100%;
 	border: 5px solid #FD5000;
 	display: block;
@@ -135,7 +135,7 @@
 .social-media-list {
     list-style: none;
     margin-left: 0;
-    text-align: center;
+    text-align: left;
 }
 
 .footer-col-wrapper {
@@ -166,6 +166,7 @@
     width: -webkit-calc(45% - (#{$spacing-unit} / 2));
     width:         calc(45% - (#{$spacing-unit} / 2));
 }
+
 
 @include media-query($on-laptop) {
     .footer-col-1,
