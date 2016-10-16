@@ -187,8 +187,12 @@ pre {
     line-height: 1.5; }
     .site-nav .page-link:not(:first-child) {
       margin-left: 20px; }
+  .site-nav a.active:not(:first-child) {
+    margin-left: 20px; }
   .site-nav .page-link {
     color: white; }
+  .site-nav a.active {
+    color: #fab634; }
   @media screen and (max-width: 600px) {
     .site-nav {
       position: absolute;

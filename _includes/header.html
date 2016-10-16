@@ -16,17 +16,20 @@
 
 
       <div class="trigger">
-	    {% unless include.hidehome %}
-			 <a href="/" class="page-link">Blog</a>
-        {% endunless %}
-        {% for page in site.pages %}
-          {% unless page.exclude %}
-            {% if page.title %}
-            <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-            {% endif %}
-          {% endunless %}
-        {% endfor %}
 
+        {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+          {% for p in navigation_pages %}
+            {% unless page.exclude %}
+              {% if p.navigation_weight %}
+
+                <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% else %}class="page-link"{% endif %}>
+                  {{ p.title }}
+                </a>
+
+                {% endif %}
+              {% endunless %}
+
+            {% endfor %}
       </div>
     </nav>
 

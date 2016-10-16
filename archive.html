@@ -2,6 +2,7 @@
 layout: page
 title: Archive
 permalink: /archive/
+navigation_weight: 3
 ---
 
 <ul>
@@ -15,7 +16,7 @@ permalink: /archive/
 	        <h3>{{ post.date | date: '%Y %b' }}</h3>
 	      {% endif %}
 	    {% endunless %}
- 
+
 	    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 	  {% endfor %}
 </ul>
