@@ -4,55 +4,11 @@
     <title>Tyler Miller | iOS Developer</title>
     <description>A site to display some of my work and share some thoughts!
 </description>
-    <link>https://millerapps.github.io/</link>
-    <atom:link href="https://millerapps.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 17 Oct 2016 09:52:35 -0400</pubDate>
-    <lastBuildDate>Mon, 17 Oct 2016 09:52:35 -0400</lastBuildDate>
-    <generator>Jekyll v3.2.1</generator>
-    
-      <item>
-        <title>Disc Golf</title>
-        <description>&lt;h1 id=&quot;the-game-of-disc-golf&quot;&gt;The Game of Disc Golf&lt;/h1&gt;
-
-&lt;p&gt;I recently got into playing Disc Golf, which you may or may not be familiar with. Below is the definition according to Wikipedia:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;“Disc Golf (often referred to as frisbee golf, frolf, or folf) is a flying disc game, as well as a precision and accuracy sport, in which individual players throw a flying disc at a target.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I must say at first when I was asked to play I thought it would be a rather easy game, but oh I was I ever wrong! It turned out to be a rather challenging and rewarding. Disc Golf is a great activity for a group wether it be family, friends, or fellow players.&lt;/p&gt;
-
-&lt;p&gt;Currently I have only been playing for a little over one month, I have a total of 9 discs which are listed below. More discs are sure to come.&lt;/p&gt;
-
-&lt;ol class=&quot;o-list&quot;&gt;
-  &lt;li&gt;Star Mamba - Distance Driver (Innova)&lt;/li&gt;
-  &lt;li&gt;Skeeter - Mid Range (Innova)&lt;/li&gt;
-  &lt;li&gt;Nuke SS - Distance Driver (Discraft)&lt;/li&gt;
-  &lt;li&gt;TL3 - Fairway Driver (Innova)&lt;/li&gt;
-  &lt;li&gt;Dominator - Distance Driver (Innova)&lt;/li&gt;
-  &lt;li&gt;Pro Wraith - Distance Driver (Innova)&lt;/li&gt;
-  &lt;li&gt;Pro Wraith - Distance Driver (Innova)&lt;/li&gt;
-  &lt;li&gt;VIP Plastic King - Distance Driver (Westside Discs)&lt;/li&gt;
-  &lt;li&gt;R-Pro Aviar - Putter (Innova)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;So far disc golf has been something I look froward to playing each week with my friends, after all it is a gerat sport to play with others.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 16 Oct 2016 19:13:00 -0400</pubDate>
-        <link>https://millerapps.github.io/disc-golf</link>
-        <guid isPermaLink="true">https://millerapps.github.io/disc-golf</guid>
-        
-        
-        <category>work,</category>
-        
-        <category>life,</category>
-        
-        <category>outdoors,</category>
-        
-        <category>fun,</category>
-        
-        <category>sports</category>
-        
-      </item>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 26 Jun 2017 16:10:02 -0400</pubDate>
+    <lastBuildDate>Mon, 26 Jun 2017 16:10:02 -0400</lastBuildDate>
+    <generator>Jekyll v3.5.0</generator>
     
       <item>
         <title>Finding Work</title>
@@ -66,8 +22,8 @@
 
 </description>
         <pubDate>Wed, 28 Sep 2016 21:25:45 -0400</pubDate>
-        <link>https://millerapps.github.io/finding-work</link>
-        <guid isPermaLink="true">https://millerapps.github.io/finding-work</guid>
+        <link>http://localhost:4000/finding-work</link>
+        <guid isPermaLink="true">http://localhost:4000/finding-work</guid>
         
         
         <category>work,</category>
@@ -153,8 +109,8 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 06 Sep 2016 07:50:00 -0400</pubDate>
-        <link>https://millerapps.github.io/maroundbutton</link>
-        <guid isPermaLink="true">https://millerapps.github.io/maroundbutton</guid>
+        <link>http://localhost:4000/maroundbutton</link>
+        <guid isPermaLink="true">http://localhost:4000/maroundbutton</guid>
         
         
         <category>open</category>
@@ -172,8 +128,8 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
 &lt;/span&gt; Once I learned the mechanics the game became a little easier while remaining challenging. Throughout the entire game you will be delighted to a great little melody and wonderful visuals. I urge everyone to give Shotty Bird a try.&lt;/p&gt;
 </description>
         <pubDate>Fri, 03 Jun 2016 00:00:00 -0400</pubDate>
-        <link>https://millerapps.github.io/shotty-bird</link>
-        <guid isPermaLink="true">https://millerapps.github.io/shotty-bird</guid>
+        <link>http://localhost:4000/shotty-bird</link>
+        <guid isPermaLink="true">http://localhost:4000/shotty-bird</guid>
         
         
         <category>app,</category>
@@ -191,8 +147,8 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
 &lt;p&gt;Jekyll has got me interested in web again and I hope to dive deeper into both.&lt;/p&gt;
 </description>
         <pubDate>Fri, 05 Jun 2015 00:00:00 -0400</pubDate>
-        <link>https://millerapps.github.io/jekyll-my-thoughts</link>
-        <guid isPermaLink="true">https://millerapps.github.io/jekyll-my-thoughts</guid>
+        <link>http://localhost:4000/jekyll-my-thoughts</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll-my-thoughts</guid>
         
         
         <category>app,</category>
@@ -207,8 +163,8 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 02 Jun 2015 05:14:55 -0400</pubDate>
-        <link>https://millerapps.github.io/stickers</link>
-        <guid isPermaLink="true">https://millerapps.github.io/stickers</guid>
+        <link>http://localhost:4000/stickers</link>
+        <guid isPermaLink="true">http://localhost:4000/stickers</guid>
         
         
       </item>
@@ -220,8 +176,8 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
 &lt;p&gt;Now for a little about the app, it is a game set in space with a simple goal to dodge the asteroids for as long as possible. Along the way spacemen will spawn on occasion that will provide the player you to gain an extra life (up to 3) and 5 extra points. If you would like to check Dodging Asteroids it is available on the &lt;a href=&quot;https://itunes.apple.com/us/app/dodging-asteriods/id969815744?mt=8&quot; target=&quot;_blank&quot;&gt;App Store&lt;/a&gt; today!&lt;/p&gt;
 </description>
         <pubDate>Mon, 11 May 2015 07:56:55 -0400</pubDate>
-        <link>https://millerapps.github.io/dodging-asteroids</link>
-        <guid isPermaLink="true">https://millerapps.github.io/dodging-asteroids</guid>
+        <link>http://localhost:4000/dodging-asteroids</link>
+        <guid isPermaLink="true">http://localhost:4000/dodging-asteroids</guid>
         
         
         <category>app</category>

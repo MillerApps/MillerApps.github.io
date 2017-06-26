@@ -238,6 +238,14 @@ pre {
   margin-bottom: 15px;
   text-align: center; }
 
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+.page-content {
+  flex: 1; }
+
 .me-img {
   width: 150px;
   height: 150px;
