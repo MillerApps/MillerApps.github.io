@@ -28,7 +28,8 @@
     margin-top: 180px;
     font-size: 170%;
      @include media-query($on-palm) {
-	     margin-top: 30px;
+	     margin-top: 15px;
+
 	     }
 
 
@@ -129,6 +130,16 @@ a.active {
     font-size: 18px;
     margin-bottom: $spacing-unit / 2;
     text-align: center;
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
 }
 
 .me-img {
@@ -260,7 +271,7 @@ a.active {
 .feat-img {
 	margin: 0 auto;
 	margin-bottom: 10px;
-    display: block;
+  display: block;
 }
 
 .post-header {
@@ -303,4 +314,34 @@ a.active {
             font-size: 18px;
         }
     }
+
+}
+// Oredered List
+.o-list {
+
+  list-style-type: none;
+  display: inline-block;
+  padding-left: 30%;
+
+  @include media-query($on-laptop) {
+      padding-left: 0;
+  }
+
+}
+
+.o-list li {
+  counter-increment: step-counter;
+  margin-bottom: 10px;
+
+}
+
+.o-list li::before {
+  content: counter(step-counter);
+  margin-right: 5px;
+  font-size: 80%;
+  background-color: #2cb3c7;
+  color: white;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 3px;
 }

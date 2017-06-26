@@ -176,10 +176,10 @@ pre {
   float: right;
   line-height: 56px;
   margin-top: 180px;
-  font-size: 120%; }
+  font-size: 170%; }
   @media screen and (max-width: 600px) {
     .site-nav {
-      margin-top: 30px; } }
+      margin-top: 15px; } }
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
@@ -364,6 +364,28 @@ pre {
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 18px; } }
+
+.o-list {
+  list-style-type: none;
+  display: inline-block;
+  padding-left: 30%; }
+  @media screen and (max-width: 800px) {
+    .o-list {
+      padding-left: 0; } }
+
+.o-list li {
+  counter-increment: step-counter;
+  margin-bottom: 10px; }
+
+.o-list li::before {
+  content: counter(step-counter);
+  margin-right: 5px;
+  font-size: 80%;
+  background-color: #2cb3c7;
+  color: white;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 3px; }
 
 /**
  * Syntax highlighting styles

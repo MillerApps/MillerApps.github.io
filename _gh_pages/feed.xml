@@ -6,9 +6,53 @@
 </description>
     <link>https://millerapps.github.io/</link>
     <atom:link href="https://millerapps.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 16 Oct 2016 14:16:52 -0400</pubDate>
-    <lastBuildDate>Sun, 16 Oct 2016 14:16:52 -0400</lastBuildDate>
+    <pubDate>Mon, 17 Oct 2016 09:52:35 -0400</pubDate>
+    <lastBuildDate>Mon, 17 Oct 2016 09:52:35 -0400</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Disc Golf</title>
+        <description>&lt;h1 id=&quot;the-game-of-disc-golf&quot;&gt;The Game of Disc Golf&lt;/h1&gt;
+
+&lt;p&gt;I recently got into playing Disc Golf, which you may or may not be familiar with. Below is the definition according to Wikipedia:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“Disc Golf (often referred to as frisbee golf, frolf, or folf) is a flying disc game, as well as a precision and accuracy sport, in which individual players throw a flying disc at a target.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I must say at first when I was asked to play I thought it would be a rather easy game, but oh I was I ever wrong! It turned out to be a rather challenging and rewarding. Disc Golf is a great activity for a group wether it be family, friends, or fellow players.&lt;/p&gt;
+
+&lt;p&gt;Currently I have only been playing for a little over one month, I have a total of 9 discs which are listed below. More discs are sure to come.&lt;/p&gt;
+
+&lt;ol class=&quot;o-list&quot;&gt;
+  &lt;li&gt;Star Mamba - Distance Driver (Innova)&lt;/li&gt;
+  &lt;li&gt;Skeeter - Mid Range (Innova)&lt;/li&gt;
+  &lt;li&gt;Nuke SS - Distance Driver (Discraft)&lt;/li&gt;
+  &lt;li&gt;TL3 - Fairway Driver (Innova)&lt;/li&gt;
+  &lt;li&gt;Dominator - Distance Driver (Innova)&lt;/li&gt;
+  &lt;li&gt;Pro Wraith - Distance Driver (Innova)&lt;/li&gt;
+  &lt;li&gt;Pro Wraith - Distance Driver (Innova)&lt;/li&gt;
+  &lt;li&gt;VIP Plastic King - Distance Driver (Westside Discs)&lt;/li&gt;
+  &lt;li&gt;R-Pro Aviar - Putter (Innova)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So far disc golf has been something I look froward to playing each week with my friends, after all it is a gerat sport to play with others.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 16 Oct 2016 19:13:00 -0400</pubDate>
+        <link>https://millerapps.github.io/disc-golf</link>
+        <guid isPermaLink="true">https://millerapps.github.io/disc-golf</guid>
+        
+        
+        <category>work,</category>
+        
+        <category>life,</category>
+        
+        <category>outdoors,</category>
+        
+        <category>fun,</category>
+        
+        <category>sports</category>
+        
+      </item>
     
       <item>
         <title>Finding Work</title>
@@ -39,14 +83,14 @@
         <description>&lt;p&gt;&lt;strong&gt;Updated&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;maroundbutton&quot;&gt;MARoundButton&lt;/h3&gt;
-&lt;p&gt;MARoundButton is a simple UIButton subclass written in ~~Swift 2.2~~ Swift 3.0 that allows for easy rounding of UIButtons. MARoundButton supports Interface Builder as well as directly through code. MARoundButton is my first open sourced project, albeit a simple one. If you are interested in using MARoundButton it can be found on &lt;a href=&quot;https://github.com/MillerApps/MARoundButton&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;MARoundButton is a simple UIButton subclass written in &lt;del&gt;Swift 2.2&lt;/del&gt; Swift 3.0 that allows for easy rounding of UIButtons. MARoundButton supports Interface Builder as well as directly through code. MARoundButton is my first open sourced project, albeit a simple one. If you are interested in using MARoundButton it can be found on &lt;a href=&quot;https://github.com/MillerApps/MARoundButton&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;installation&quot;&gt;Installation&lt;/h4&gt;
 
 &lt;p&gt;MARoundButton is available through &lt;a href=&quot;http://cocoapods.org&quot; target=&quot;_blank&quot;&gt;CocoaPods&lt;/a&gt;. To install
 it, simply add the following line to your Podfile:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'MARoundButton'&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'MARoundButton'&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -66,12 +110,12 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
 
 &lt;p&gt;First import MARoundButton&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MARoundButton&lt;/span&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MARoundButton&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;Next setup a button similar to the following:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;btn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MARoundButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CGRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;btn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MARoundButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CGRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backgroundColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;brown&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;BTN&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tintColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;white&lt;/span&gt;
