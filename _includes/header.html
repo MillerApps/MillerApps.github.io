@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-<a href="{{ site.baseurl }}/"><img src="/assets/miller apps.png" alt="Logo"></a>
+    <a href="{{ site.baseurl }}/"><img src="/assets/miller apps.png" alt="Logo"></a>
 
 
     <nav class="site-nav">
@@ -17,19 +17,11 @@
 
       <div class="trigger">
 
-        {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
-          {% for p in navigation_pages %}
-            {% unless page.exclude %}
-              {% if p.navigation_weight %}
+        {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %} {% for p in navigation_pages %} {% unless page.exclude %} {% if p.navigation_weight %}
 
-                <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% else %}class="page-link"{% endif %}>
+        <a href="{{ p.url }}" {% if p.url== page.url %}class="active" {% else %}class="page-link" {% endif %}>
                   {{ p.title }}
-                </a>
-
-                {% endif %}
-              {% endunless %}
-
-            {% endfor %}
+                </a> {% endif %} {% endunless %} {% endfor %}
       </div>
     </nav>
 

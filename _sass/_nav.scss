@@ -1,0 +1,117 @@
+/*
+ * Site header
+ */
+.site-header {
+    border-top: 5px solid #FD5000;
+    border-bottom: 3px solid #FD5000;
+    min-height: 56px;
+    background-color: #FF8B43;
+
+    // Positioning context for the mobile navigation icon
+    position: relative;
+}
+
+
+.site-header img {
+	 float: left;
+	 margin-top: 5px;
+	 margin-bottom: 5px;
+	 width: 300px;
+	 height: 230px;
+}
+
+
+
+.site-nav {
+    float: right;
+    line-height: 56px;
+    margin-top: 180px;
+    font-size: 170%;
+     @include media-query($on-palm) {
+	     margin-top: 15px;
+
+	     }
+
+
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        color: $text-color;
+        line-height: $base-line-height;
+
+        // Gaps between nav items, but not on the first one
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+
+    a.active {
+      // Gaps between nav items, but not on the first one
+      &:not(:first-child) {
+          margin-left: 20px;
+      }
+    }
+
+
+
+
+.page-link {
+	color: white;
+}
+
+a.active {
+  color: #fab634;
+}
+
+
+    @include media-query($on-palm) {
+        position: absolute;
+        top: 9px;
+        right: 30px;
+        background-color: $background-color;
+        border: 1px solid $grey-color-light;
+        border-radius: 5px;
+        text-align: right;
+
+
+
+        .menu-icon {
+            display: block;
+            float: right;
+            width: 36px;
+            height: 26px;
+            line-height: 0;
+            padding-top: 10px;
+            text-align: center;
+
+
+            > svg {
+                width: 18px;
+                height: 15px;
+
+                path {
+                    fill: $grey-color-dark;
+
+                }
+            }
+        }
+
+        .trigger {
+            clear: both;
+            display: none;
+        }
+
+        &:hover .trigger {
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .page-link {
+            display: block;
+            padding: 5px 10px;
+            color: black;
+        }
+    }
+}
