@@ -10,6 +10,18 @@
     // Positioning context for the mobile navigation icon
     position: relative;
 }
+.navbar-brand img {
+  height: 5rem;
+
+  &:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+
+  @media (max-width: 576px) {
+      height: 4rem;
+  }
+}
 
 
 .site-header img {
@@ -21,97 +33,209 @@
 }
 
 
+// Orignial work by Victor Belozyorov on CodePen https://codepen.io/WispProxy/pen/GqzoYg.
+/***************************
+ *	Variables
+ **************************/;
+$font-family: 'Open Sans', sans-serif;
+$font-size:   1em;
 
-.site-nav {
-    float: right;
-    line-height: 56px;
-    margin-top: 180px;
-    font-size: 170%;
-     @include media-query($on-palm) {
-	     margin-top: 15px;
+$color-body:  #e2e2e2;
+$color-text:  #282828;
+$color-menu:  #fcfcfc;
 
-	     }
+$variable-menu-animation-time:        1s;
+$variable-burger-animation-time:      .35s;
 
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
-    }
-
-    a.active {
-      // Gaps between nav items, but not on the first one
-      &:not(:first-child) {
-          margin-left: 20px;
-      }
-    }
+$variable-menu-animation-function:    cubic-bezier(.25, .1, .25, 1);
+$variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
 
 
-
-
-.page-link {
-	color: white;
+/***************************
+ *	Application Main Styles
+ **************************/
+#menu--toggle[type="checkbox"]:not(:checked),
+#menu--toggle[type="checkbox"]:checked {
+  display: none;
 }
 
-a.active {
-  color: #fab634;
+.menu--toggle__trigger,
+.menu--toggle__burger,
+.menu--toggle__burger:before,
+.menu--toggle__burger:after {
+  position: absolute;
+  top: 1.6em;
+  left: 1.6em;
+  width: 2em;
+  height: 5px;
+  background-color: $color-text;
+  border-radius: 2px;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-transition: $variable-burger-animation-time $variable-menu-animation-function;
+  transition: $variable-burger-animation-time $variable-menu-animation-function;
 }
 
+.menu--toggle__trigger {
+  height: 2em;
+  background: none;
+}
 
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
+.menu--toggle__burger {
 
+  &:before {
+    content: "";
+    top: 10px;
+    left: 0;
+  }
+  &:after {
+    content: "";
+    top: 20px;
+    left: 0;
+  }
+}
 
+.menu__body {
+  position: absolute;
+  width: 7em;
+  height: 7em;
+  left: .010em;
+  margin: 0;
+  padding: 0;
+  background-color: $color-menu;
+  border-bottom-right-radius: 100%;
+  -webkit-box-shadow: 3px 3px 7px rgba($color-text, .2);
+          box-shadow: 3px 3px 7px rgba($color-text, .2);
+  z-index: 10;
+  -webkit-animation: checkboxUncheckedAnimation $variable-burger-animation-time both;
+          animation: checkboxUncheckedAnimation $variable-burger-animation-time both;
+}
 
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
+.menu__body-element,
+.menu__body-link {
+  display: none;
+  margin: 4.4em 0 -3.3em -.1em;
+  font-weight: normal;
+  color: $color-text;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  list-style: none;
+  outline: 0;
+}
 
+.menu__body-element {
+  text-indent: 2em;
+}
 
-            > svg {
-                width: 18px;
-                height: 15px;
+.menu__body-link:hover {
+  display: block;
+  width: 0;
+  color: $color-text;
+  background-color: $color-body;
+  -webkit-animation: changeWidthOfElementAnimation $variable-burger-animation-time both;
+          animation: changeWidthOfElementAnimation $variable-burger-animation-time both;
+}
 
-                path {
-                    fill: $grey-color-dark;
+#menu--toggle:checked + .menu--toggle__trigger {
 
-                }
-            }
-        }
+  & + .menu--toggle__burger {
+    top: 35px;
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+    -webkit-transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
+    transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
+    transition: transform $variable-burger-animation-time $variable-burger-animation-function;
+    transition: transform $variable-burger-animation-time $variable-burger-animation-function, -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
 
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-            color: black;
-        }
+    &:before {
+      top: 0;
+      -webkit-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+      -webkit-transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
+      transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
+      transition: transform $variable-burger-animation-time $variable-burger-animation-function;
+      transition: transform $variable-burger-animation-time $variable-burger-animation-function, -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
     }
+    &:after {
+      top: 0;
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+      -webkit-transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
+      transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
+      transition: transform $variable-burger-animation-time $variable-burger-animation-function;
+      transition: transform $variable-burger-animation-time $variable-burger-animation-function, -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
+    }
+  }
+
+  & + .menu--toggle__burger + .menu__body {
+    -webkit-animation: checkboxCheckedAnimation $variable-menu-animation-time $variable-menu-animation-function both;
+            animation: checkboxCheckedAnimation $variable-menu-animation-time $variable-menu-animation-function both;
+  }
+
+  & ~ .menu__body .menu__body-element,
+  & ~ .menu__body .menu__body-link {
+    display: block;
+  }
+}
+
+.promotion {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('http://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Gooseberry-spring.jpg/1280px-Gooseberry-spring.jpg');
+  background-size: cover;
+}
+
+/**
+ *	Animations
+ */
+@-webkit-keyframes checkboxCheckedAnimation {
+  50%, 100% {
+    width: 100vw;
+    height: 100vh;
+  }
+  100% {
+    border-radius: 0;
+  }
+}
+@keyframes checkboxCheckedAnimation {
+  50%, 100% {
+    width: 100vw;
+    height: 100vh;
+  }
+  100% {
+    border-radius: 0;
+  }
+}
+
+@-webkit-keyframes checkboxUncheckedAnimation {
+  0% {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@keyframes checkboxUncheckedAnimation {
+  0% {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@-webkit-keyframes changeWidthOfElementAnimation {
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes changeWidthOfElementAnimation {
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }

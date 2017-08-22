@@ -111,7 +111,6 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(1000px - (30px * 2));
   max-width: calc(1000px - (30px * 2));
   margin-right: auto;
   margin-left: auto;
@@ -119,19 +118,6 @@ pre {
   padding-left: 30px; }
   @media screen and (max-width: 800px) {
     .wrapper {
-      max-width: -webkit-calc(1000px - (30px));
-      max-width: calc(1000px - (30px));
-      padding-right: 15px;
-      padding-left: 15px; } }
-
-.shop {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px; }
-  @media screen and (max-width: 800px) {
-    .shop {
-      max-width: -webkit-calc(1000px - (30px));
       max-width: calc(1000px - (30px));
       padding-right: 15px;
       padding-left: 15px; } }
@@ -139,7 +125,7 @@ pre {
 /**
  * Clearfix
  */
-.wrapper:after, .shop:after, .footer-col-wrapper:after {
+.wrapper:after, .footer-col-wrapper:after {
   content: "";
   display: table;
   clear: both; }
@@ -474,6 +460,15 @@ pre {
   background-color: #FF8B43;
   position: relative; }
 
+.navbar-brand img {
+  height: 5rem; }
+  .navbar-brand img:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
+  @media (max-width: 576px) {
+    .navbar-brand img {
+      height: 4rem; } }
+
 .site-header img {
   float: left;
   margin-top: 5px;
@@ -481,60 +476,152 @@ pre {
   width: 300px;
   height: 230px; }
 
-.site-nav {
-  float: right;
-  line-height: 56px;
-  margin-top: 180px;
-  font-size: 170%; }
-  @media screen and (max-width: 600px) {
-    .site-nav {
-      margin-top: 15px; } }
-  .site-nav .menu-icon {
-    display: none; }
-  .site-nav .page-link {
-    color: #111;
-    line-height: 1.5; }
-    .site-nav .page-link:not(:first-child) {
-      margin-left: 20px; }
-  .site-nav a.active:not(:first-child) {
-    margin-left: 20px; }
-  .site-nav .page-link {
-    color: white; }
-  .site-nav a.active {
-    color: #fab634; }
-  @media screen and (max-width: 600px) {
-    .site-nav {
-      position: absolute;
-      top: 9px;
-      right: 30px;
-      background-color: #fdfdfd;
-      border: 1px solid #e8e8e8;
-      border-radius: 5px;
-      text-align: right; }
-      .site-nav .menu-icon {
-        display: block;
-        float: right;
-        width: 36px;
-        height: 26px;
-        line-height: 0;
-        padding-top: 10px;
-        text-align: center; }
-        .site-nav .menu-icon > svg {
-          width: 18px;
-          height: 15px; }
-          .site-nav .menu-icon > svg path {
-            fill: #424242; }
-      .site-nav .trigger {
-        clear: both;
-        display: none; }
-      .site-nav:hover .trigger {
-        display: block;
-        padding-bottom: 5px; }
-      .site-nav .page-link {
-        display: block;
-        padding: 5px 10px;
-        color: black; } }
+/***************************
+ *	Variables
+ **************************/
+/***************************
+ *	Application Main Styles
+ **************************/
+#menu--toggle[type="checkbox"]:not(:checked),
+#menu--toggle[type="checkbox"]:checked {
+  display: none; }
 
+.menu--toggle__trigger,
+.menu--toggle__burger,
+.menu--toggle__burger:before,
+.menu--toggle__burger:after {
+  position: absolute;
+  top: 1.6em;
+  left: 1.6em;
+  width: 2em;
+  height: 5px;
+  background-color: #282828;
+  border-radius: 2px;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-transition: 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: 0.35s cubic-bezier(0.25, 0.1, 0.25, 1); }
+
+.menu--toggle__trigger {
+  height: 2em;
+  background: none; }
+
+.menu--toggle__burger:before {
+  content: "";
+  top: 10px;
+  left: 0; }
+.menu--toggle__burger:after {
+  content: "";
+  top: 20px;
+  left: 0; }
+
+.menu__body {
+  position: absolute;
+  width: 7em;
+  height: 7em;
+  left: .010em;
+  margin: 0;
+  padding: 0;
+  background-color: #fcfcfc;
+  border-bottom-right-radius: 100%;
+  -webkit-box-shadow: 3px 3px 7px rgba(40, 40, 40, 0.2);
+  box-shadow: 3px 3px 7px rgba(40, 40, 40, 0.2);
+  z-index: 10;
+  -webkit-animation: checkboxUncheckedAnimation 0.35s both;
+  animation: checkboxUncheckedAnimation 0.35s both; }
+
+.menu__body-element,
+.menu__body-link {
+  display: none;
+  margin: 4.4em 0 -3.3em -.1em;
+  font-weight: normal;
+  color: #282828;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  list-style: none;
+  outline: 0; }
+
+.menu__body-element {
+  text-indent: 2em; }
+
+.menu__body-link:hover {
+  display: block;
+  width: 0;
+  color: #282828;
+  background-color: #e2e2e2;
+  -webkit-animation: changeWidthOfElementAnimation 0.35s both;
+  animation: changeWidthOfElementAnimation 0.35s both; }
+
+#menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger {
+  top: 35px;
+  -webkit-transform: rotate(405deg);
+  transform: rotate(405deg);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  #menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger:before {
+    top: 0;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  #menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger:after {
+    top: 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+#menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger + .menu__body {
+  -webkit-animation: checkboxCheckedAnimation 1s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+  animation: checkboxCheckedAnimation 1s cubic-bezier(0.25, 0.1, 0.25, 1) both; }
+#menu--toggle:checked + .menu--toggle__trigger ~ .menu__body .menu__body-element, #menu--toggle:checked + .menu--toggle__trigger ~ .menu__body .menu__body-link {
+  display: block; }
+
+.promotion {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("http://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Gooseberry-spring.jpg/1280px-Gooseberry-spring.jpg");
+  background-size: cover; }
+
+/**
+ *	Animations
+ */
+@-webkit-keyframes checkboxCheckedAnimation {
+  50%, 100% {
+    width: 100vw;
+    height: 100vh; }
+  100% {
+    border-radius: 0; } }
+@keyframes checkboxCheckedAnimation {
+  50%, 100% {
+    width: 100vw;
+    height: 100vh; }
+  100% {
+    border-radius: 0; } }
+@-webkit-keyframes checkboxUncheckedAnimation {
+  0% {
+    width: 100vw;
+    height: 100vh; } }
+@keyframes checkboxUncheckedAnimation {
+  0% {
+    width: 100vw;
+    height: 100vh; } }
+@-webkit-keyframes changeWidthOfElementAnimation {
+  50% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+@keyframes changeWidthOfElementAnimation {
+  50% {
+    width: 0; }
+  100% {
+    width: 100%; } }
 .card {
   margin: 10px; }
 

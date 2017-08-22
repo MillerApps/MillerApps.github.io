@@ -11,6 +11,7 @@
   <meta name="description" content="Dodging Asteroids is the very first iOS app that I have released. I worked on it for around two months while learning SpriteKit (Apple’s 2d Gaming framework)...">
 
   <link rel="stylesheet" href=" /assets/css/bootstrap.min.css " />
+  <link rel="stylesheet" href=" /assets/css/hamburgers.min.css" />
   <link rel="stylesheet" href=" /css/main.css ">
   <link rel="canonical" href="http://localhost:4000/dodging-asteroids" />
   <link rel="alternate" type="application/rss+xml" title="Tyler Miller | iOS Developer" href="http://localhost:4000 /feed.xml " />
@@ -26,39 +27,61 @@
 
     <a href="/"><img src="/assets/miller apps.png" alt="Logo"></a>
 
+  <!-- Orignial code for menu by Victor Belozyorov on CodePen https://codepen.io/WispProxy/pen/GqzoYg. -->
+    <div class="menu">
+      <input id="menu--toggle" type="checkbox" />
+      <!-- /#menu--toggle -->
+      <label class="menu--toggle__trigger" for="menu--toggle"></label>
+      <!-- /.menu--toggle__trigger -->
+      <label class="menu--toggle__burger" for="menu--toggle"></label>
+      <!-- /.menu--toggle__burger -->
 
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
 
+      <ul class="menu__body">
 
-      <div class="trigger">
 
                
 
-        <a href="/" class="page-link" >
-                  Blog
-                </a>     
+        <li class="menu_body-element">
 
-        <a href="/about/" class="page-link" >
-                  About
-                </a>     
 
-        <a href="/archive/" class="page-link" >
-                  Archive
-                </a>     
+          <a href="/" class="menu__body-element">
 
-        <a href="/work/" class="page-link" >
-                  My Work
-                </a>   
-      </div>
-    </nav>
 
+                    Blog
+                  </li></a>     
+
+        <li class="menu_body-element">
+
+
+          <a href="/about/" class="menu__body-element">
+
+
+                    About
+                  </li></a>     
+
+        <li class="menu_body-element">
+
+
+          <a href="/archive/" class="menu__body-element">
+
+
+                    Archive
+                  </li></a>     
+
+        <li class="menu_body-element">
+
+
+          <a href="/work/" class="menu__body-element">
+
+
+                    My Work
+                  </li></a>   
+
+
+      </ul>
+
+    </div>
   </div>
 
 </header>
