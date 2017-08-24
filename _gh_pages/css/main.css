@@ -583,12 +583,6 @@ pre {
 #menu--toggle:checked + .menu--toggle__trigger ~ .menu__body .menu__body-element, #menu--toggle:checked + .menu--toggle__trigger ~ .menu__body .menu__body-link {
   display: block; }
 
-.promotion {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("http://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Gooseberry-spring.jpg/1280px-Gooseberry-spring.jpg");
-  background-size: cover; }
-
 /**
  *	Animations
  */
@@ -607,9 +601,15 @@ pre {
 @-webkit-keyframes checkboxUncheckedAnimation {
   0% {
     width: 100vw;
+    height: 100vh; }
+  100% {
+    width: 100vw;
     height: 100vh; } }
 @keyframes checkboxUncheckedAnimation {
   0% {
+    width: 100vw;
+    height: 100vh; }
+  100% {
     width: 100vw;
     height: 100vh; } }
 @-webkit-keyframes changeWidthOfElementAnimation {
