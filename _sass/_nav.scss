@@ -179,10 +179,16 @@ $variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
   }
 }
 
+.promotion {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('http://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Gooseberry-spring.jpg/1280px-Gooseberry-spring.jpg');
+  background-size: cover;
+}
+
 /**
  *	Animations
  */
-
 @-webkit-keyframes checkboxCheckedAnimation {
   50%, 100% {
     width: 100vw;
@@ -192,7 +198,6 @@ $variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
     border-radius: 0;
   }
 }
-
 @keyframes checkboxCheckedAnimation {
   50%, 100% {
     width: 100vw;
