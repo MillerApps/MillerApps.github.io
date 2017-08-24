@@ -588,13 +588,13 @@ pre {
  */
 @-webkit-keyframes checkboxCheckedAnimation {
   50%, 100% {
-    width: 100vmax;
+    width: 100vw;
     height: 100vh; }
   100% {
     border-radius: 0; } }
 @keyframes checkboxCheckedAnimation {
   50%, 100% {
-    width: 100vmax;
+    width: 100vw;
     height: 100vh; }
   100% {
     border-radius: 0; } }
