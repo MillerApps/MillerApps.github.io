@@ -15,7 +15,7 @@
 
   &:hover {
     -webkit-transform: scale(1.05);
-            transform: scale(1.05);
+        transform: scale(1.05);
   }
 
   @media (max-width: 576px) {
@@ -142,7 +142,7 @@ $variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
   & + .menu--toggle__burger {
     top: 35px;
     -webkit-transform: rotate(405deg);
-            transform: rotate(405deg);
+        transform: rotate(405deg);
     -webkit-transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
     transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
     transition: transform $variable-burger-animation-time $variable-burger-animation-function;
@@ -151,7 +151,7 @@ $variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
     &:before {
       top: 0;
       -webkit-transform: rotate(-90deg);
-              transform: rotate(-90deg);
+          transform: rotate(-90deg);
       -webkit-transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
       transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
       transition: transform $variable-burger-animation-time $variable-burger-animation-function;
@@ -160,7 +160,7 @@ $variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
     &:after {
       top: 0;
       -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
+          transform: rotate(90deg);
       -webkit-transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
       transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
       transition: transform $variable-burger-animation-time $variable-burger-animation-function;
