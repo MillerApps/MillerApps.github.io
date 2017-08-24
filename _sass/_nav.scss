@@ -182,18 +182,20 @@ $variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
 /**
  *	Animations
  */
+
 @-webkit-keyframes checkboxCheckedAnimation {
   50%, 100% {
-    width: 100vw;
+    width: 100vmax;
     height: 100vh;
   }
   100% {
     border-radius: 0;
   }
 }
+
 @keyframes checkboxCheckedAnimation {
   50%, 100% {
-    width: 100vw;
+    width: 100vmax;
     height: 100vh;
   }
   100% {
@@ -215,20 +217,20 @@ $variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
   }
 }
 
-
-
 @-webkit-keyframes changeWidthOfElementAnimation {
-  from { width: 7rem;}
-  to { width: 100%;}
-  from { height: 7rem;}
-  to {height: 600%;}
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
-
-
 @keyframes changeWidthOfElementAnimation {
-  from { width: 7rem;}
-  to { width: 100%;}
-  from { height: 7rem;}
-  to {height: 600%;}
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
