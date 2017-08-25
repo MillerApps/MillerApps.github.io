@@ -174,6 +174,7 @@ $variable-burger-animation-function: cubic-bezier(.68, -.55, .265, 1.55);
 /**
  *	Animations
  */
+
 @-webkit-keyframes checkboxCheckedAnimation {
   100%,
   50% {
@@ -183,8 +184,12 @@ $variable-burger-animation-function: cubic-bezier(.68, -.55, .265, 1.55);
 
   100% {
     border-radius: 0;
+    // not sure why this is needed for MS Edge
+    width: 100vw;
+    height: 100vh;
   }
 }
+
 @keyframes checkboxCheckedAnimation {
   100%,
   50% {
@@ -194,6 +199,9 @@ $variable-burger-animation-function: cubic-bezier(.68, -.55, .265, 1.55);
 
   100% {
     border-radius: 0;
+    // not sure why this is needed for MS Edge
+    width: 100vw;
+    height: 100vh;
   }
 }
 @-webkit-keyframes checkboxUncheckedAnimation {
