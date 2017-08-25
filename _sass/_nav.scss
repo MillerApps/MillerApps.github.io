@@ -2,67 +2,59 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid #FD5000;
-    border-bottom: 3px solid #FD5000;
-    min-height: 56px;
-    background-color: #FF8B43;
-
-    // Positioning context for the mobile navigation icon
-    position: relative;
+  border-top: 5px solid #FD5000;
+  border-bottom: 3px solid #FD5000;
+  min-height: 56px;
+  background-color: #FF8B43;
+  // Positioning context for the mobile navigation icon
+  position: relative;
 }
+
 .navbar-brand img {
   height: 5rem;
 
   &:hover {
     -webkit-transform: scale(1.05);
-            transform: scale(1.05);
+    transform: scale(1.05);
   }
-
   @media (max-width: 576px) {
-      height: 4rem;
+    height: 4rem;
   }
 }
-
 
 .site-header img {
-	 float: left;
-	 margin-top: 5px;
-	 margin-bottom: 5px;
-	 width: 300px;
-	 height: 230px;
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 300px;
+  height: 230px;
 }
-
-
 // Orignial work by Victor Belozyorov on CodePen https://codepen.io/WispProxy/pen/GqzoYg.
 /***************************
  *	Variables
- **************************/;
+ **************************/
+;
 $font-family: 'Open Sans', sans-serif;
-$font-size:   1em;
-
-$color-body:  #e2e2e2;
-$color-text:  #282828;
-$color-menu:  #fcfcfc;
-
-$variable-menu-animation-time:        1s;
-$variable-burger-animation-time:      .35s;
-
-$variable-menu-animation-function:    cubic-bezier(.25, .1, .25, 1);
-$variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
-
-
+$font-size: 1em;
+$color-body: #e2e2e2;
+$color-text: #282828;
+$color-menu: #fcfcfc;
+$variable-menu-animation-time: 1s;
+$variable-burger-animation-time: 0.35s;
+$variable-menu-animation-function: cubic-bezier(.25, .1, .25, 1);
+$variable-burger-animation-function: cubic-bezier(.68, -.55, .265, 1.55);
 /***************************
  *	Application Main Styles
  **************************/
-#menu--toggle[type="checkbox"]:not(:checked),
-#menu--toggle[type="checkbox"]:checked {
+#menu--toggle[type="checkbox"]:checked,
+#menu--toggle[type="checkbox"]:not(:checked) {
   display: none;
 }
 
-.menu--toggle__trigger,
 .menu--toggle__burger,
+.menu--toggle__burger:after,
 .menu--toggle__burger:before,
-.menu--toggle__burger:after {
+.menu--toggle__trigger {
   position: absolute;
   top: 1.6em;
   left: 1.6em;
@@ -82,12 +74,12 @@ $variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
 }
 
 .menu--toggle__burger {
-
   &:before {
     content: "";
     top: 10px;
     left: 0;
   }
+
   &:after {
     content: "";
     top: 20px;
@@ -99,16 +91,16 @@ $variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
   position: absolute;
   width: 7em;
   height: 7em;
-  left: .010em;
+  left: 0.010em;
   margin: 0;
   padding: 0;
   background-color: $color-menu;
   border-bottom-right-radius: 100%;
   -webkit-box-shadow: 3px 3px 7px rgba($color-text, .2);
-          box-shadow: 3px 3px 7px rgba($color-text, .2);
+  box-shadow: 3px 3px 7px rgba($color-text, .2);
   z-index: 10;
   -webkit-animation: checkboxUncheckedAnimation $variable-burger-animation-time both;
-          animation: checkboxUncheckedAnimation $variable-burger-animation-time both;
+  animation: checkboxUncheckedAnimation $variable-burger-animation-time both;
 }
 
 .menu__body-element,
@@ -134,15 +126,14 @@ $variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
   color: $color-text;
   background-color: $color-body;
   -webkit-animation: changeWidthOfElementAnimation $variable-burger-animation-time both;
-          animation: changeWidthOfElementAnimation $variable-burger-animation-time both;
+  animation: changeWidthOfElementAnimation $variable-burger-animation-time both;
 }
 
 #menu--toggle:checked + .menu--toggle__trigger {
-
   & + .menu--toggle__burger {
     top: 35px;
     -webkit-transform: rotate(405deg);
-            transform: rotate(405deg);
+    transform: rotate(405deg);
     -webkit-transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
     transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
     transition: transform $variable-burger-animation-time $variable-burger-animation-function;
@@ -151,16 +142,17 @@ $variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
     &:before {
       top: 0;
       -webkit-transform: rotate(-90deg);
-              transform: rotate(-90deg);
+      transform: rotate(-90deg);
       -webkit-transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
       transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
       transition: transform $variable-burger-animation-time $variable-burger-animation-function;
       transition: transform $variable-burger-animation-time $variable-burger-animation-function, -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
     }
+
     &:after {
       top: 0;
       -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
+      transform: rotate(90deg);
       -webkit-transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
       transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
       transition: transform $variable-burger-animation-time $variable-burger-animation-function;
@@ -170,7 +162,7 @@ $variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
 
   & + .menu--toggle__burger + .menu__body {
     -webkit-animation: checkboxCheckedAnimation $variable-menu-animation-time $variable-menu-animation-function both;
-            animation: checkboxCheckedAnimation $variable-menu-animation-time $variable-menu-animation-function both;
+    animation: checkboxCheckedAnimation $variable-menu-animation-time $variable-menu-animation-function both;
   }
 
   & ~ .menu__body .menu__body-element,
@@ -179,68 +171,57 @@ $variable-burger-animation-function:  cubic-bezier(.68, -.55, .265, 1.55);
   }
 }
 
-
 /**
  *	Animations
  */
 @-webkit-keyframes checkboxCheckedAnimation {
-  50%, 100% {
+  100%,
+  50% {
     width: 100vw;
     height: 100vh;
   }
+
   100% {
     border-radius: 0;
   }
 }
 @keyframes checkboxCheckedAnimation {
-  50%, 100% {
+  100%,
+  50% {
     width: 100vw;
     height: 100vh;
   }
+
   100% {
     border-radius: 0;
   }
 }
-
-
-
 @-webkit-keyframes checkboxUncheckedAnimation {
   0% {
     width: 100vw;
     height: 100vh;
   }
-  100% {
-    width: 100vw;
-    height: 100vh;
-  }
 }
-
-
-
 @keyframes checkboxUncheckedAnimation {
   0% {
     width: 100vw;
     height: 100vh;
   }
-  100% {
-    width: 100vw;
-    height: 100vh;
-  }
 }
-
 @-webkit-keyframes changeWidthOfElementAnimation {
   50% {
     width: 0;
   }
+
   100% {
     width: 100%;
   }
 }
-
 @keyframes changeWidthOfElementAnimation {
   50% {
     width: 0;
   }
+
   100% {
     width: 100%;
   }

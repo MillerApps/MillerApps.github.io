@@ -482,14 +482,14 @@ pre {
 /***************************
  *	Application Main Styles
  **************************/
-#menu--toggle[type="checkbox"]:not(:checked),
-#menu--toggle[type="checkbox"]:checked {
+#menu--toggle[type="checkbox"]:checked,
+#menu--toggle[type="checkbox"]:not(:checked) {
   display: none; }
 
-.menu--toggle__trigger,
 .menu--toggle__burger,
+.menu--toggle__burger:after,
 .menu--toggle__burger:before,
-.menu--toggle__burger:after {
+.menu--toggle__trigger {
   position: absolute;
   top: 1.6em;
   left: 1.6em;
@@ -519,7 +519,7 @@ pre {
   position: absolute;
   width: 7em;
   height: 7em;
-  left: .010em;
+  left: 0.010em;
   margin: 0;
   padding: 0;
   background-color: #fcfcfc;
@@ -587,13 +587,15 @@ pre {
  *	Animations
  */
 @-webkit-keyframes checkboxCheckedAnimation {
-  50%, 100% {
+  100%,
+  50% {
     width: 100vw;
     height: 100vh; }
   100% {
     border-radius: 0; } }
 @keyframes checkboxCheckedAnimation {
-  50%, 100% {
+  100%,
+  50% {
     width: 100vw;
     height: 100vh; }
   100% {
@@ -601,15 +603,9 @@ pre {
 @-webkit-keyframes checkboxUncheckedAnimation {
   0% {
     width: 100vw;
-    height: 100vh; }
-  100% {
-    width: 100vw;
     height: 100vh; } }
 @keyframes checkboxUncheckedAnimation {
   0% {
-    width: 100vw;
-    height: 100vh; }
-  100% {
     width: 100vw;
     height: 100vh; } }
 @-webkit-keyframes changeWidthOfElementAnimation {
