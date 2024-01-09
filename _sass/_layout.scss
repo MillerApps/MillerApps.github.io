@@ -10,6 +10,7 @@
     font-size: 18px;
     margin-bottom: calc($spacing-unit / 2);
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .site {
@@ -31,11 +32,11 @@
 
 .me-img {
 	width: 150px;
-  height: 150px;
+    height: 150px;
 	border-radius: 100%;
 	border: 5px solid #FD5000;
 	display: block;
-	margin: 0 auto 30px;
+	margin: 0 auto 45px;
 }
 
 .contact-list,

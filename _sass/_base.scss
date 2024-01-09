@@ -13,6 +13,8 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+
+
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
@@ -201,5 +203,14 @@ pre {
         path {
             fill: $grey-color;
         }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+    }
+    p {
+        color: #ffffff;
     }
 }
