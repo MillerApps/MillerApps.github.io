@@ -198,6 +198,20 @@
     }
 
 }
+
+// BlockQuotes
+blockquote {
+    margin-left: 35px;
+}
+
+.blockquote-info {
+    padding: 5px;
+    background-color: rgba(63, 154, 239, 0.317);  
+    border-radius: 10px;
+    outline: 1px solid white; 
+}
+
+
 // Oredered List
 .o-list {
 
