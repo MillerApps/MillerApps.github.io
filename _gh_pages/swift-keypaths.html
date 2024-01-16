@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="14T0GEUZ0SniruVDG6_qViMRDA3FOTDh3T74bLoWKaY" />
+
+  <title>Swift KeyPaths</title>
+  <meta name="description" content="So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is.">
+
+  <link rel="stylesheet" href=" /assets/css/bootstrap.min.css " />
+  <link rel="stylesheet" href=" /assets/css/hamburgers.min.css" />
+  <link rel="stylesheet" href=" /css/main.css ">
+  <link rel="canonical" href="http://localhost:4000/swift-keypaths" />
+  <link rel="alternate" type="application/rss+xml" title="Tyler Miller | iOS Developer" href="http://localhost:4000 /feed.xml " />
+
+</head>
+
+
+<body class="site">
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img src="/assets/miller apps.png" alt="Logo"></a>
+
+    <nav>
+      <!-- Orignial code for menu by Victor Belozyorov on CodePen https://codepen.io/WispProxy/pen/GqzoYg. -->
+      <div class="menu">
+        <input id="menu--toggle" type="checkbox" />
+        <!-- /#menu--toggle -->
+        <label class="menu--toggle__trigger" for="menu--toggle"></label>
+        <!-- /.menu--toggle__trigger -->
+        <label class="menu--toggle__burger" for="menu--toggle"></label>
+        <!-- /.menu--toggle__burger -->
+
+
+        <ul class="menu__body">
+
+
+                 
+
+          <li class="menu_body-element">
+
+
+            <a href="/" class="menu__body-element">
+
+
+                        Blog
+                      </li></a>     
+
+          <li class="menu_body-element">
+
+
+            <a href="/about/" class="menu__body-element">
+
+
+                        About
+                      </li></a>     
+
+          <li class="menu_body-element">
+
+
+            <a href="/archive/" class="menu__body-element">
+
+
+                        Archive
+                      </li></a>     
+
+          <li class="menu_body-element">
+
+
+            <a href="/work/" class="menu__body-element">
+
+
+                        My Work
+                      </li></a>   
+
+
+        </ul>
+
+      </div>
+    </nav>
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Swift KeyPaths</h1>
+    <p class="post-meta">Jan 15, 2024 • Tyler Miller <span class="reading-time" title="Estimated read time">
+  
+  
+    ~ 3 min read
+  
+
+
+</span>
+</p>
+  </header>
+
+  
+
+  <article class="post-content">
+    <p>So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is.</p>
+
+<blockquote class="blockquote-info">
+  <p>📘 Info
+ Please Note: I Am not an expert and this is more or less a way for me to help cement the basics of this concept in my own mind. If this is of any Value to you, thats just an added bonus!</p>
+</blockquote>
+
+<p>To begin Apple defines a keyPath as follows:</p>
+<blockquote>
+  <p><strong>A key path from a specific root type to a specific resulting value type.</strong></p>
+</blockquote>
+
+<p>Here’s a bit more detailed definition:</p>
+<blockquote>
+  <p><strong>A reference (“path”) to a property on a give Type. In Swift a ‘KeyPath’ is expressed as ‘<em>\Type.property</em>’, ‘<em>Type</em>’ is the struct or class. And ‘<em>property</em>’ would be what you want to reference</strong></p>
+</blockquote>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">struct</span> <span class="kt">Superhero</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">alias</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">var</span> <span class="nv">superpower</span><span class="p">:</span> <span class="kt">String</span>
+<span class="p">}</span>
+
+<span class="c1">// Defining key paths for 'alias' and 'superpower' properties of the Superhero struct.</span>
+<span class="c1">// These constants allow indirect reference to the properties of any Superhero instance.</span>
+<span class="k">let</span> <span class="nv">aliasKeyPath</span> <span class="o">=</span> <span class="p">\</span><span class="kt">Superhero</span><span class="o">.</span><span class="n">alias</span>
+<span class="k">let</span> <span class="nv">superpowerKeyPath</span> <span class="o">=</span> <span class="p">\</span><span class="kt">Superhero</span><span class="o">.</span><span class="n">superpower</span>
+
+</code></pre></div></div>
+
+<blockquote>
+  <p>We just created a simple struct and set constants which hold the KeyPath.</p>
+</blockquote>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">// Creating an instance of Superhero.</span>
+<span class="c1">// 'superhero' is now an object with 'alias' and 'superpower' properties.</span>
+<span class="k">var</span> <span class="nv">superhero</span> <span class="o">=</span> <span class="kt">Superhero</span><span class="p">(</span><span class="nv">alias</span><span class="p">:</span> <span class="s">"Spider-Bro"</span><span class="p">,</span> <span class="nv">superpower</span><span class="p">:</span> <span class="s">"Web-slinging"</span><span class="p">)</span>
+
+<span class="c1">// Accessing property values using the key paths defined earlier.</span>
+<span class="c1">// This demonstrates how key paths can be used to read values from specific properties.</span>
+<span class="k">let</span> <span class="nv">superheroAlias</span> <span class="o">=</span> <span class="n">superhero</span><span class="p">[</span><span class="nv">keyPath</span><span class="p">:</span> <span class="n">aliasKeyPath</span><span class="p">]</span> <span class="c1">// Retrieves 'alias' value: "Spider-Bro"</span>
+<span class="k">let</span> <span class="nv">superheroPower</span> <span class="o">=</span> <span class="n">superhero</span><span class="p">[</span><span class="nv">keyPath</span><span class="p">:</span> <span class="n">superpowerKeyPath</span><span class="p">]</span> <span class="c1">// Retrieves 'superpower' value: "Web-slinging"</span>
+
+<span class="c1">// Printing the accessed values.</span>
+<span class="c1">// It shows how to use the key paths to get property values in a readable and reusable manner.</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">superheroAlias</span><span class="p">,</span> <span class="n">superheroPower</span><span class="p">)</span>
+
+<span class="c1">// Accessing properties using shorthand key path syntax directly.</span>
+<span class="c1">// This is a more concise way to use key paths, especially when they are not reused elsewhere.</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">superhero</span><span class="p">[</span><span class="nv">keyPath</span><span class="p">:</span> <span class="p">\</span><span class="o">.</span><span class="n">alias</span><span class="p">],</span> <span class="n">superhero</span><span class="p">[</span><span class="nv">keyPath</span><span class="p">:</span> <span class="p">\</span><span class="o">.</span><span class="n">superpower</span><span class="p">])</span>
+
+</code></pre></div></div>
+<blockquote>
+  <p>We instantiate a Superhero struct here, then we access the values in two manners.</p>
+</blockquote>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="o">/</span> <span class="kt">Modifying</span> <span class="n">a</span> <span class="n">property</span> <span class="n">value</span> <span class="n">using</span> <span class="n">its</span> <span class="n">key</span> <span class="n">path</span><span class="o">.</span>
+<span class="c1">// This line demonstrates how key paths can also be used to set new values for specific properties.</span>
+<span class="n">superhero</span><span class="p">[</span><span class="nv">keyPath</span><span class="p">:</span> <span class="p">\</span><span class="o">.</span><span class="n">alias</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Spider-Pig"</span> <span class="c1">// Changes 'alias' property to 'Spider-Pig'</span>
+
+<span class="c1">// Printing the updated alias to demonstrate the change.</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">superhero</span><span class="p">[</span><span class="nv">keyPath</span><span class="p">:</span> <span class="p">\</span><span class="o">.</span><span class="n">alias</span><span class="p">])</span>
+
+</code></pre></div></div>
+
+<blockquote>
+  <p>Finally, we see how to modify the property values</p>
+</blockquote>
+
+<p>These are the very basics of KeyPaths in Swift. I believe this should be enough to at least get you familiar with the concept to the point where SwiftUI will make a tad bit more sense when first getting started.</p>
+
+  </article>
+
+</div>
+ 
+<div id="disqus_thread"></div>
+<script>
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement('script');
+    s.src = '//tylermiller.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> 
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Tyler Miller | iOS Developer</h2>
+
+    <img class="me-img" src="/assets/me.jpg" alt="Tyler Miller">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Contact</li>
+          <li><a href="mailto:thetylermiller4@gmail.com">thetylermiller4@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/MillerApps" target="_blank">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">MillerApps</span>
+            </a>
+          </li>
+           
+          <li>
+            <a href="https://twitter.com/MillerApps" target="_blank">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">MillerApps</span>
+            </a>
+          </li>
+           
+          <li>
+            <a href="https://www.instagram.com/tyler_miller47" target="_blank">
+              <span class="icon  icon--instagram">
+                <svg viewBox="0 0 56 56">
+                  <path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7   c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
+                  <circle cx="41.5" cy="16.4" r="2.9"/>
+                  <path fill="#828282" d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9   h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.4,39.9c0,3.1-0.9,5.6-2.7,7.3   c-1.8,1.7-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6   c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9z"/>
+                </svg>
+              </span>
+
+              <span class="username">tyler_miller47</span>
+            </a>
+          </li>
+          
+
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">A site to display some of my work and share some thoughts!
+</p>
+        <div> 
+          <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="millerapps" data-description="Support me on Buy me a coffee!" data-message="Thanks, for Stopping by! Fuel my addiction!" data-color="#FF813F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+</footer>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+
+</html>
