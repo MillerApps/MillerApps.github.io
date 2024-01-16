@@ -10,15 +10,21 @@ permalink: swift-keypaths
 
 So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is. 
 
+
 > 📘 Info
 >  Please Note: I Am not an expert and this is more or less a way for me to help cement the basics of this concept in my own mind. If this is of any Value to you, thats just an added bonus! 
 {: .blockquote-info }
 
+
 To begin Apple defines a keyPath as follows:
 > **A key path from a specific root type to a specific resulting value type.**
+>
+
 
 Here's a bit more detailed definition:
 > **A reference ("path") to a property on a give Type. In Swift a 'KeyPath' is expressed as '*\Type.property*', '*Type*' is the struct or class. And '*property*' would be what you want to reference**
+>
+
 
  ```swift
 
@@ -56,10 +62,12 @@ print(superheroAlias, superheroPower)
 print(superhero[keyPath: \.alias], superhero[keyPath: \.superpower])
 
 ```
+
  > We instantiate a Superhero struct here, then we access the values in two manners.
 
+
  ```swift
- / Modifying a property value using its key path.
+// Modifying a property value using its key path.
 // This line demonstrates how key paths can also be used to set new values for specific properties.
 superhero[keyPath: \.alias] = "Spider-Pig" // Changes 'alias' property to 'Spider-Pig'
 
@@ -68,6 +76,8 @@ print(superhero[keyPath: \.alias])
 
  ```
 
+
  > Finally, we see how to modify the property values
+
 
  These are the very basics of KeyPaths in Swift. I believe this should be enough to at least get you familiar with the concept to the point where SwiftUI will make a tad bit more sense when first getting started.

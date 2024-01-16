@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Jan 2024 19:42:13 -0500</pubDate>
-    <lastBuildDate>Mon, 15 Jan 2024 19:42:13 -0500</lastBuildDate>
+    <pubDate>Mon, 15 Jan 2024 19:46:27 -0500</pubDate>
+    <lastBuildDate>Mon, 15 Jan 2024 19:46:27 -0500</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
@@ -22,11 +22,13 @@
 &lt;p&gt;To begin Apple defines a keyPath as follows:&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;A key path from a specific root type to a specific resulting value type.&lt;/strong&gt;&lt;/p&gt;
+
 &lt;/blockquote&gt;
 
 &lt;p&gt;Here’s a bit more detailed definition:&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;A reference (“path”) to a property on a give Type. In Swift a ‘KeyPath’ is expressed as ‘&lt;em&gt;\Type.property&lt;/em&gt;’, ‘&lt;em&gt;Type&lt;/em&gt;’ is the struct or class. And ‘&lt;em&gt;property&lt;/em&gt;’ would be what you want to reference&lt;/strong&gt;&lt;/p&gt;
+
 &lt;/blockquote&gt;
 
 &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
@@ -65,11 +67,12 @@
 &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;superhero&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;keyPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;superhero&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;keyPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;superpower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;We instantiate a Superhero struct here, then we access the values in two manners.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Modifying&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;its&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Modifying a property value using its key path.&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// This line demonstrates how key paths can also be used to set new values for specific properties.&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;superhero&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;keyPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Spider-Pig&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Changes &apos;alias&apos; property to &apos;Spider-Pig&apos;&lt;/span&gt;
 

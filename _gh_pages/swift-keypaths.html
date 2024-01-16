@@ -119,11 +119,13 @@
 <p>To begin Apple defines a keyPath as follows:</p>
 <blockquote>
   <p><strong>A key path from a specific root type to a specific resulting value type.</strong></p>
+
 </blockquote>
 
 <p>Here’s a bit more detailed definition:</p>
 <blockquote>
   <p><strong>A reference (“path”) to a property on a give Type. In Swift a ‘KeyPath’ is expressed as ‘<em>\Type.property</em>’, ‘<em>Type</em>’ is the struct or class. And ‘<em>property</em>’ would be what you want to reference</strong></p>
+
 </blockquote>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
@@ -162,11 +164,12 @@
 <span class="nf">print</span><span class="p">(</span><span class="n">superhero</span><span class="p">[</span><span class="nv">keyPath</span><span class="p">:</span> <span class="p">\</span><span class="o">.</span><span class="n">alias</span><span class="p">],</span> <span class="n">superhero</span><span class="p">[</span><span class="nv">keyPath</span><span class="p">:</span> <span class="p">\</span><span class="o">.</span><span class="n">superpower</span><span class="p">])</span>
 
 </code></pre></div></div>
+
 <blockquote>
   <p>We instantiate a Superhero struct here, then we access the values in two manners.</p>
 </blockquote>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="o">/</span> <span class="kt">Modifying</span> <span class="n">a</span> <span class="n">property</span> <span class="n">value</span> <span class="n">using</span> <span class="n">its</span> <span class="n">key</span> <span class="n">path</span><span class="o">.</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Modifying a property value using its key path.</span>
 <span class="c1">// This line demonstrates how key paths can also be used to set new values for specific properties.</span>
 <span class="n">superhero</span><span class="p">[</span><span class="nv">keyPath</span><span class="p">:</span> <span class="p">\</span><span class="o">.</span><span class="n">alias</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Spider-Pig"</span> <span class="c1">// Changes 'alias' property to 'Spider-Pig'</span>
 
