@@ -1,11 +1,12 @@
 ---
 layout: post
 title:  "MARoundButton"
-date:   2016-09-06 11:50:00
+date:   2016-09-06
 categories: open source, swift
 comments: True
 author: Tyler Miller
 permalink: maroundbutton
+archived: true
 ---
 
 **Updated**

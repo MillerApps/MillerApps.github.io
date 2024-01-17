@@ -1,11 +1,12 @@
 ---
 layout: post
 title:  "Finding Work"
-date:   2016-09-29 1:25:45
+date:   2016-09-29
 categories: work, life, software 
 comments: True
 author: Tyler Miller
 permalink: finding-work
+archived: true
 ---
 
 

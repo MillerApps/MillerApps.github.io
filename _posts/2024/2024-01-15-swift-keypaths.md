@@ -6,6 +6,7 @@ categories: neat, things new to me, software, swift, keypath
 comments: True
 author: Tyler Miller
 permalink: swift-keypaths
+archived: false
 ---
 
 So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is. 

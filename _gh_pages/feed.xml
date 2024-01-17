@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Jan 2024 20:25:50 -0500</pubDate>
-    <lastBuildDate>Mon, 15 Jan 2024 20:25:50 -0500</lastBuildDate>
+    <pubDate>Wed, 17 Jan 2024 15:31:13 -0500</pubDate>
+    <lastBuildDate>Wed, 17 Jan 2024 15:31:13 -0500</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
@@ -144,7 +144,7 @@
 &lt;p&gt;This post hasn’t really provided any useful information on how to overcome this obstacle, rather it was more of a way to express my feelings and share my experience. I hope you enjoyed it anyways!&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 28 Sep 2016 21:25:45 -0400</pubDate>
+        <pubDate>Thu, 29 Sep 2016 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/finding-work</link>
         <guid isPermaLink="true">http://localhost:4000/finding-work</guid>
         
@@ -228,7 +228,7 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
 &lt;a href=&quot;http://cocoapods.org/pods/MARoundButton&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://img.shields.io/cocoapods/p/MARoundButton.svg?style=flat&quot; alt=&quot;Platform&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 06 Sep 2016 07:50:00 -0400</pubDate>
+        <pubDate>Tue, 06 Sep 2016 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/maroundbutton</link>
         <guid isPermaLink="true">http://localhost:4000/maroundbutton</guid>
         
@@ -283,7 +283,7 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
         <description>&lt;p&gt;I just ordered some custom stickers and would like to offer the opportunity for anyone to purchase one. If you are interested in purchasing one you can do so &lt;a href=&quot;https://www.stickermule.com/marketplace/5743-miller-apps&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 02 Jun 2015 05:14:55 -0400</pubDate>
+        <pubDate>Tue, 02 Jun 2015 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/stickers</link>
         <guid isPermaLink="true">http://localhost:4000/stickers</guid>
         
@@ -296,7 +296,7 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
 
 &lt;p&gt;Now for a little about the app, it is a game set in space with a simple goal to dodge the asteroids for as long as possible. Along the way spacemen will spawn on occasion that will provide the player you to gain an extra life (up to 3) and 5 extra points. If you would like to check Dodging Asteroids it is available on the &lt;a href=&quot;https://itunes.apple.com/us/app/dodging-asteriods/id969815744?mt=8&quot; target=&quot;_blank&quot;&gt;App Store&lt;/a&gt; today!&lt;/p&gt;
 </description>
-        <pubDate>Mon, 11 May 2015 07:56:55 -0400</pubDate>
+        <pubDate>Mon, 11 May 2015 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/dodging-asteroids</link>
         <guid isPermaLink="true">http://localhost:4000/dodging-asteroids</guid>
         
