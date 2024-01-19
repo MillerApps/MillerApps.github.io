@@ -594,9 +594,6 @@ blockquote > :last-child {
   color: #099;
 }
 
-/*
- * Site header
- */
 .site-header {
   border-top: 5px solid #FD5000;
   border-bottom: 3px solid #FD5000;
@@ -604,21 +601,56 @@ blockquote > :last-child {
   background-color: #FF8B43;
   position: relative;
 }
-
-.navbar-brand img {
+.site-header .wrapper nav .menu #menu--toggle {
+  position: absolute;
+  left: -9999px;
+}
+.site-header .wrapper nav .menu ul.menu__body {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -56px;
+  left: 0;
+  width: 100%;
+}
+.site-header .wrapper nav .menu ul.menu__body li.menu_body-element a.menu__body-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  background-color: #e0e0e0;
+  color: #FF8B43;
+  text-decoration: none;
+  border-bottom: 3.5px solid #FF8B43;
+  border-right: 3px solid #FD5000;
+  border-left: 2px solid gray;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  margin-bottom: 10px;
+}
+.site-header .wrapper nav .menu ul.menu__body li.menu_body-element a.menu__body-element:hover {
+  background-color: #cccccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.site-header .wrapper nav .menu ul.menu__body li.menu_body-element:not(:last-child) {
+  margin-right: -2.652px;
+}
+.site-header .wrapper .navbar-brand img {
   height: 5rem;
 }
-.navbar-brand img:hover {
+.site-header .wrapper .navbar-brand img:hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 @media (max-width: 576px) {
-  .navbar-brand img {
+  .site-header .wrapper .navbar-brand img {
     height: 4rem;
   }
 }
-
-.site-header img {
+.site-header .wrapper img {
   float: left;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -626,180 +658,6 @@ blockquote > :last-child {
   height: 230px;
 }
 
-/***************************
- *	Variables
- **************************/
-/***************************
- *	Application Main Styles
- **************************/
-#menu--toggle[type=checkbox]:checked,
-#menu--toggle[type=checkbox]:not(:checked) {
-  display: none;
-}
-
-.menu--toggle__burger,
-.menu--toggle__burger:after,
-.menu--toggle__burger:before,
-.menu--toggle__trigger {
-  position: absolute;
-  top: 1.6em;
-  left: 1.6em;
-  width: 2em;
-  height: 5px;
-  background-color: #282828;
-  border-radius: 2px;
-  cursor: pointer;
-  z-index: 100;
-  -webkit-transition: 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition: 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.menu--toggle__trigger {
-  height: 2em;
-  background: none;
-}
-
-.menu--toggle__burger:before {
-  content: "";
-  top: 10px;
-  left: 0;
-}
-.menu--toggle__burger:after {
-  content: "";
-  top: 20px;
-  left: 0;
-}
-
-.menu__body {
-  position: absolute;
-  width: 7em;
-  height: 7em;
-  left: 0.01em;
-  margin: 0;
-  padding: 0;
-  background-color: #fcfcfc;
-  border-bottom-right-radius: 100%;
-  -webkit-box-shadow: 3px 3px 7px rgba(40, 40, 40, 0.2);
-  box-shadow: 3px 3px 7px rgba(40, 40, 40, 0.2);
-  z-index: 10;
-  -webkit-animation: checkboxUncheckedAnimation 0.35s both;
-  animation: checkboxUncheckedAnimation 0.35s both;
-}
-
-.menu__body-element,
-.menu__body-link {
-  display: none;
-  margin: 4.4em 0 -3.3em -0.1em;
-  font-weight: normal;
-  color: #282828;
-  text-decoration: none;
-  text-transform: none;
-  text-align: center;
-  list-style: none;
-  outline: 0;
-}
-
-.menu__body-element {
-  text-indent: 2em;
-}
-
-.menu__body-link:hover {
-  display: block;
-  width: 0;
-  color: #282828;
-  background-color: #e2e2e2;
-  -webkit-animation: changeWidthOfElementAnimation 0.35s both;
-  animation: changeWidthOfElementAnimation 0.35s both;
-}
-
-#menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger {
-  top: 35px;
-  -webkit-transform: rotate(405deg);
-  transform: rotate(405deg);
-  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-#menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger:before {
-  top: 0;
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-#menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger:after {
-  top: 0;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-#menu--toggle:checked + .menu--toggle__trigger + .menu--toggle__burger + .menu__body {
-  -webkit-animation: checkboxCheckedAnimation 1s cubic-bezier(0.25, 0.1, 0.25, 1) both;
-  animation: checkboxCheckedAnimation 1s cubic-bezier(0.25, 0.1, 0.25, 1) both;
-}
-#menu--toggle:checked + .menu--toggle__trigger ~ .menu__body .menu__body-element, #menu--toggle:checked + .menu--toggle__trigger ~ .menu__body .menu__body-link {
-  display: block;
-}
-
-/**
- *	Animations
- */
-@-webkit-keyframes checkboxCheckedAnimation {
-  100%, 50% {
-    width: 100vw;
-    height: 100vh;
-  }
-  100% {
-    border-radius: 0;
-    width: 100vw;
-    height: 100vh;
-  }
-}
-@keyframes checkboxCheckedAnimation {
-  100%, 50% {
-    width: 100vw;
-    height: 100vh;
-  }
-  100% {
-    border-radius: 0;
-    width: 100vw;
-    height: 100vh;
-  }
-}
-@-webkit-keyframes checkboxUncheckedAnimation {
-  0% {
-    width: 100vw;
-    height: 100vh;
-  }
-}
-@keyframes checkboxUncheckedAnimation {
-  0% {
-    width: 100vw;
-    height: 100vh;
-  }
-}
-@-webkit-keyframes changeWidthOfElementAnimation {
-  50% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@keyframes changeWidthOfElementAnimation {
-  50% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
 .card {
   margin: 10px;
 }

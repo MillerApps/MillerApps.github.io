@@ -1,236 +1,85 @@
-/*
- * Site header
- */
+$font-family: 'Open Sans', sans-serif;
+$font-size: 1em;
+$color-text: #FF8B43;
+$color-menu: #f0f0f0; // Light color for a paper-like appearance
+$tab-color: #e0e0e0; // Color for the tab background
+$hover-background: #cccccc; // Lighter color for hover
+$transition-duration: 0.3s;
+$header-height: 56px; // Height of the header
+
 .site-header {
   border-top: 5px solid #FD5000;
   border-bottom: 3px solid #FD5000;
-  min-height: 56px;
+  min-height: $header-height;
   background-color: #FF8B43;
-  // Positioning context for the mobile navigation icon
   position: relative;
-}
 
-.navbar-brand img {
-  height: 5rem;
+  .wrapper {
+    nav {
+      .menu {
+        #menu--toggle {
+          position: absolute;
+          left: -9999px;
+        }
 
-  &:hover {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-  @media (max-width: 576px) {
-    height: 4rem;
-  }
-}
+        ul.menu__body {
+          list-style-type: none;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          position: absolute;
+          bottom: -$header-height;
+          left: 0;
+          width: 100%;
 
-.site-header img {
-  float: left;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  width: 300px;
-  height: 230px;
-}
-// Orignial work by Victor Belozyorov on CodePen https://codepen.io/WispProxy/pen/GqzoYg.
-/***************************
- *	Variables
- **************************/
-;
-$font-family: 'Open Sans', sans-serif;
-$font-size: 1em;
-$color-body: #e2e2e2;
-$color-text: #282828;
-$color-menu: #fcfcfc;
-$variable-menu-animation-time: 1s;
-$variable-burger-animation-time: 0.35s;
-$variable-menu-animation-function: cubic-bezier(.25, .1, .25, 1);
-$variable-burger-animation-function: cubic-bezier(.68, -.55, .265, 1.55);
-/***************************
- *	Application Main Styles
- **************************/
-#menu--toggle[type="checkbox"]:checked,
-#menu--toggle[type="checkbox"]:not(:checked) {
-  display: none;
-}
+          li.menu_body-element {
+            a.menu__body-element {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 10px 15px;
+              background-color: $tab-color;
+              color: $color-text;
+              text-decoration: none;
+              border-bottom: 3.5px solid #FF8B43;
+              border-right: 3px solid #FD5000;
+              border-left: 2px solid gray;
+              border-radius: 0 0 10px 10px; // Rounded bottom corners for tab effect
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+              transition: all $transition-duration;
+              margin-bottom: 10px; // Slight overlap to mimic physical tabs
 
-.menu--toggle__burger,
-.menu--toggle__burger:after,
-.menu--toggle__burger:before,
-.menu--toggle__trigger {
-  position: absolute;
-  top: 1.6em;
-  left: 1.6em;
-  width: 2em;
-  height: 5px;
-  background-color: $color-text;
-  border-radius: 2px;
-  cursor: pointer;
-  z-index: 100;
-  -webkit-transition: $variable-burger-animation-time $variable-menu-animation-function;
-  transition: $variable-burger-animation-time $variable-menu-animation-function;
-}
+              &:hover {
+                background-color: $hover-background;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+              }
+            }
 
-.menu--toggle__trigger {
-  height: 2em;
-  background: none;
-}
-
-.menu--toggle__burger {
-  &:before {
-    content: "";
-    top: 10px;
-    left: 0;
-  }
-
-  &:after {
-    content: "";
-    top: 20px;
-    left: 0;
-  }
-}
-
-.menu__body {
-  position: absolute;
-  width: 7em;
-  height: 7em;
-  left: 0.010em;
-  margin: 0;
-  padding: 0;
-  background-color: $color-menu;
-  border-bottom-right-radius: 100%;
-  -webkit-box-shadow: 3px 3px 7px rgba($color-text, .2);
-  box-shadow: 3px 3px 7px rgba($color-text, .2);
-  z-index: 10;
-  -webkit-animation: checkboxUncheckedAnimation $variable-burger-animation-time both;
-  animation: checkboxUncheckedAnimation $variable-burger-animation-time both;
-}
-
-.menu__body-element,
-.menu__body-link {
-  display: none;
-  margin: 4.4em 0 -3.3em -.1em;
-  font-weight: normal;
-  color: $color-text;
-  text-decoration: none;
-  text-transform: none;
-  text-align: center;
-  list-style: none;
-  outline: 0;
-}
-
-.menu__body-element {
-  text-indent: 2em;
-}
-
-.menu__body-link:hover {
-  display: block;
-  width: 0;
-  color: $color-text;
-  background-color: $color-body;
-  -webkit-animation: changeWidthOfElementAnimation $variable-burger-animation-time both;
-  animation: changeWidthOfElementAnimation $variable-burger-animation-time both;
-}
-
-#menu--toggle:checked + .menu--toggle__trigger {
-  & + .menu--toggle__burger {
-    top: 35px;
-    -webkit-transform: rotate(405deg);
-    transform: rotate(405deg);
-    -webkit-transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
-    transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
-    transition: transform $variable-burger-animation-time $variable-burger-animation-function;
-    transition: transform $variable-burger-animation-time $variable-burger-animation-function, -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
-
-    &:before {
-      top: 0;
-      -webkit-transform: rotate(-90deg);
-      transform: rotate(-90deg);
-      -webkit-transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
-      transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
-      transition: transform $variable-burger-animation-time $variable-burger-animation-function;
-      transition: transform $variable-burger-animation-time $variable-burger-animation-function, -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
+            &:not(:last-child) {
+              margin-right: -2.652px; // Adjust spacing between tabs
+            }
+          }
+        }
+      }
     }
 
-    &:after {
-      top: 0;
-      -webkit-transform: rotate(90deg);
-      transform: rotate(90deg);
-      -webkit-transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
-      transition: -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
-      transition: transform $variable-burger-animation-time $variable-burger-animation-function;
-      transition: transform $variable-burger-animation-time $variable-burger-animation-function, -webkit-transform $variable-burger-animation-time $variable-burger-animation-function;
+    .navbar-brand img {
+      height: 5rem;
+      &:hover {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+      }
+      @media (max-width: 576px) {
+        height: 4rem;
+      }
     }
-  }
 
-  & + .menu--toggle__burger + .menu__body {
-    -webkit-animation: checkboxCheckedAnimation $variable-menu-animation-time $variable-menu-animation-function both;
-    animation: checkboxCheckedAnimation $variable-menu-animation-time $variable-menu-animation-function both;
-  }
-
-  & ~ .menu__body .menu__body-element,
-  & ~ .menu__body .menu__body-link {
-    display: block;
-  }
-}
-
-/**
- *	Animations
- */
-
-@-webkit-keyframes checkboxCheckedAnimation {
-  100%,
-  50% {
-    width: 100vw;
-    height: 100vh;
-  }
-
-  100% {
-    border-radius: 0;
-    // not sure why this is needed for MS Edge
-    width: 100vw;
-    height: 100vh;
-  }
-}
-
-@keyframes checkboxCheckedAnimation {
-  100%,
-  50% {
-    width: 100vw;
-    height: 100vh;
-  }
-
-  100% {
-    border-radius: 0;
-    // not sure why this is needed for MS Edge
-    width: 100vw;
-    height: 100vh;
-  }
-}
-@-webkit-keyframes checkboxUncheckedAnimation {
-  0% {
-    width: 100vw;
-    height: 100vh;
-  }
-}
-@keyframes checkboxUncheckedAnimation {
-  0% {
-    width: 100vw;
-    height: 100vh;
-  }
-}
-@-webkit-keyframes changeWidthOfElementAnimation {
-  50% {
-    width: 0;
-  }
-
-  100% {
-    width: 100%;
-  }
-}
-@keyframes changeWidthOfElementAnimation {
-  50% {
-    width: 0;
-  }
-
-  100% {
-    width: 100%;
+    img {
+      float: left;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      width: 300px;
+      height: 230px;
+    }
   }
 }
