@@ -620,19 +620,21 @@ blockquote > :last-child {
   align-items: center;
   justify-content: center;
   padding: 10px 15px;
-  background-color: #e0e0e0;
-  color: #FF8B43;
-  text-decoration: none;
-  border-bottom: 3.5px solid #FF8B43;
+  background: linear-gradient(to bottom, #FF8B43, #FD5000);
+  color: #fff;
+  text-decoration: solid;
+  font-weight: bold;
+  border-bottom: 3px solid gray;
   border-right: 3px solid #FD5000;
-  border-left: 2px solid gray;
+  border-left: 2px solid #FF8B43;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
   margin-bottom: 10px;
 }
 .site-header .wrapper nav .menu ul.menu__body li.menu_body-element a.menu__body-element:hover {
-  background-color: #cccccc;
+  background-color: #6f503a;
+  background: linear-gradient(to bottom, #FD5000, #FF8B43);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 .site-header .wrapper nav .menu ul.menu__body li.menu_body-element:not(:last-child) {

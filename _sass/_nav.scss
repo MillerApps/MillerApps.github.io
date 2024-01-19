@@ -1,17 +1,20 @@
 $font-family: 'Open Sans', sans-serif;
 $font-size: 1em;
-$color-text: #FF8B43;
-$color-menu: #f0f0f0; // Light color for a paper-like appearance
-$tab-color: #e0e0e0; // Color for the tab background
-$hover-background: #cccccc; // Lighter color for hover
+$header-color: #FF8B43;
+$header-scoendary-color: #FD5000;
+$color-text: #fff;
+$tab-gradient: linear-gradient(to bottom, $header-color, $header-scoendary-color);
+$tab-hover: linear-gradient(to bottom, $header-scoendary-color, $header-color);
+$tab-color: $header-scoendary-color; // Color for the tab background
+$hover-background: #6f503a; // Lighter color for hover
 $transition-duration: 0.3s;
 $header-height: 56px; // Height of the header
 
 .site-header {
-  border-top: 5px solid #FD5000;
-  border-bottom: 3px solid #FD5000;
+  border-top: 5px solid $header-scoendary-color;
+  border-bottom: 3px solid $header-scoendary-color;
   min-height: $header-height;
-  background-color: #FF8B43;
+  background-color: $header-color;
   position: relative;
 
   .wrapper {
@@ -38,12 +41,13 @@ $header-height: 56px; // Height of the header
               align-items: center;
               justify-content: center;
               padding: 10px 15px;
-              background-color: $tab-color;
+              background: $tab-gradient;
               color: $color-text;
-              text-decoration: none;
-              border-bottom: 3.5px solid #FF8B43;
-              border-right: 3px solid #FD5000;
-              border-left: 2px solid gray;
+              text-decoration: solid;
+              font-weight: bold;
+              border-bottom: 3px solid gray;
+              border-right: 3px solid $header-scoendary-color;
+              border-left: 2px solid $header-color;
               border-radius: 0 0 10px 10px; // Rounded bottom corners for tab effect
               box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
               transition: all $transition-duration;
@@ -51,6 +55,7 @@ $header-height: 56px; // Height of the header
 
               &:hover {
                 background-color: $hover-background;
+                background: $tab-hover;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
               }
             }
