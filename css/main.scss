@@ -1,9 +1,12 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
+// This is the main Sass file for the MillerApps website.
+// It contains variables, mixins, and imports for the site's styles.
+// The file also includes CSS rules for centering elements and displaying images.
+
 @charset "utf-8";
-
-
 
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
@@ -28,8 +31,6 @@ $content-width:    1000px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
-
 // Using media queries with like this:
 // @include media-query($on-palm) {
 //     .wrapper {
@@ -43,8 +44,6 @@ $on-laptop:        800px;
     }
 }
 
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
@@ -54,35 +53,30 @@ $on-laptop:        800px;
         "work"
 ;
 
-
-
-
+// CSS rules for centering an unordered list
 #center ul {
 	margin-left: auto;
   margin-right: auto;
 	padding: 0;
 	list-style: none;
-
 }
 
+// CSS rules for floating list items
 .apps li{
 	float: left;
-
-
 }
 
+// CSS rules for an image holder
 .image-holder img {
 	height: 300px;
 	width: 300px;
 	float: right;
 	display: block;
 	padding: 10px;
-
-
 }
-// For centering an image
-.center-image
-{
+
+// CSS rules for centering an image
+.center-image {
     margin: 0 auto;
     display: block;
 }

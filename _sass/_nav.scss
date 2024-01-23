@@ -1,7 +1,16 @@
-$font-family: 'Open Sans', sans-serif;
+/**
+ * This file contains the styling for the navigation bar.
+ * It defines variables for font family, font size, header colors, tab colors, hover effects, and transition duration.
+ * The .site-header class represents the header container and sets its border, background color, and position.
+ * The .wrapper class contains the navigation menu and logo.
+ * The navigation menu is styled with a list of menu items, each with a tab-like appearance.
+ * The .navbar-brand class styles the logo image.
+ * The img class styles other images within the .wrapper class.
+ */
+$font-family: "Open Sans", sans-serif;
 $font-size: 1em;
-$header-color: #FF8B43;
-$header-scoendary-color: #FD5000;
+$header-color: #ff8b43;
+$header-scoendary-color: #fd5000;
 $color-text: #fff;
 $tab-gradient: linear-gradient(to bottom, $header-color, $header-scoendary-color);
 $tab-hover: linear-gradient(to bottom, $header-scoendary-color, $header-color);
