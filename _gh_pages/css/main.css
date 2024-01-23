@@ -23,7 +23,7 @@ body {
   line-height: 1.5;
   font-weight: 300;
   color: #111;
-  background-color: #fdfdfd;
+  background-color: #fff8ec;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -81,11 +81,11 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #fab634;
+  color: #ffdea5;
   text-decoration: none;
 }
 a:visited {
-  color: #dc9205;
+  color: #ffc259;
 }
 a:hover {
   color: #111;
@@ -169,7 +169,7 @@ pre > code {
  * Site footer styles
  */
 .site-footer {
-  border-top: 5px solid #FF8B43;
+  border-top: 5px solid #ffa032;
   padding: 30px 0;
 }
 
@@ -213,7 +213,7 @@ pre > code {
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  border: 5px solid #FD5000;
+  border: 5px solid #ff830a;
   display: block;
   margin: 0 auto 45px;
 }
@@ -483,6 +483,15 @@ blockquote > :last-child {
 }
 
 /**
+ * Styles for unordered list(archive list)
+ */
+.archive-list {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/**
  * Syntax highlighting styles
  *
  * This file contains styles for syntax highlighting. It defines various classes
@@ -698,10 +707,10 @@ blockquote > :last-child {
  * The img class styles other images within the .wrapper class.
  */
 .site-header {
-  border-top: 5px solid #fd5000;
-  border-bottom: 3px solid #fd5000;
+  border-top: 5px solid #cc4c02;
+  border-bottom: 3px solid #cc4c02;
   min-height: 56px;
-  background-color: #ff8b43;
+  background-color: #ff830a;
   position: relative;
 }
 .site-header .wrapper nav .menu #menu--toggle {
@@ -723,21 +732,21 @@ blockquote > :last-child {
   align-items: center;
   justify-content: center;
   padding: 10px 15px;
-  background: linear-gradient(to bottom, #ff8b43, #fd5000);
+  background: linear-gradient(to bottom, #ff830a, #cc4c02);
   color: #fff;
   text-decoration: solid;
   font-weight: bold;
   border-bottom: 3px solid gray;
-  border-right: 3px solid #fd5000;
-  border-left: 2px solid #ff8b43;
+  border-right: 3px solid #cc4c02;
+  border-left: 2px solid #ff830a;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
   margin-bottom: 10px;
 }
 .site-header .wrapper nav .menu ul.menu__body li.menu_body-element a.menu__body-element:hover {
-  background-color: #6f503a;
-  background: linear-gradient(to bottom, #fd5000, #ff8b43);
+  background-color: #ff6a00;
+  background: linear-gradient(to bottom, #cc4c02, #ff830a);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 .site-header .wrapper nav .menu ul.menu__body li.menu_body-element:not(:last-child) {

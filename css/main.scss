@@ -7,6 +7,24 @@
 // The file also includes CSS rules for centering elements and displaying images.
 
 @charset "utf-8";
+//Colors 
+$blaze-orange-50: #fff8ec;
+$blaze-orange-100: #fff0d3;
+$blaze-orange-200: #ffdea5;
+$blaze-orange-300: #ffc56d;
+$blaze-orange-400: #ffa032;
+$blaze-orange-500: #ff830a;
+$blaze-orange-600: #ff6a00;
+$blaze-orange-700: #cc4c02;
+$blaze-orange-800: #a13b0b;
+$text-color:       #111;
+$background-color: $blaze-orange-50;
+$brand-color:      $blaze-orange-200;
+$read-time:        #fb748b;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
 
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
@@ -16,15 +34,6 @@ $medium-font-size: $base-font-size * 1.111;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #fab634;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
 // Width of the content area
 $content-width:    1000px;
 
@@ -56,7 +65,7 @@ $on-laptop:        800px;
 // CSS rules for centering an unordered list
 #center ul {
 	margin-left: auto;
-  margin-right: auto;
+    margin-right: auto;
 	padding: 0;
 	list-style: none;
 }

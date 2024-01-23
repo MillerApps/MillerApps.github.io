@@ -9,13 +9,13 @@
  */
 $font-family: "Open Sans", sans-serif;
 $font-size: 1em;
-$header-color: #ff8b43;
-$header-scoendary-color: #fd5000;
+$header-color: $blaze-orange-500;
+$header-scoendary-color: $blaze-orange-700;
 $color-text: #fff;
 $tab-gradient: linear-gradient(to bottom, $header-color, $header-scoendary-color);
 $tab-hover: linear-gradient(to bottom, $header-scoendary-color, $header-color);
 $tab-color: $header-scoendary-color; // Color for the tab background
-$hover-background: #6f503a; // Lighter color for hover
+$hover-background: $blaze-orange-600; // Lighter color for hover
 $transition-duration: 0.3s;
 $header-height: 56px; // Height of the header
 

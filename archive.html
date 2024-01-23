@@ -11,7 +11,7 @@ navigation_weight: 3
 	The file uses Liquid templating language to loop through the posts and display them in a list.
 	Each post is displayed with its date and title, and linked to its corresponding URL.
 -->
-<ul>
+<ul class="archive-list">
 	{% assign posts = site.posts | where: "archived", true %}
 	{% for post in posts %}
 	  {% unless post.next %}

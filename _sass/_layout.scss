@@ -2,7 +2,7 @@
  * Site footer styles
  */
 .site-footer {
-    border-top: 5px solid #FF8B43;
+    border-top: 5px solid $blaze-orange-400;
     padding: $spacing-unit 0;
 }
 
@@ -46,7 +46,7 @@
     width: 150px;
     height: 150px;
     border-radius: 100%;
-    border: 5px solid #FD5000;
+    border: 5px solid $blaze-orange-500;
     display: block;
     margin: 0 auto 45px;
 }
@@ -165,7 +165,7 @@
  */
 .reading-time {
     font-size: $medium-font-size;
-    color: #fb748b;
+    color: $read-time;
 }
 
 /**
@@ -317,4 +317,14 @@ blockquote {
     font-weight: bold;
     padding: 3px 8px;
     border-radius: 3px;
+}
+
+/**
+ * Styles for unordered list(archive list)
+ */
+
+.archive-list{
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
 }
