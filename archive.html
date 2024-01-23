@@ -1,10 +1,3 @@
-
-<!--
-	This HTML file is used for displaying an archive of posts on a website.
-	It includes a layout, title, permalink, and navigation weight.
-	The file uses Liquid templating language to loop through the posts and display them in a list.
-	Each post is displayed with its date and title, and linked to its corresponding URL.
--->
 ---
 layout: page
 title: Archive
@@ -12,6 +5,12 @@ permalink: /archive/
 navigation_weight: 3
 ---
 
+<!--
+	This HTML file is used for displaying an archive of posts on a website.
+	It includes a layout, title, permalink, and navigation weight.
+	The file uses Liquid templating language to loop through the posts and display them in a list.
+	Each post is displayed with its date and title, and linked to its corresponding URL.
+-->
 <ul>
 	{% assign posts = site.posts | where: "archived", true %}
 	{% for post in posts %}

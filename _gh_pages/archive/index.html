@@ -1,6 +1,16 @@
+<!-- 
+  This is the default layout file for the MillerApps.github.io website.
+  It includes various HTML components such as the head, header, page content, footer, and scripts.
+  The content placeholder is used to dynamically insert the page content.
+  The comments component is also included for displaying comments.
+-->
 <!DOCTYPE html>
 <html>
 
+
+<!--
+This file represents the head section of an HTML document. It contains meta tags, title, description, and links to CSS stylesheets and RSS feed. The values for these elements are dynamically generated using Liquid templating language.
+-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +18,7 @@
   <meta name="google-site-verification" content="14T0GEUZ0SniruVDG6_qViMRDA3FOTDh3T74bLoWKaY" />
 
   <title>Archive</title>
-  <meta name="description" content="A site to display some of my work and share some thoughts!
+  <meta name="description" content="&copy;2024, Tyler Miller
 ">
 
   <link rel="stylesheet" href=" /assets/css/bootstrap.min.css " />
@@ -22,7 +32,16 @@
 
 <body class="site">
 
-  <header class="site-header">
+  
+<!-- 
+  This file represents the header section of a website. It contains the site logo and a navigation menu.
+  The navigation menu is generated dynamically based on the pages defined in the site's configuration.
+  The menu is implemented using a toggle button and a list of menu items.
+-->
+<header class="site-header">
+  ...
+</header>
+<header class="site-header">
 
   <div class="wrapper">
 
@@ -92,7 +111,13 @@
 
   <div class="page-content">
     <div class="wrapper">
-      <div class="post">
+      <!--
+This HTML file represents the layout for a page in the MillerApps.github.io website.
+It includes a conditional statement to check if the page title is not equal to "Shop".
+If the condition is true, it displays a header with the page title.
+The content of the page is displayed within an article element.
+-->
+<div class="post">
 
   
   <header class="post-header">
@@ -101,7 +126,13 @@
   
 
   <article class="post-content">
-    <ul>
+    <!--
+	This HTML file is used for displaying an archive of posts on a website.
+	It includes a layout, title, permalink, and navigation weight.
+	The file uses Liquid templating language to loop through the posts and display them in a list.
+	Each post is displayed with its date and title, and linked to its corresponding URL.
+-->
+<ul>
 	
 	
 	  
@@ -167,11 +198,22 @@
 
 </div>
  
+<!-- This code block is responsible for displaying Disqus comments on a webpage. It checks if the "page.comments" variable is true, and if so, it inserts the Disqus comment section using the provided JavaScript code. The JavaScript code dynamically loads the Disqus embed script and appends it to the HTML document. If JavaScript is disabled, a fallback message is displayed. -->
+
 
     </div>
   </div>
 
-  <footer class="site-footer">
+  
+<!-- 
+  This is the HTML code for the footer section of a website.
+  It includes the site title, an image, contact information, and social media links.
+  The footer also displays the current year and a Ko-fi support button.
+-->
+<footer class="site-footer">
+  ...
+</footer>
+<footer class="site-footer">
 
   <div class="wrapper">
 
@@ -234,7 +276,8 @@
       </div>
 
       <div class="footer-col  footer-col-3">
-        <p class="text">©2024</p>
+        <p class="text">&copy;2024, Tyler Miller
+</p>
         <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#fab634', 'G2G2TGT2Q');kofiwidget2.draw();</script> 
       </div>
     </div>
@@ -248,8 +291,6 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
-
-
 
 
 </body>

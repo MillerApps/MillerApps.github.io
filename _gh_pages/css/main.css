@@ -1,4 +1,10 @@
 /**
+ * This file contains the base styles for the website. It includes a reset for basic elements,
+ * defines basic styling for the body, sets margins to maintain vertical rhythm, styles images and figures,
+ * formats lists, headings, links, and code blocks, and provides a wrapper and clearfix utility class.
+ * It also includes a media query for dark mode styles.
+ */
+/**
  * Reset some basic elements
  */
 body, h1, h2, h3, h4, h5, h6,
@@ -160,13 +166,16 @@ pre > code {
   }
 }
 /**
- * Site footer
+ * Site footer styles
  */
 .site-footer {
   border-top: 5px solid #FF8B43;
   padding: 30px 0;
 }
 
+/**
+ * Footer heading styles
+ */
 .footer-heading {
   font-size: 18px;
   margin-bottom: 15px;
@@ -174,6 +183,9 @@ pre > code {
   padding-bottom: 20px;
 }
 
+/**
+ * Site container styles
+ */
 .site {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,12 +197,18 @@ pre > code {
   flex-direction: column;
 }
 
+/**
+ * Page content styles
+ */
 .page-content {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
+/**
+ * Image styles for personal photo
+ */
 .me-img {
   width: 150px;
   height: 150px;
@@ -200,6 +218,9 @@ pre > code {
   margin: 0 auto 45px;
 }
 
+/**
+ * List styles for contact information and social media links
+ */
 .contact-list,
 .social-media-list {
   list-style: none;
@@ -207,6 +228,9 @@ pre > code {
   text-align: left;
 }
 
+/**
+ * Footer column wrapper styles
+ */
 .footer-col-wrapper {
   font-size: 15px;
   text-align: center;
@@ -214,24 +238,39 @@ pre > code {
   margin-left: -15px;
 }
 
+/**
+ * Footer column styles
+ */
 .footer-col {
   float: left;
   margin-bottom: 15px;
   padding-left: 15px;
 }
 
+/**
+ * Footer column 1 styles
+ */
 .footer-col-1 {
   width: calc(35% - 30px / 2);
 }
 
+/**
+ * Footer column 2 styles
+ */
 .footer-col-2 {
   width: calc(20% - 30px / 2);
 }
 
+/**
+ * Footer column 3 styles
+ */
 .footer-col-3 {
   width: calc(45% - 30px / 2);
 }
 
+/**
+ * Media query styles for laptop screens
+ */
 @media screen and (max-width: 800px) {
   .footer-col-1,
   .footer-col-2 {
@@ -241,6 +280,9 @@ pre > code {
     width: calc(100% - 30px / 2);
   }
 }
+/**
+ * Media query styles for palm-sized screens
+ */
 @media screen and (max-width: 600px) {
   .footer-col {
     float: none;
@@ -248,16 +290,22 @@ pre > code {
   }
 }
 /**
- * Page content
+ * Page content styles
  */
 .page-content {
   padding: 30px 0;
 }
 
+/**
+ * Page heading styles
+ */
 .page-heading {
   font-size: 20px;
 }
 
+/**
+ * List styles for blog post list
+ */
 .post-list {
   margin-left: 0;
   list-style: none;
@@ -266,21 +314,33 @@ pre > code {
   margin-bottom: 30px;
 }
 
+/**
+ * Styles for post meta information
+ */
 .post-meta {
   font-size: 14px;
   color: #828282;
 }
 
+/**
+ * Styles for reading time information
+ */
 .reading-time {
   font-size: 17.776px;
   color: #fb748b;
 }
 
+/**
+ * Styles for post links
+ */
 .post-link {
   display: block;
   font-size: 24px;
 }
 
+/**
+ * Styles for Miller Apps image
+ */
 .miller-apps-image {
   height: 250px;
   width: 250px;
@@ -288,6 +348,9 @@ pre > code {
   display: block;
 }
 
+/**
+ * Styles for work images
+ */
 .image-work {
   width: 150px;
   height: 150px;
@@ -296,7 +359,7 @@ pre > code {
 }
 
 /**
- * Posts
+ * Styles for featured images in blog posts
  */
 .feat-img {
   margin: 0 auto;
@@ -304,10 +367,16 @@ pre > code {
   display: block;
 }
 
+/**
+ * Styles for post header
+ */
 .post-header {
   margin-bottom: 30px;
 }
 
+/**
+ * Styles for post title
+ */
 .post-title {
   font-size: 42px;
   letter-spacing: -1px;
@@ -319,6 +388,9 @@ pre > code {
   }
 }
 
+/**
+ * Styles for post content
+ */
 .post-content {
   margin-bottom: 30px;
 }
@@ -347,6 +419,9 @@ pre > code {
   }
 }
 
+/**
+ * Styles for blockquotes
+ */
 blockquote {
   margin-left: 35px;
   color: #828282;
@@ -361,6 +436,9 @@ blockquote > :last-child {
   margin-bottom: 0;
 }
 
+/**
+ * Styles for blockquote info
+ */
 .blockquote-info {
   padding: 5px;
   background-color: rgba(63, 154, 239, 0.317);
@@ -368,6 +446,9 @@ blockquote > :last-child {
   outline: 1px solid white;
 }
 
+/**
+ * Styles for ordered list
+ */
 .o-list {
   list-style-type: none;
   display: inline-block;
@@ -379,11 +460,17 @@ blockquote > :last-child {
   }
 }
 
+/**
+ * Styles for ordered list items
+ */
 .o-list li {
   counter-increment: step-counter;
   margin-bottom: 10px;
 }
 
+/**
+ * Styles for ordered list item counter
+ */
 .o-list li::before {
   content: counter(step-counter);
   margin-right: 5px;
@@ -395,6 +482,13 @@ blockquote > :last-child {
   border-radius: 3px;
 }
 
+/**
+ * Syntax highlighting styles
+ *
+ * This file contains styles for syntax highlighting. It defines various classes
+ * for different types of syntax elements such as comments, keywords, literals,
+ * and names. Each class has specific color and font styles applied to it.
+ */
 /**
  * Syntax highlighting styles
  */
@@ -594,11 +688,20 @@ blockquote > :last-child {
   color: #099;
 }
 
+/**
+ * This file contains the styling for the navigation bar.
+ * It defines variables for font family, font size, header colors, tab colors, hover effects, and transition duration.
+ * The .site-header class represents the header container and sets its border, background color, and position.
+ * The .wrapper class contains the navigation menu and logo.
+ * The navigation menu is styled with a list of menu items, each with a tab-like appearance.
+ * The .navbar-brand class styles the logo image.
+ * The img class styles other images within the .wrapper class.
+ */
 .site-header {
-  border-top: 5px solid #FD5000;
-  border-bottom: 3px solid #FD5000;
+  border-top: 5px solid #fd5000;
+  border-bottom: 3px solid #fd5000;
   min-height: 56px;
-  background-color: #FF8B43;
+  background-color: #ff8b43;
   position: relative;
 }
 .site-header .wrapper nav .menu #menu--toggle {
@@ -620,13 +723,13 @@ blockquote > :last-child {
   align-items: center;
   justify-content: center;
   padding: 10px 15px;
-  background: linear-gradient(to bottom, #FF8B43, #FD5000);
+  background: linear-gradient(to bottom, #ff8b43, #fd5000);
   color: #fff;
   text-decoration: solid;
   font-weight: bold;
   border-bottom: 3px solid gray;
-  border-right: 3px solid #FD5000;
-  border-left: 2px solid #FF8B43;
+  border-right: 3px solid #fd5000;
+  border-left: 2px solid #ff8b43;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
@@ -634,7 +737,7 @@ blockquote > :last-child {
 }
 .site-header .wrapper nav .menu ul.menu__body li.menu_body-element a.menu__body-element:hover {
   background-color: #6f503a;
-  background: linear-gradient(to bottom, #FD5000, #FF8B43);
+  background: linear-gradient(to bottom, #fd5000, #ff8b43);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 .site-header .wrapper nav .menu ul.menu__body li.menu_body-element:not(:last-child) {
@@ -660,6 +763,9 @@ blockquote > :last-child {
   height: 230px;
 }
 
+/**
+ * This file contains styles for the card component.
+ */
 .card {
   margin: 10px;
 }
