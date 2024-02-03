@@ -42,7 +42,8 @@ $header-height: 56px; // Height of the header
           position: absolute;
           bottom: -$header-height;
           left: 0;
-          width: 100%;
+          width: 100%; // If margin-left not set to auto, the menu will pushed past the viewport, possibly due to being set elsewhere
+          margin-left: auto;
 
           li.menu_body-element {
             a.menu__body-element {
@@ -52,7 +53,7 @@ $header-height: 56px; // Height of the header
               padding: 10px 15px;
               background: $tab-gradient;
               color: $color-text;
-              text-decoration: solid;
+              text-decoration: none;
               font-weight: bold;
               border-bottom: 3px solid gray;
               border-right: 3px solid $header-scoendary-color;

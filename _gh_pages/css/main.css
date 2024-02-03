@@ -579,6 +579,7 @@ blockquote > :last-child {
   bottom: -56px;
   left: 0;
   width: 100%;
+  margin-left: auto;
 }
 .site-header .wrapper nav .menu ul.menu__body li.menu_body-element a.menu__body-element {
   display: flex;
@@ -587,7 +588,7 @@ blockquote > :last-child {
   padding: 10px 15px;
   background: linear-gradient(to bottom, #ff830a, #cc4c02);
   color: #fff;
-  text-decoration: solid;
+  text-decoration: none;
   font-weight: bold;
   border-bottom: 3px solid gray;
   border-right: 3px solid #cc4c02;
