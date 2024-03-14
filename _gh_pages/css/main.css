@@ -120,7 +120,7 @@ pre > code {
  * Wrapper
  */
 .wrapper {
-  max-width: calc(1000px - 30px * 2);
+  max-width: calc(1000px - (30px * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 30px;
@@ -250,21 +250,21 @@ pre > code {
  * Footer column 1 styles
  */
 .footer-col-1 {
-  width: calc(35% - 30px / 2);
+  width: calc(35% - (30px / 2));
 }
 
 /**
  * Footer column 2 styles
  */
 .footer-col-2 {
-  width: calc(20% - 30px / 2);
+  width: calc(20% - (30px / 2));
 }
 
 /**
  * Footer column 3 styles
  */
 .footer-col-3 {
-  width: calc(45% - 30px / 2);
+  width: calc(45% - (30px / 2));
 }
 
 /**
@@ -273,10 +273,10 @@ pre > code {
 @media screen and (max-width: 800px) {
   .footer-col-1,
   .footer-col-2 {
-    width: calc(50% - 30px / 2);
+    width: calc(50% - (30px / 2));
   }
   .footer-col-3 {
-    width: calc(100% - 30px / 2);
+    width: calc(100% - (30px / 2));
   }
 }
 /**
@@ -285,7 +285,7 @@ pre > code {
 @media screen and (max-width: 600px) {
   .footer-col {
     float: none;
-    width: calc(100% - 30px / 2);
+    width: calc(100% - (30px / 2));
   }
 }
 /**
