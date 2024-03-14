@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 02 Feb 2024 22:42:14 -0500</pubDate>
-    <lastBuildDate>Fri, 02 Feb 2024 22:42:14 -0500</lastBuildDate>
+    <pubDate>Thu, 14 Mar 2024 21:39:39 +0000</pubDate>
+    <lastBuildDate>Thu, 14 Mar 2024 21:39:39 +0000</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
     
       <item>
@@ -87,7 +87,7 @@
 
 &lt;p&gt;These are the very basics of KeyPaths in Swift. I believe this should be enough to at least get you familiar with the concept to the point where SwiftUI will make a tad bit more sense when first getting started.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 15 Jan 2024 00:36:45 -0500</pubDate>
+        <pubDate>Mon, 15 Jan 2024 05:36:45 +0000</pubDate>
         <link>http://localhost:4000/swift-keypaths</link>
         <guid isPermaLink="true">http://localhost:4000/swift-keypaths</guid>
         
@@ -118,7 +118,7 @@
 
 &lt;p&gt;Now, I’m turning over a new leaf. Armed with a 14” MacBook Pro equipped with an M3 Pro chip and 36 GB of RAM, I am ready to rekindle my technical skills. My goal is to commit to creating apps, tools, and anything that I find intriguing or practical. It’s going to be a challenging journey, as I feel somewhat out of touch with the coding world. It’s almost as if I’m starting from scratch. Nevertheless, I’m ready for this long haul and excited about these new beginnings. Wish me luck on this fresh endeavor.&lt;/p&gt;
 </description>
-        <pubDate>Sat, 16 Dec 2023 21:11:45 -0500</pubDate>
+        <pubDate>Sun, 17 Dec 2023 02:11:45 +0000</pubDate>
         <link>http://localhost:4000/coming-back</link>
         <guid isPermaLink="true">http://localhost:4000/coming-back</guid>
         
@@ -144,7 +144,7 @@
 &lt;p&gt;This post hasn’t really provided any useful information on how to overcome this obstacle, rather it was more of a way to express my feelings and share my experience. I hope you enjoyed it anyways!&lt;/p&gt;
 
 </description>
-        <pubDate>Thu, 29 Sep 2016 00:00:00 -0400</pubDate>
+        <pubDate>Thu, 29 Sep 2016 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/finding-work</link>
         <guid isPermaLink="true">http://localhost:4000/finding-work</guid>
         
@@ -228,7 +228,7 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
 &lt;a href=&quot;http://cocoapods.org/pods/MARoundButton&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://img.shields.io/cocoapods/p/MARoundButton.svg?style=flat&quot; alt=&quot;Platform&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 06 Sep 2016 00:00:00 -0400</pubDate>
+        <pubDate>Tue, 06 Sep 2016 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/maroundbutton</link>
         <guid isPermaLink="true">http://localhost:4000/maroundbutton</guid>
         
@@ -248,7 +248,7 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
 &lt;/span&gt;
  Once I learned the mechanics the game became a little easier while remaining challenging. Throughout the entire game you will be delighted to a great little melody and wonderful visuals. I urge everyone to give Shotty Bird a try.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 03 Jun 2016 00:00:00 -0400</pubDate>
+        <pubDate>Fri, 03 Jun 2016 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/shotty-bird</link>
         <guid isPermaLink="true">http://localhost:4000/shotty-bird</guid>
         
@@ -267,7 +267,7 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
 
 &lt;p&gt;Jekyll has got me interested in web again and I hope to dive deeper into both.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 05 Jun 2015 00:00:00 -0400</pubDate>
+        <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/jekyll-my-thoughts</link>
         <guid isPermaLink="true">http://localhost:4000/jekyll-my-thoughts</guid>
         
@@ -283,7 +283,7 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
         <description>&lt;p&gt;I just ordered some custom stickers and would like to offer the opportunity for anyone to purchase one. If you are interested in purchasing one you can do so &lt;a href=&quot;https://www.stickermule.com/marketplace/5743-miller-apps&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 02 Jun 2015 00:00:00 -0400</pubDate>
+        <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/stickers</link>
         <guid isPermaLink="true">http://localhost:4000/stickers</guid>
         
@@ -296,7 +296,7 @@ it, simply add the following line to your Podfile:&lt;/p&gt;
 
 &lt;p&gt;Now for a little about the app, it is a game set in space with a simple goal to dodge the asteroids for as long as possible. Along the way spacemen will spawn on occasion that will provide the player you to gain an extra life (up to 3) and 5 extra points. If you would like to check Dodging Asteroids it is available on the &lt;a href=&quot;https://itunes.apple.com/us/app/dodging-asteriods/id969815744?mt=8&quot; target=&quot;_blank&quot;&gt;App Store&lt;/a&gt; today!&lt;/p&gt;
 </description>
-        <pubDate>Mon, 11 May 2015 00:00:00 -0400</pubDate>
+        <pubDate>Mon, 11 May 2015 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/dodging-asteroids</link>
         <guid isPermaLink="true">http://localhost:4000/dodging-asteroids</guid>
         
