@@ -3,3 +3,5 @@ _site
 _mdwriter.cson
 /.DS_Store
 .DS_Store
+.jekyll-cache
+.jekyll-metadata
