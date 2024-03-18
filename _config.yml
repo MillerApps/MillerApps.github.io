@@ -16,8 +16,8 @@ destination: _gh_pages
 twitter_username: MillerApps
 # The GitHub username associated with the website.
 github_username:  MillerApps
-# The Instagram username associated with the website.
-instagram_username: tyler_miller47
+# The Mastodon username associated with the website.
+mastodon_username: MillerApps
 
 # Build settings
 # The markdown engine to use for rendering content.
