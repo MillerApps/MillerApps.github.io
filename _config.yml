@@ -22,5 +22,6 @@ mastodon_username: MillerApps
 # Build settings
 # The markdown engine to use for rendering content.
 markdown: kramdown
+  parse_block_html: true
 # The permalink structure for the generated pages.
 permlinks: /:title
