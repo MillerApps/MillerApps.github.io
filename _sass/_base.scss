@@ -197,6 +197,13 @@ pre {
     }
   }
 }
+/** light mode**/
+details summary {
+  cursor: pointer;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+}
 
 @media (prefers-color-scheme: dark) {
   body {
@@ -208,5 +215,12 @@ pre {
   ul,
   ol {
     color: #ffffff;
+  }
+  details summary {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #1c1c1c; 
+    padding: 10px;
+    border-radius: 5px;
   }
 }
