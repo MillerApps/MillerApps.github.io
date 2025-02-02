@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Rabbit Hole | MillerApps</title>
+    <link>//localhost:1313/post/</link>
+    <description>Recent content in Posts on Rabbit Hole | MillerApps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 20 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secure DNS Setup with pfSense, AdGuard Home, and Tailscale</title>
+      <link>//localhost:1313/dns-fun/</link>
+      <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/dns-fun/</guid>
+      <description>&lt;h2 id=&#34;current-setup-overview&#34;&gt;Current Setup Overview&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt;&lt;br&gt;
+I am not an expert nor do I claim to be!&lt;br&gt;
+I am simply a man who decided to learn more about networking and went down the rabbit hole of DNS and DNS encryption.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This is my personal experience; use it as a starting point for your own explorations.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;My current setup involves the following components and configurations to ensure secure and private DNS resolution:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Client Device to pfSense:&lt;/strong&gt;&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;current-setup-overview&#34;&gt;Current Setup Overview&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt;&lt;br&gt;
+I am not an expert nor do I claim to be!&lt;br&gt;
+I am simply a man who decided to learn more about networking and went down the rabbit hole of DNS and DNS encryption.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This is my personal experience; use it as a starting point for your own explorations.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;My current setup involves the following components and configurations to ensure secure and private DNS resolution:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Client Device to pfSense:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DNS requests from client devices are sent to pfSense in plain text (for unencrypted, unsupported devices). On devices capable of DNS-over-HTTPS (DoH) or DNS-over-TLS (DoT), full encryption is applied from the client onward. Otherwise, DNS requests remain unencrypted at the client level.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;pfSense to AdGuard Home:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pfSense forwards DNS requests to AdGuard Home using SSL/TLS with the designated certificates (to be created later).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;AdGuard Home:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Processes DNS requests, applying filtering rules.&lt;/li&gt;
+&lt;li&gt;Forwards DNS requests to Mullvad’s DNS servers using either DNS-over-HTTPS (DoH) or DNS-over-TLS (DoT).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tailscale:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Routes DNS traffic through pfSense for mobile devices when off the home network.&lt;/li&gt;
+&lt;li&gt;This ensures that DNS queries are encrypted between mobile devices and pfSense, though not necessarily end-to-end.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;dns-request-and-return-route-diagram&#34;&gt;DNS Request and Return Route Diagram&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD
+    A[Client Device] --&amp;gt;|1. Sends DNS (Plain, DoH, or DoT: device dependent) request| B[pfSense]
+    B --&amp;gt;|2. Forwards DNS request with SSL/TLS| C[AdGuard Home]
+    C --&amp;gt;|3. Sends DNS request using DoH/DoT| D[Mullvad DNS Server]
+    D --&amp;gt;|4. Returns DNS response| C
+    C --&amp;gt;|5. Forwards DNS response with SSL/TLS| B
+    B --&amp;gt;|6. Returns DNS response (Plain, DoH, or DoT: device dependent)| A
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;summary-of-security-benefits&#34;&gt;Summary of Security Benefits&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Encryption from pfSense to AdGuard Home:&lt;/strong&gt; DNS queries are encrypted with SSL/TLS.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Encryption from AdGuard Home to Mullvad’s DNS Servers:&lt;/strong&gt; DNS queries are encrypted using DoH or DoT.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy:&lt;/strong&gt; Minimizes logging risks from third-party DNS providers and cell carriers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ad and Tracker Blocking:&lt;/strong&gt; AdGuard Home blocks ads and trackers at the DNS level.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Consistency:&lt;/strong&gt; The same DNS filtering rules apply both at home and on the go (via a reverse proxy or Tailscale).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step-by-step-setup-guide&#34;&gt;Step-by-Step Setup Guide&lt;/h2&gt;
+&lt;h3 id=&#34;step-1-install-and-configure-adguard-home&#34;&gt;Step 1: Install and Configure AdGuard Home&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Download and Install AdGuard Home:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Automated Install (Linux/Unix/MacOS/FreeBSD/OpenBSD):
+&lt;a href=&#34;https://github.com/AdguardTeam/AdGuardHome#automated-install-linuxunixmacosfreebsdopenbsd&#34;&gt;AdGuard Home Automated Install&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Proxmox Helper Script:
+&lt;a href=&#34;https://tteck.github.io/Proxmox/#adguard-home-lxc&#34;&gt;Proxmox Helper Script&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bash -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/adguard.sh&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Access the Web Interface:&lt;/strong&gt;&lt;br&gt;
+In your web browser, navigate to:&lt;br&gt;
+&lt;code&gt;http://&amp;lt;your_server_ip&amp;gt;:3000&lt;/code&gt;&lt;br&gt;
+and complete the setup.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;step-2-configure-adguard-home&#34;&gt;Step 2: Configure AdGuard Home&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Access the AdGuard Home Web Interface:&lt;/strong&gt;&lt;br&gt;
+Navigate to &lt;code&gt;http://&amp;lt;your_server_ip&amp;gt;:3000&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Set Up Upstream DNS Servers:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;strong&gt;Settings&lt;/strong&gt; → &lt;strong&gt;DNS Settings&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Under &lt;strong&gt;Upstream DNS servers&lt;/strong&gt;, add:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;https://dns.mullvad.net/dns-query&lt;/code&gt; (for DoH)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tls://dns.mullvad.net&lt;/code&gt; (for DoT)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Configure Encryption:&lt;/strong&gt;&lt;br&gt;
+More details can be found in the &lt;a href=&#34;https://github.com/AdguardTeam/AdGuardHome/wiki/Encryption&#34;&gt;AdGuard Home Encryption Wiki&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Go to &lt;strong&gt;Settings&lt;/strong&gt; → &lt;strong&gt;Encryption Settings&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Configure SSL/TLS certificates.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set up Let&amp;rsquo;s Encrypt certs using Certbot:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo certbot certonly --manual --preferred-challenges&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;dns --preferred-chain&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ISRG Root X1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Follow the instructions provided by Certbot. Provide your domain (and wildcard if needed) during the process.&lt;br&gt;
+After completion, you&amp;rsquo;ll receive two files:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fullchain.pem&lt;/code&gt; – PEM-encoded SSL certificate.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;privkey.pem&lt;/code&gt; – PEM-encoded private key.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Either paste the contents into the fields or provide the full file paths, then save and apply.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;step-3-configure-pfsense-for-secure-dns-forwarding&#34;&gt;Step 3: Configure pfSense for Secure DNS Forwarding&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Install the Certificate:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In pfSense, navigate to &lt;strong&gt;System&lt;/strong&gt; → &lt;strong&gt;Cert Manager&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Import your SSL/TLS certificate and private key (simply use &lt;code&gt;cat &amp;lt;path&amp;gt;&lt;/code&gt; to copy the full output contents).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Set Up AdGuard as the DNS Server:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;strong&gt;System&lt;/strong&gt; → &lt;strong&gt;General Setup&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Under DNS Settings, add the IPv4 and (if applicable) IPv6 addresses for AdGuard.&lt;/li&gt;
+&lt;li&gt;Save and apply.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Configure the DNS Resolver (Unbound):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Navigate to &lt;strong&gt;Services&lt;/strong&gt; → &lt;strong&gt;DNS Resolver&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Enable the DNS Resolver.&lt;/li&gt;
+&lt;li&gt;Leave ports as default.&lt;/li&gt;
+&lt;li&gt;Enable SSL/TLS Service.&lt;/li&gt;
+&lt;li&gt;Select the certificate installed previously.&lt;/li&gt;
+&lt;li&gt;Choose the interfaces to use (e.g., All if unsure).&lt;/li&gt;
+&lt;li&gt;Under &lt;strong&gt;DNS Query Forwarding&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Enable Forwarding Mode.&lt;/li&gt;
+&lt;li&gt;Use SSL/TLS for outgoing DNS queries to forwarding servers (this forwards DNS queries to AdGuard via DoT).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Save and apply.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;step-4-configure-tailscale&#34;&gt;Step 4: Configure Tailscale&lt;/h3&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Enable SSH Access:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;In pfSense, navigate to &lt;strong&gt;System&lt;/strong&gt; → &lt;strong&gt;Advanced&lt;/strong&gt; → &lt;strong&gt;Admin Access&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Under &lt;strong&gt;Secure Shell&lt;/strong&gt;, check &amp;ldquo;Enable Secure Shell&amp;rdquo;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(Optional) Change the default port from &lt;strong&gt;22&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;From your terminal, connect using:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh -p &amp;lt;port-if-changed&amp;gt; &amp;lt;your-admin-name&amp;gt;@&amp;lt;your-pfsense-ip&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select option &lt;code&gt;8&lt;/code&gt; (Shell) from the pfSense menu.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run the following to install Tailscale:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pkg add -f https://pkg.freebsd.org/FreeBSD:14:amd64/latest/All/tailscale-1.70.0.pkg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(Replace the URL with the latest version if updated; &lt;code&gt;1.70.0&lt;/code&gt; was released on &lt;strong&gt;07/17/24&lt;/strong&gt;.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(Optional) Add firewall rules to restrict SSH access from WAN for increased security.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Install Tailscale on pfSense:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Follow the official Tailscale documentation to install it via pfSense’s package manager.&lt;/li&gt;
+&lt;li&gt;Go to &lt;strong&gt;System&lt;/strong&gt; → &lt;strong&gt;Package Manager&lt;/strong&gt; → &lt;strong&gt;Available Packages&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Note: At times the available version might lag behind; check &lt;a href=&#34;https://forum.netgate.com/topic/174525/how-to-update-to-the-latest-tailscale-version/60&#34;&gt;this forum discussion&lt;/a&gt; for updates.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Configure Tailscale to Use pfSense as DNS:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Navigate to &lt;strong&gt;VPN&lt;/strong&gt; → &lt;strong&gt;Tailscale&lt;/strong&gt; → &lt;strong&gt;Settings&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Under DNS, uncheck &amp;ldquo;Accept DNS&amp;rdquo; (if checked) to prevent Tailscale from overriding your DNS settings.&lt;/li&gt;
+&lt;li&gt;Under Routing, uncheck &amp;ldquo;Accept Subnet Routes&amp;rdquo; if it’s enabled.
+&lt;ul&gt;
+&lt;li&gt;Add the IP of pfSense (for example, &lt;code&gt;192.168.1.1/32&lt;/code&gt;) to Advertised Routes.&lt;/li&gt;
+&lt;li&gt;Optionally, add AdGuard&amp;rsquo;s IP if you wish to access its admin panel remotely.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Save and apply the changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Approve Routes and Configure DNS in Tailscale Admin:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Visit &lt;a href=&#34;https://login.tailscale.com/admin/machines&#34;&gt;Tailscale’s Admin Console&lt;/a&gt;, select your pfSense machine.&lt;/li&gt;
+&lt;li&gt;Under the “Subnets” section, approve the awaiting routes.&lt;/li&gt;
+&lt;li&gt;In the “DNS” tab, enable &amp;ldquo;override local DNS&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Add a custom nameserver pointing to your advertised pfSense IP.&lt;/li&gt;
+&lt;li&gt;Optionally, disable key expiry by selecting the three vertical dots (ellipsis) next to your pfSense machine and opting for &amp;ldquo;Disable key expiry&amp;rdquo;. More details can be found &lt;a href=&#34;https://tailscale.com/kb/1028/key-expiry?q=key&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Install Tailscale on Mobile Devices:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download and install the Tailscale app on your mobile devices.&lt;/li&gt;
+&lt;li&gt;Log in with your Tailscale account and enable the Tailscale DNS settings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;optional-step-5-configure-clients&#34;&gt;Optional Step 5: Configure Clients&lt;/h3&gt;
+&lt;h4 id=&#34;configure-macos--ios-for-dohdot&#34;&gt;Configure macOS &amp;amp; iOS for DoH/DoT&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Using Built-in Support (macOS 11+ and iOS 14+):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Refer to the following resources:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/paulmillr/encrypted-dns&#34;&gt;paulmillr/encrypted-dns on GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mullvad.net/en/blog/profiles-to-configure-our-encrypted-dns-on-apple-devices&#34;&gt;Mullvad&amp;rsquo;s Profiles for Encrypted DNS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.quad9.net/news/blog/ios-mobile-provisioning-profiles&#34;&gt;Quad9 iOS Mobile Provisioning Profiles&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Using AdGuard Profiles:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Under &lt;strong&gt;Setup Guide&lt;/strong&gt; → &lt;strong&gt;DNS Privacy&lt;/strong&gt;, configure a profile using a hostname (e.g., &lt;code&gt;adguard.&amp;lt;your-domain&amp;gt;&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Refer to the &lt;a href=&#34;https://github.com/AdguardTeam/AdGuardHome/wiki/Clients#clientid&#34;&gt;AdGuard Teams documentation on ClientIDs&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Alternative: pfSense Profile Configuration:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a configuration profile pointing to pfSense instead of AdGuard using &lt;a href=&#34;https://developer.apple.com/documentation/devicemanagement/dnssettings&#34;&gt;Apple&amp;rsquo;s DNS profile docs&lt;/a&gt; or an &lt;a href=&#34;https://dns.notjakob.com/index.html&#34;&gt;online tool&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Note: This setup works only on your home network unless paired with Tailscale. Do not reverse proxy pfSense.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Caveats with Profiles:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Profiles without a reverse proxy will only work on your Home Network. With Tailscale, encrypted DNS is still maintained via the VPN tunnel to pfSense.&lt;/li&gt;
+&lt;li&gt;If using an AdGuard profile, the VPN bypasses pfSense, but round-trip encryption remains intact.&lt;/li&gt;
+&lt;li&gt;For a signed profile, use your Apple developer account; more info is available &lt;a href=&#34;https://support.apple.com/guide/apple-configurator-mac/create-and-edit-configuration-profiles-pmd85719196/mac&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;android&#34;&gt;Android&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Android 9+ supports DNS-over-TLS natively. To configure, go to:&lt;br&gt;
+&lt;strong&gt;Settings&lt;/strong&gt; → &lt;strong&gt;Network &amp;amp; internet&lt;/strong&gt; → &lt;strong&gt;Advanced&lt;/strong&gt; → &lt;strong&gt;Private DNS&lt;/strong&gt; and enter your domain name.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;windows&#34;&gt;Windows&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows 10 Build 19628 and later support DNS-over-HTTPS natively.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This setup ensures that DNS requests remain encrypted and private between pfSense and AdGuard Home, and from AdGuard Home to Mullvad’s DNS servers. Although client-to-pfSense queries may not always be encrypted, using Tailscale secures connections for mobile devices when away from home. By leveraging pfSense, AdGuard Home, and Tailscale, you&amp;rsquo;ve built a robust and secure DNS resolution process.&lt;/p&gt;
+&lt;p&gt;Is this the ultimate solution? Probably not—it&amp;rsquo;s the framework I built while learning about networking. I hope you enjoy this journey down the rabbit hole with me. Until next time, happy exploring!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Open to suggestions or additional insights on any weak points!&lt;/em&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Motivation</title>
+      <link>//localhost:1313/post/2024/2024-03-18-motivation/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/post/2024/2024-03-18-motivation/</guid>
+      <description>&lt;h2 id=&#34;struggling-with-motivation-a-personal-journey&#34;&gt;Struggling with Motivation: A Personal Journey&lt;/h2&gt;
+&lt;p&gt;The struggle for motivation is perhaps universal, but for me, it rings particularly true. Whether in my personal interests, such as gaming and watching movies, or in my professional pursuits, such as software development, maintaining focus has always been a challenge. This difficulty, I suspect, might be a consequence of untreated childhood ADHD.&lt;/p&gt;
+&lt;p&gt;At 30 years old, I find my ability to persevere through tasks dwindling. Even things I deeply enjoy seem to lose my interest rapidly. As time goes on, this challenge appears to grow stronger. As I&amp;rsquo;m typing this, a part of me is already contemplating abandoning the task, forgetting that it was ever started. Ironic in a post that&amp;rsquo;s about lack of motivation, isn&amp;rsquo;t it?&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;struggling-with-motivation-a-personal-journey&#34;&gt;Struggling with Motivation: A Personal Journey&lt;/h2&gt;
+&lt;p&gt;The struggle for motivation is perhaps universal, but for me, it rings particularly true. Whether in my personal interests, such as gaming and watching movies, or in my professional pursuits, such as software development, maintaining focus has always been a challenge. This difficulty, I suspect, might be a consequence of untreated childhood ADHD.&lt;/p&gt;
+&lt;p&gt;At 30 years old, I find my ability to persevere through tasks dwindling. Even things I deeply enjoy seem to lose my interest rapidly. As time goes on, this challenge appears to grow stronger. As I&amp;rsquo;m typing this, a part of me is already contemplating abandoning the task, forgetting that it was ever started. Ironic in a post that&amp;rsquo;s about lack of motivation, isn&amp;rsquo;t it?&lt;/p&gt;
+&lt;h2 id=&#34;the-journey-through-coding&#34;&gt;The Journey through Coding&lt;/h2&gt;
+&lt;p&gt;Software development once brought me joy and a sense of accomplishment. But those feelings became harder to sustain, leading to a hiatus of almost 8 years. Only recently, after 4 months of tentatively stepping back into the coding world, has it started to rekindle some of its initial lure.&lt;/p&gt;
+&lt;p&gt;But it&amp;rsquo;s not been an easy road. For every direct pursuit of the goal, there are numerous side quests - detours into new concepts and ideas. And while these side ventures certainly add to my knowledge, they often seem like distractions from the main goal.&lt;/p&gt;
+&lt;p&gt;The truth is, I don&amp;rsquo;t have a magic answer to this struggle. Could ADHD medication help? Maybe. But that&amp;rsquo;s a question for further exploration.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://media3.giphy.com/media/Ri7d8I18cto2jufOKc/giphy.gif&#34; alt=&#34;Happy Rainbow GIF by Morphin&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;gaming-from-escape-to-chore&#34;&gt;Gaming: From Escape to Chore&lt;/h2&gt;
+&lt;p&gt;The world of gaming, too, has changed for me. Once a relaxing escape from reality, it now feels more like a chore. Even playing with friends often results in me merely being present, scrolling on the computer without real engagement.&lt;/p&gt;
+&lt;h2 id=&#34;seeking-solutions&#34;&gt;Seeking Solutions&lt;/h2&gt;
+&lt;p&gt;Like many out there, I&amp;rsquo;m still in the process of figuring it all out. The key might be getting the right help, or perhaps it&amp;rsquo;s about finding the right routines, tactics or coping mechanisms. These are many possibilities, but as of now, I&amp;rsquo;ve yet to discover my perfect formula.
+What are your experiences with this struggle? Have any tips or tactics worked particularly well for you? Feel free to share your thoughts, and let&amp;rsquo;s navigate this journey together.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Swift KeyPaths</title>
+      <link>//localhost:1313/post/2024/2024-01-15-swift-keypaths/</link>
+      <pubDate>Mon, 15 Jan 2024 05:36:45 +0000</pubDate>
+      
+      <guid>//localhost:1313/post/2024/2024-01-15-swift-keypaths/</guid>
+      <description>&lt;p&gt;So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📘 Info
+Please Note: I Am not an expert and this is more or less a way for me to help cement the basics of this concept in my own mind. If this is of any Value to you, thats just an added bonus!
+{: .blockquote-info }&lt;/p&gt;</description>
+      <content>&lt;p&gt;So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📘 Info
+Please Note: I Am not an expert and this is more or less a way for me to help cement the basics of this concept in my own mind. If this is of any Value to you, thats just an added bonus!
+{: .blockquote-info }&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To begin Apple defines a keyPath as follows:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A key path from a specific root type to a specific resulting value type.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here&amp;rsquo;s a bit more detailed definition:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A reference (&amp;ldquo;path&amp;rdquo;) to a property on a give Type. In Swift a &amp;lsquo;KeyPath&amp;rsquo; is expressed as &amp;lsquo;&lt;em&gt;\Type.property&lt;/em&gt;&amp;rsquo;, &amp;lsquo;&lt;em&gt;Type&lt;/em&gt;&amp;rsquo; is the struct or class. And &amp;lsquo;&lt;em&gt;property&lt;/em&gt;&amp;rsquo; would be what you want to reference&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Superhero&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; alias: String
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; superpower: String
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Defining key paths for &amp;#39;alias&amp;#39; and &amp;#39;superpower&amp;#39; properties of the Superhero struct.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// These constants allow indirect reference to the properties of any Superhero instance.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; aliasKeyPath = &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;Superhero.alias
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; superpowerKeyPath = &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;Superhero.superpower
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;We just created a simple struct and set constants which hold the KeyPath.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Creating an instance of Superhero.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// &amp;#39;superhero&amp;#39; is now an object with &amp;#39;alias&amp;#39; and &amp;#39;superpower&amp;#39; properties.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; superhero = Superhero(alias: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Spider-Bro&amp;#34;&lt;/span&gt;, superpower: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Web-slinging&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Accessing property values using the key paths defined earlier.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// This demonstrates how key paths can be used to read values from specific properties.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; superheroAlias = superhero[keyPath: aliasKeyPath] &lt;span style=&#34;color:#75715e&#34;&gt;// Retrieves &amp;#39;alias&amp;#39; value: &amp;#34;Spider-Bro&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; superheroPower = superhero[keyPath: superpowerKeyPath] &lt;span style=&#34;color:#75715e&#34;&gt;// Retrieves &amp;#39;superpower&amp;#39; value: &amp;#34;Web-slinging&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Printing the accessed values.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// It shows how to use the key paths to get property values in a readable and reusable manner.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(superheroAlias, superheroPower)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Accessing properties using shorthand key path syntax directly.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// This is a more concise way to use key paths, especially when they are not reused elsewhere.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(superhero[keyPath: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;.alias], superhero[keyPath: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;.superpower])
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;We instantiate a Superhero struct here, then we access the values in two manners.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Modifying a property value using its key path.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// This line demonstrates how key paths can also be used to set new values for specific properties.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;superhero[keyPath: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;.alias] = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Spider-Pig&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// Changes &amp;#39;alias&amp;#39; property to &amp;#39;Spider-Pig&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Printing the updated alias to demonstrate the change.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(superhero[keyPath: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;.alias])
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Finally, we see how to modify the property values&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;These are the very basics of KeyPaths in Swift. I believe this should be enough to at least get you familiar with the concept to the point where SwiftUI will make a tad bit more sense when first getting started.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>The return</title>
+      <link>//localhost:1313/post/2023/2023-12-17-return/</link>
+      <pubDate>Sun, 17 Dec 2023 02:11:45 +0000</pubDate>
+      
+      <guid>//localhost:1313/post/2023/2023-12-17-return/</guid>
+      <description>&lt;p&gt;Seven years have passed since I last engaged with this site and shared content. This platform remains a personal space where I post items that pique my interest or prove useful to me. During my hiatus, I ventured into construction, building and working with concrete. Before that, I had a stint in the oil fields, and even earlier in 2018, I contributed to an open-source project called Trust Wallet, which Binance eventually acquired.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Seven years have passed since I last engaged with this site and shared content. This platform remains a personal space where I post items that pique my interest or prove useful to me. During my hiatus, I ventured into construction, building and working with concrete. Before that, I had a stint in the oil fields, and even earlier in 2018, I contributed to an open-source project called Trust Wallet, which Binance eventually acquired.&lt;/p&gt;
+&lt;p&gt;After my final contribution to this repository, I took a break from the digital world, setting aside Xcode, VS Code, and GitHub. Around the same time, my trusty 2012 MacBook Pro 15&amp;quot; ceased to receive software updates, marking the end of an era.&lt;/p&gt;
+&lt;p&gt;Now, I&amp;rsquo;m turning over a new leaf. Armed with a 14&amp;quot; MacBook Pro equipped with an M3 Pro chip and 36 GB of RAM, I am ready to rekindle my technical skills. My goal is to commit to creating apps, tools, and anything that I find intriguing or practical. It&amp;rsquo;s going to be a challenging journey, as I feel somewhat out of touch with the coding world. It&amp;rsquo;s almost as if I&amp;rsquo;m starting from scratch. Nevertheless, I&amp;rsquo;m ready for this long haul and excited about these new beginnings. Wish me luck on this fresh endeavor.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software on Rabbit Hole | MillerApps</title>
+    <link>//localhost:1313/categories/software/</link>
+    <description>Recent content in Software on Rabbit Hole | MillerApps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 18 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Motivation</title>
+      <link>//localhost:1313/post/2024/2024-03-18-motivation/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/post/2024/2024-03-18-motivation/</guid>
+      <description>&lt;h2 id=&#34;struggling-with-motivation-a-personal-journey&#34;&gt;Struggling with Motivation: A Personal Journey&lt;/h2&gt;
+&lt;p&gt;The struggle for motivation is perhaps universal, but for me, it rings particularly true. Whether in my personal interests, such as gaming and watching movies, or in my professional pursuits, such as software development, maintaining focus has always been a challenge. This difficulty, I suspect, might be a consequence of untreated childhood ADHD.&lt;/p&gt;
+&lt;p&gt;At 30 years old, I find my ability to persevere through tasks dwindling. Even things I deeply enjoy seem to lose my interest rapidly. As time goes on, this challenge appears to grow stronger. As I&amp;rsquo;m typing this, a part of me is already contemplating abandoning the task, forgetting that it was ever started. Ironic in a post that&amp;rsquo;s about lack of motivation, isn&amp;rsquo;t it?&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;struggling-with-motivation-a-personal-journey&#34;&gt;Struggling with Motivation: A Personal Journey&lt;/h2&gt;
+&lt;p&gt;The struggle for motivation is perhaps universal, but for me, it rings particularly true. Whether in my personal interests, such as gaming and watching movies, or in my professional pursuits, such as software development, maintaining focus has always been a challenge. This difficulty, I suspect, might be a consequence of untreated childhood ADHD.&lt;/p&gt;
+&lt;p&gt;At 30 years old, I find my ability to persevere through tasks dwindling. Even things I deeply enjoy seem to lose my interest rapidly. As time goes on, this challenge appears to grow stronger. As I&amp;rsquo;m typing this, a part of me is already contemplating abandoning the task, forgetting that it was ever started. Ironic in a post that&amp;rsquo;s about lack of motivation, isn&amp;rsquo;t it?&lt;/p&gt;
+&lt;h2 id=&#34;the-journey-through-coding&#34;&gt;The Journey through Coding&lt;/h2&gt;
+&lt;p&gt;Software development once brought me joy and a sense of accomplishment. But those feelings became harder to sustain, leading to a hiatus of almost 8 years. Only recently, after 4 months of tentatively stepping back into the coding world, has it started to rekindle some of its initial lure.&lt;/p&gt;
+&lt;p&gt;But it&amp;rsquo;s not been an easy road. For every direct pursuit of the goal, there are numerous side quests - detours into new concepts and ideas. And while these side ventures certainly add to my knowledge, they often seem like distractions from the main goal.&lt;/p&gt;
+&lt;p&gt;The truth is, I don&amp;rsquo;t have a magic answer to this struggle. Could ADHD medication help? Maybe. But that&amp;rsquo;s a question for further exploration.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://media3.giphy.com/media/Ri7d8I18cto2jufOKc/giphy.gif&#34; alt=&#34;Happy Rainbow GIF by Morphin&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;gaming-from-escape-to-chore&#34;&gt;Gaming: From Escape to Chore&lt;/h2&gt;
+&lt;p&gt;The world of gaming, too, has changed for me. Once a relaxing escape from reality, it now feels more like a chore. Even playing with friends often results in me merely being present, scrolling on the computer without real engagement.&lt;/p&gt;
+&lt;h2 id=&#34;seeking-solutions&#34;&gt;Seeking Solutions&lt;/h2&gt;
+&lt;p&gt;Like many out there, I&amp;rsquo;m still in the process of figuring it all out. The key might be getting the right help, or perhaps it&amp;rsquo;s about finding the right routines, tactics or coping mechanisms. These are many possibilities, but as of now, I&amp;rsquo;ve yet to discover my perfect formula.
+What are your experiences with this struggle? Have any tips or tactics worked particularly well for you? Feel free to share your thoughts, and let&amp;rsquo;s navigate this journey together.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Swift KeyPaths</title>
+      <link>//localhost:1313/post/2024/2024-01-15-swift-keypaths/</link>
+      <pubDate>Mon, 15 Jan 2024 05:36:45 +0000</pubDate>
+      
+      <guid>//localhost:1313/post/2024/2024-01-15-swift-keypaths/</guid>
+      <description>&lt;p&gt;So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📘 Info
+Please Note: I Am not an expert and this is more or less a way for me to help cement the basics of this concept in my own mind. If this is of any Value to you, thats just an added bonus!
+{: .blockquote-info }&lt;/p&gt;</description>
+      <content>&lt;p&gt;So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📘 Info
+Please Note: I Am not an expert and this is more or less a way for me to help cement the basics of this concept in my own mind. If this is of any Value to you, thats just an added bonus!
+{: .blockquote-info }&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To begin Apple defines a keyPath as follows:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A key path from a specific root type to a specific resulting value type.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here&amp;rsquo;s a bit more detailed definition:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A reference (&amp;ldquo;path&amp;rdquo;) to a property on a give Type. In Swift a &amp;lsquo;KeyPath&amp;rsquo; is expressed as &amp;lsquo;&lt;em&gt;\Type.property&lt;/em&gt;&amp;rsquo;, &amp;lsquo;&lt;em&gt;Type&lt;/em&gt;&amp;rsquo; is the struct or class. And &amp;lsquo;&lt;em&gt;property&lt;/em&gt;&amp;rsquo; would be what you want to reference&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Superhero&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; alias: String
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; superpower: String
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Defining key paths for &amp;#39;alias&amp;#39; and &amp;#39;superpower&amp;#39; properties of the Superhero struct.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// These constants allow indirect reference to the properties of any Superhero instance.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; aliasKeyPath = &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;Superhero.alias
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; superpowerKeyPath = &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;Superhero.superpower
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;We just created a simple struct and set constants which hold the KeyPath.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Creating an instance of Superhero.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// &amp;#39;superhero&amp;#39; is now an object with &amp;#39;alias&amp;#39; and &amp;#39;superpower&amp;#39; properties.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; superhero = Superhero(alias: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Spider-Bro&amp;#34;&lt;/span&gt;, superpower: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Web-slinging&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Accessing property values using the key paths defined earlier.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// This demonstrates how key paths can be used to read values from specific properties.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; superheroAlias = superhero[keyPath: aliasKeyPath] &lt;span style=&#34;color:#75715e&#34;&gt;// Retrieves &amp;#39;alias&amp;#39; value: &amp;#34;Spider-Bro&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; superheroPower = superhero[keyPath: superpowerKeyPath] &lt;span style=&#34;color:#75715e&#34;&gt;// Retrieves &amp;#39;superpower&amp;#39; value: &amp;#34;Web-slinging&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Printing the accessed values.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// It shows how to use the key paths to get property values in a readable and reusable manner.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(superheroAlias, superheroPower)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Accessing properties using shorthand key path syntax directly.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// This is a more concise way to use key paths, especially when they are not reused elsewhere.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(superhero[keyPath: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;.alias], superhero[keyPath: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;.superpower])
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;We instantiate a Superhero struct here, then we access the values in two manners.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Modifying a property value using its key path.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// This line demonstrates how key paths can also be used to set new values for specific properties.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;superhero[keyPath: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;.alias] = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Spider-Pig&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// Changes &amp;#39;alias&amp;#39; property to &amp;#39;Spider-Pig&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Printing the updated alias to demonstrate the change.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(superhero[keyPath: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;.alias])
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Finally, we see how to modify the property values&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;These are the very basics of KeyPaths in Swift. I believe this should be enough to at least get you familiar with the concept to the point where SwiftUI will make a tad bit more sense when first getting started.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>The return</title>
+      <link>//localhost:1313/post/2023/2023-12-17-return/</link>
+      <pubDate>Sun, 17 Dec 2023 02:11:45 +0000</pubDate>
+      
+      <guid>//localhost:1313/post/2023/2023-12-17-return/</guid>
+      <description>&lt;p&gt;Seven years have passed since I last engaged with this site and shared content. This platform remains a personal space where I post items that pique my interest or prove useful to me. During my hiatus, I ventured into construction, building and working with concrete. Before that, I had a stint in the oil fields, and even earlier in 2018, I contributed to an open-source project called Trust Wallet, which Binance eventually acquired.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Seven years have passed since I last engaged with this site and shared content. This platform remains a personal space where I post items that pique my interest or prove useful to me. During my hiatus, I ventured into construction, building and working with concrete. Before that, I had a stint in the oil fields, and even earlier in 2018, I contributed to an open-source project called Trust Wallet, which Binance eventually acquired.&lt;/p&gt;
+&lt;p&gt;After my final contribution to this repository, I took a break from the digital world, setting aside Xcode, VS Code, and GitHub. Around the same time, my trusty 2012 MacBook Pro 15&amp;quot; ceased to receive software updates, marking the end of an era.&lt;/p&gt;
+&lt;p&gt;Now, I&amp;rsquo;m turning over a new leaf. Armed with a 14&amp;quot; MacBook Pro equipped with an M3 Pro chip and 36 GB of RAM, I am ready to rekindle my technical skills. My goal is to commit to creating apps, tools, and anything that I find intriguing or practical. It&amp;rsquo;s going to be a challenging journey, as I feel somewhat out of touch with the coding world. It&amp;rsquo;s almost as if I&amp;rsquo;m starting from scratch. Nevertheless, I&amp;rsquo;m ready for this long haul and excited about these new beginnings. Wish me luck on this fresh endeavor.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

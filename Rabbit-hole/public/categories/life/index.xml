@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Life on Rabbit Hole | MillerApps</title>
+    <link>//localhost:1313/categories/life/</link>
+    <description>Recent content in Life on Rabbit Hole | MillerApps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 17 Dec 2023 02:11:45 +0000</lastBuildDate><atom:link href="//localhost:1313/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The return</title>
+      <link>//localhost:1313/post/2023/2023-12-17-return/</link>
+      <pubDate>Sun, 17 Dec 2023 02:11:45 +0000</pubDate>
+      
+      <guid>//localhost:1313/post/2023/2023-12-17-return/</guid>
+      <description>&lt;p&gt;Seven years have passed since I last engaged with this site and shared content. This platform remains a personal space where I post items that pique my interest or prove useful to me. During my hiatus, I ventured into construction, building and working with concrete. Before that, I had a stint in the oil fields, and even earlier in 2018, I contributed to an open-source project called Trust Wallet, which Binance eventually acquired.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Seven years have passed since I last engaged with this site and shared content. This platform remains a personal space where I post items that pique my interest or prove useful to me. During my hiatus, I ventured into construction, building and working with concrete. Before that, I had a stint in the oil fields, and even earlier in 2018, I contributed to an open-source project called Trust Wallet, which Binance eventually acquired.&lt;/p&gt;
+&lt;p&gt;After my final contribution to this repository, I took a break from the digital world, setting aside Xcode, VS Code, and GitHub. Around the same time, my trusty 2012 MacBook Pro 15&amp;quot; ceased to receive software updates, marking the end of an era.&lt;/p&gt;
+&lt;p&gt;Now, I&amp;rsquo;m turning over a new leaf. Armed with a 14&amp;quot; MacBook Pro equipped with an M3 Pro chip and 36 GB of RAM, I am ready to rekindle my technical skills. My goal is to commit to creating apps, tools, and anything that I find intriguing or practical. It&amp;rsquo;s going to be a challenging journey, as I feel somewhat out of touch with the coding world. It&amp;rsquo;s almost as if I&amp;rsquo;m starting from scratch. Nevertheless, I&amp;rsquo;m ready for this long haul and excited about these new beginnings. Wish me luck on this fresh endeavor.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
