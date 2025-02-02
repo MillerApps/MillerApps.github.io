@@ -55,6 +55,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           TZ: America/Los_Angeles
         run: |
+          cd Rabbit-hole
           hugo \
             --gc \
             --minify \
