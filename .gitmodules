@@ -1,0 +1,3 @@
+[submodule "Rabbit-hole/themes/terminal"]
+	path = Rabbit-hole/themes/terminal
+	url = https://github.com/panr/hugo-theme-terminal.git
