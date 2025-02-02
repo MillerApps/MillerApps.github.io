@@ -5,10 +5,16 @@ I am using the Hugo static website generator, for two reasons:
 
 > [!NOTE] 
 > This repo makes use of Nix to set up a dev shell with all the needed tolls for Hugo, which includes Hugo as well.
+> Nix is rather cool and useful.
 
 To use the Nix dev shell environment run:
 ```sh
 nix develop
 ```
-
+Here are a few aspects of Hugo that really resonate with my lazy, get-things-done approach:
+- Lightning-Fast Builds
+- Easy to Learn
+- Built-In Server & Live Reloading
+- Powered by Golang
+- No need to really worry about much aside from Markdown
 
