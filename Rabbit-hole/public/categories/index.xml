@@ -2,167 +2,187 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Rabbit Hole | MillerApps</title>
-    <link>//localhost:1313/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Rabbit Hole | MillerApps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Dns</title>
-      <link>//localhost:1313/categories/dns/</link>
-      <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
+      <title>Darwin</title>
+      <link>http://localhost:1313/categories/darwin/</link>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/categories/dns/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>It</title>
-      <link>//localhost:1313/categories/it/</link>
-      <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/categories/it/</guid>
+      <guid>http://localhost:1313/categories/darwin/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Neat</title>
-      <link>//localhost:1313/categories/neat/</link>
-      <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
+      <link>http://localhost:1313/categories/neat/</link>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/categories/neat/</guid>
+      <guid>http://localhost:1313/categories/neat/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
-      <title>Networking</title>
-      <link>//localhost:1313/categories/networking/</link>
-      <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
+      <title>Nix</title>
+      <link>http://localhost:1313/categories/nix/</link>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/categories/networking/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Pfsense</title>
-      <link>//localhost:1313/categories/pfsense/</link>
-      <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/categories/pfsense/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Tailscale</title>
-      <link>//localhost:1313/categories/tailscale/</link>
-      <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/categories/tailscale/</guid>
+      <guid>http://localhost:1313/categories/nix/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Things New to Me</title>
-      <link>//localhost:1313/categories/things-new-to-me/</link>
+      <link>http://localhost:1313/categories/things-new-to-me/</link>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/things-new-to-me/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Dns</title>
+      <link>http://localhost:1313/categories/dns/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/categories/things-new-to-me/</guid>
+      <guid>http://localhost:1313/categories/dns/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>It</title>
+      <link>http://localhost:1313/categories/it/</link>
+      <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/it/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>http://localhost:1313/categories/networking/</link>
+      <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/networking/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Pfsense</title>
+      <link>http://localhost:1313/categories/pfsense/</link>
+      <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/pfsense/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Tailscale</title>
+      <link>http://localhost:1313/categories/tailscale/</link>
+      <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/tailscale/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Dev</title>
-      <link>//localhost:1313/categories/dev/</link>
+      <link>http://localhost:1313/categories/dev/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/categories/dev/</guid>
+      <guid>http://localhost:1313/categories/dev/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Focus</title>
-      <link>//localhost:1313/categories/focus/</link>
+      <link>http://localhost:1313/categories/focus/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/categories/focus/</guid>
+      <guid>http://localhost:1313/categories/focus/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Funk</title>
-      <link>//localhost:1313/categories/funk/</link>
+      <link>http://localhost:1313/categories/funk/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/categories/funk/</guid>
+      <guid>http://localhost:1313/categories/funk/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Motivation</title>
-      <link>//localhost:1313/categories/motivation/</link>
+      <link>http://localhost:1313/categories/motivation/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/categories/motivation/</guid>
+      <guid>http://localhost:1313/categories/motivation/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Software</title>
-      <link>//localhost:1313/categories/software/</link>
+      <link>http://localhost:1313/categories/software/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/categories/software/</guid>
+      <guid>http://localhost:1313/categories/software/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Keypath</title>
-      <link>//localhost:1313/categories/keypath/</link>
+      <link>http://localhost:1313/categories/keypath/</link>
       <pubDate>Mon, 15 Jan 2024 05:36:45 +0000</pubDate>
       
-      <guid>//localhost:1313/categories/keypath/</guid>
+      <guid>http://localhost:1313/categories/keypath/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Swift</title>
-      <link>//localhost:1313/categories/swift/</link>
+      <link>http://localhost:1313/categories/swift/</link>
       <pubDate>Mon, 15 Jan 2024 05:36:45 +0000</pubDate>
       
-      <guid>//localhost:1313/categories/swift/</guid>
+      <guid>http://localhost:1313/categories/swift/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Life</title>
-      <link>//localhost:1313/categories/life/</link>
+      <link>http://localhost:1313/categories/life/</link>
       <pubDate>Sun, 17 Dec 2023 02:11:45 +0000</pubDate>
       
-      <guid>//localhost:1313/categories/life/</guid>
+      <guid>http://localhost:1313/categories/life/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Work</title>
-      <link>//localhost:1313/categories/work/</link>
+      <link>http://localhost:1313/categories/work/</link>
       <pubDate>Sun, 17 Dec 2023 02:11:45 +0000</pubDate>
       
-      <guid>//localhost:1313/categories/work/</guid>
+      <guid>http://localhost:1313/categories/work/</guid>
       <description></description>
       <content></content>
     </item>

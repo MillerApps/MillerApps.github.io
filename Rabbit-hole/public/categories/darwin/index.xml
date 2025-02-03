@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Darwin on Rabbit Hole | MillerApps</title>
+    <link>http://localhost:1313/categories/darwin/</link>
+    <description>Recent content in Darwin on Rabbit Hole | MillerApps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/darwin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025</title>
+      <link>http://localhost:1313/2025/</link>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2025/</guid>
+      <description>&lt;h1 id=&#34;2025-thus-far&#34;&gt;2025 Thus Far&lt;/h1&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;I’ve been messing with Nix on macOS, probably not correctly.&lt;/li&gt;
+&lt;li&gt;Switched my website from Jekyll to Hugo because Jekyll felt abandoned.
+&lt;ul&gt;
+&lt;li&gt;Used a pre-made theme because making my own CSS sounded exhausting.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Want to learn Go and build some simple CLI tools.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;now-for-the-long-version&#34;&gt;Now, for the long version…&lt;/h2&gt;
+&lt;h3 id=&#34;my-nix-setup-probably-not-done-right&#34;&gt;My Nix Setup (Probably Not Done Right)&lt;/h3&gt;
+&lt;p&gt;I’ve been using nix-darwin to manage my macOS system declaratively—meaning instead of manually installing apps, setting preferences, and tweaking my environment, I define everything in configuration files. Sounds great, right? In theory, yes. In practice… I’m pretty sure I’ve done some things wrong. But it works (mostly), so I’ll count that as a win.&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;2025-thus-far&#34;&gt;2025 Thus Far&lt;/h1&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;I’ve been messing with Nix on macOS, probably not correctly.&lt;/li&gt;
+&lt;li&gt;Switched my website from Jekyll to Hugo because Jekyll felt abandoned.
+&lt;ul&gt;
+&lt;li&gt;Used a pre-made theme because making my own CSS sounded exhausting.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Want to learn Go and build some simple CLI tools.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;now-for-the-long-version&#34;&gt;Now, for the long version…&lt;/h2&gt;
+&lt;h3 id=&#34;my-nix-setup-probably-not-done-right&#34;&gt;My Nix Setup (Probably Not Done Right)&lt;/h3&gt;
+&lt;p&gt;I’ve been using nix-darwin to manage my macOS system declaratively—meaning instead of manually installing apps, setting preferences, and tweaking my environment, I define everything in configuration files. Sounds great, right? In theory, yes. In practice… I’m pretty sure I’ve done some things wrong. But it works (mostly), so I’ll count that as a win.&lt;/p&gt;
+&lt;p&gt;Here’s what I’ve attempted:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Modular Configs – Splitting my setup into logical pieces like homebrew.nix, zsh.nix, and macos.nix.&lt;/li&gt;
+&lt;li&gt;Automating System Setup – In theory, I should be able to wipe my Mac and get everything back exactly as it was. In reality? Let’s not test that just yet.&lt;/li&gt;
+&lt;li&gt;Dev Shells – One of the cooler things I’ve played with is using Nix to set up development environments. Instead of manually installing dependencies, I define them in a flake.nix or shell.nix, and boom—every project gets its own isolated environment. No more polluting my global system. (At least, that’s the idea.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;redoing-my-website-jekyll-out-hugo-in&#34;&gt;Redoing My Website (Jekyll Out, Hugo In)&lt;/h3&gt;
+&lt;p&gt;While tweaking my Nix setup, I also decided it was time to redo my website. I had been using Jekyll for years, but it started feeling abandoned, and I wanted something faster and easier to maintain. Enter Hugo.&lt;/p&gt;
+&lt;p&gt;Hugo is a static site generator that’s ridiculously fast and simple to use. Moving from Jekyll to Hugo took a bit of effort, but the result is a much cleaner setup. I also used Nix to set up a dev shell for Hugo, so I never have to worry about installing the right tools manually—just enter the shell, and everything I need is there.&lt;/p&gt;
+&lt;p&gt;Now, did I spend time crafting my own CSS and making a completely custom design? Absolutely not. I took the Terminal theme, slapped on a Catppuccin color scheme, and called it a day. Because, let’s be real, making a website look good takes time—and I’d rather spend that time breaking my Nix setup instead.&lt;/p&gt;
+&lt;h3 id=&#34;whats-next&#34;&gt;What’s Next?&lt;/h3&gt;
+&lt;p&gt;Next up, I want to dive into Go. I’m getting back into programming, and Go seems like a great starting point—simple syntax, great performance, and a strong ecosystem for building CLI tools. I don’t have a concrete project in mind yet—probably something small and useful for my workflow—but I’m excited to start learning.&lt;/p&gt;
+&lt;p&gt;I’m sure I’ll keep refining my Nix setup, tweaking my website, and probably breaking things along the way. But that’s half the fun, right?&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
