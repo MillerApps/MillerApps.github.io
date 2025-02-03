@@ -41,6 +41,8 @@
 &lt;h2 id=&#34;now-for-the-long-version&#34;&gt;Now, for the long version…&lt;/h2&gt;
 &lt;h3 id=&#34;my-nix-setup-probably-not-done-right&#34;&gt;My Nix Setup (Probably Not Done Right)&lt;/h3&gt;
 &lt;p&gt;I’ve been using nix-darwin to manage my macOS system declaratively—meaning instead of manually installing apps, setting preferences, and tweaking my environment, I define everything in configuration files. Sounds great, right? In theory, yes. In practice… I’m pretty sure I’ve done some things wrong. But it works (mostly), so I’ll count that as a win.&lt;/p&gt;
+&lt;h3 id=&#34;what-the-hell-is-nix&#34;&gt;What the hell is Nix?&lt;/h3&gt;
+&lt;p&gt;Now this is a great question—one that does not have a cut-and-dry answer. The basic explanation? A cross-platform package manager. That alone makes it a powerful tool, but Nix is also an OS and a functional programming language. It provides a way to make reproducible systems, environments, and so much more. Maybe I’ll take a deeper dive into this rabbit hole later.&lt;/p&gt;
 &lt;p&gt;Here’s what I’ve attempted:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Modular Configs – Splitting my setup into logical pieces like homebrew.nix, zsh.nix, and macos.nix.&lt;/li&gt;
@@ -48,7 +50,7 @@
 &lt;li&gt;Dev Shells – One of the cooler things I’ve played with is using Nix to set up development environments. Instead of manually installing dependencies, I define them in a flake.nix or shell.nix, and boom—every project gets its own isolated environment. No more polluting my global system. (At least, that’s the idea.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;redoing-my-website-jekyll-out-hugo-in&#34;&gt;Redoing My Website (Jekyll Out, Hugo In)&lt;/h3&gt;
-&lt;p&gt;While tweaking my Nix setup, I also decided it was time to redo my website. I had been using Jekyll for years, but it started feeling abandoned, and I wanted something faster and easier to maintain. Enter Hugo.&lt;/p&gt;
+&lt;p&gt;I had been using Jekyll for years, but it started feeling abandoned, and I wanted something faster and easier to maintain. Enter Hugo.&lt;/p&gt;
 &lt;p&gt;Hugo is a static site generator that’s ridiculously fast and simple to use. Moving from Jekyll to Hugo took a bit of effort, but the result is a much cleaner setup. I also used Nix to set up a dev shell for Hugo, so I never have to worry about installing the right tools manually—just enter the shell, and everything I need is there.&lt;/p&gt;
 &lt;p&gt;Now, did I spend time crafting my own CSS and making a completely custom design? Absolutely not. I took the Terminal theme, slapped on a Catppuccin color scheme, and called it a day. Because, let’s be real, making a website look good takes time—and I’d rather spend that time breaking my Nix setup instead.&lt;/p&gt;
 &lt;h3 id=&#34;whats-next&#34;&gt;What’s Next?&lt;/h3&gt;
