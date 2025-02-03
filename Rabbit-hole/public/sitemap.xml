@@ -80,6 +80,8 @@
     <loc>http://localhost:1313/categories/work/</loc>
     <lastmod>2023-12-17T02:11:45+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/toolbox/</loc>
+  </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>

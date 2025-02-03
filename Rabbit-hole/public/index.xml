@@ -468,6 +468,127 @@ Please Note: I Am not an expert and this is more or less a way for me to help ce
     </item>
     
     <item>
+      <title></title>
+      <link>http://localhost:1313/toolbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/toolbox/</guid>
+      <description>&lt;h1 id=&#34;whats-in-my-toolbox&#34;&gt;Whats in my toolbox?&lt;/h1&gt;
+&lt;h2 id=&#34;hardware&#34;&gt;Hardware:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2023 M3 Pro 14&amp;quot; Macbook Pro, space black, 36GB Memory 1TB Storage&lt;/li&gt;
+&lt;li&gt;27&amp;quot; Apple Studio Display&lt;/li&gt;
+&lt;li&gt;27&amp;quot; LG 4k monitor&lt;/li&gt;
+&lt;li&gt;Dygma Defy Keyboard (still not great at typing efficiently)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Nix, Nix-Darwin, &amp;amp; Home manger:
+&lt;ul&gt;
+&lt;li&gt;dotfiles&lt;/li&gt;
+&lt;li&gt;system tools&lt;/li&gt;
+&lt;li&gt;user tools&lt;/li&gt;
+&lt;li&gt;settings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Homebrew:
+&lt;ul&gt;
+&lt;li&gt;Mac apps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ghostty:
+&lt;ul&gt;
+&lt;li&gt;My terminal of choice&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Neovim:
+&lt;ul&gt;
+&lt;li&gt;text editor, ide&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Zed:
+&lt;ul&gt;
+&lt;li&gt;GUI text editor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;lazygit
+&lt;ul&gt;
+&lt;li&gt;TUI git client&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Raycast:
+&lt;ul&gt;
+&lt;li&gt;Spotlight replacement&lt;/li&gt;
+&lt;li&gt;much more&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Tailscale:
+&lt;ul&gt;
+&lt;li&gt;mesh vpn to access home network from anywhere&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Many more&amp;hellip; more complete list of sorts can be found &lt;a href=&#34;https://github.com/millerapps/dotfiles&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      <content>&lt;h1 id=&#34;whats-in-my-toolbox&#34;&gt;Whats in my toolbox?&lt;/h1&gt;
+&lt;h2 id=&#34;hardware&#34;&gt;Hardware:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2023 M3 Pro 14&amp;quot; Macbook Pro, space black, 36GB Memory 1TB Storage&lt;/li&gt;
+&lt;li&gt;27&amp;quot; Apple Studio Display&lt;/li&gt;
+&lt;li&gt;27&amp;quot; LG 4k monitor&lt;/li&gt;
+&lt;li&gt;Dygma Defy Keyboard (still not great at typing efficiently)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Nix, Nix-Darwin, &amp;amp; Home manger:
+&lt;ul&gt;
+&lt;li&gt;dotfiles&lt;/li&gt;
+&lt;li&gt;system tools&lt;/li&gt;
+&lt;li&gt;user tools&lt;/li&gt;
+&lt;li&gt;settings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Homebrew:
+&lt;ul&gt;
+&lt;li&gt;Mac apps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ghostty:
+&lt;ul&gt;
+&lt;li&gt;My terminal of choice&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Neovim:
+&lt;ul&gt;
+&lt;li&gt;text editor, ide&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Zed:
+&lt;ul&gt;
+&lt;li&gt;GUI text editor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;lazygit
+&lt;ul&gt;
+&lt;li&gt;TUI git client&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Raycast:
+&lt;ul&gt;
+&lt;li&gt;Spotlight replacement&lt;/li&gt;
+&lt;li&gt;much more&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Tailscale:
+&lt;ul&gt;
+&lt;li&gt;mesh vpn to access home network from anywhere&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Many more&amp;hellip; more complete list of sorts can be found &lt;a href=&#34;https://github.com/millerapps/dotfiles&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -11,7 +11,7 @@ pagination.pagerSize = 5
   contentTypeName = "post"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 5
 
   # show selector to switch language
   showLanguageSelector = false
@@ -100,4 +100,8 @@ pagination.pagerSize = 5
           identifier = "Github"
           name = "Github"
           url = "https://github.com/MillerApps"
+        [[languages.en.menu.main]]
+          identifier = "Toolbox"
+          name = "Toolbox"
+          url = "/toolbox"
 

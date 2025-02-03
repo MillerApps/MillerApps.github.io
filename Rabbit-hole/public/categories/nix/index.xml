@@ -42,7 +42,8 @@
 &lt;h3 id=&#34;my-nix-setup-probably-not-done-right&#34;&gt;My Nix Setup (Probably Not Done Right)&lt;/h3&gt;
 &lt;p&gt;I’ve been using nix-darwin to manage my macOS system declaratively—meaning instead of manually installing apps, setting preferences, and tweaking my environment, I define everything in configuration files. Sounds great, right? In theory, yes. In practice… I’m pretty sure I’ve done some things wrong. But it works (mostly), so I’ll count that as a win.&lt;/p&gt;
 &lt;h3 id=&#34;what-the-hell-is-nix&#34;&gt;What the hell is Nix?&lt;/h3&gt;
-&lt;p&gt;Now this is a great question—one that does not have a cut-and-dry answer. The basic explanation? A cross-platform package manager. That alone makes it a powerful tool, but Nix is also an OS and a functional programming language. It provides a way to make reproducible systems, environments, and so much more. Maybe I’ll take a deeper dive into this rabbit hole later.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://nixos.org/logo/nixos-logo-only-hires.png&#34; alt=&#34;Nix Logo&#34;&gt;
+Now this is a great question—one that does not have a cut-and-dry answer. The basic explanation? A cross-platform package manager. That alone makes it a powerful tool, but Nix is also an OS and a functional programming language. It provides a way to make reproducible systems, environments, and so much more. Maybe I’ll take a deeper dive into this rabbit hole later.&lt;/p&gt;
 &lt;p&gt;Here’s what I’ve attempted:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Modular Configs – Splitting my setup into logical pieces like homebrew.nix, zsh.nix, and macos.nix.&lt;/li&gt;
