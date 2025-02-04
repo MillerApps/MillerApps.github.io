@@ -6,7 +6,7 @@
 - 27" LG 4k monitor
 - Dygma Defy Keyboard (still not great at typing efficiently)
 
-## Software
+## Software:
 - Nix, Nix-Darwin, & Home manger:
     - dotfiles
     - system tools
