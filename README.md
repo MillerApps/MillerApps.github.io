@@ -4,7 +4,7 @@ I am using the Hugo static website generator, for two reasons:
 2. Jekyll is not really updated anymore
 
 > [!NOTE] 
-> This repo makes use of Nix to set up a dev shell with all the needed tolls for Hugo, which includes Hugo as well.
+> This repo makes use of Nix to set up a dev shell with all the needed tools for Hugo, which includes Hugo as well.
 > Nix is rather cool and useful.
 
 To use the Nix dev shell environment run:
