@@ -13,7 +13,7 @@
       <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/2025/</guid>
-      <description>&lt;h1 id=&#34;2025-thus-far&#34;&gt;2025 Thus Far&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;thus-far&#34;&gt;Thus Far&lt;/h1&gt;
 &lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;I’ve been messing with Nix on macOS, probably not correctly.&lt;/li&gt;
@@ -27,7 +27,7 @@
 &lt;h2 id=&#34;now-for-the-long-version&#34;&gt;Now, for the long version…&lt;/h2&gt;
 &lt;h3 id=&#34;my-nix-setup-probably-not-done-right&#34;&gt;My Nix Setup (Probably Not Done Right)&lt;/h3&gt;
 &lt;p&gt;I’ve been using nix-darwin to manage my macOS system declaratively—meaning instead of manually installing apps, setting preferences, and tweaking my environment, I define everything in configuration files. Sounds great, right? In theory, yes. In practice… I’m pretty sure I’ve done some things wrong. But it works (mostly), so I’ll count that as a win.&lt;/p&gt;</description>
-      <content>&lt;h1 id=&#34;2025-thus-far&#34;&gt;2025 Thus Far&lt;/h1&gt;
+      <content>&lt;h1 id=&#34;thus-far&#34;&gt;Thus Far&lt;/h1&gt;
 &lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;I’ve been messing with Nix on macOS, probably not correctly.&lt;/li&gt;
