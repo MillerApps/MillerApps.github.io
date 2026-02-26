@@ -1,0 +1,11 @@
+<a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
+  <div class="logo">
+    <span class="logo__title">
+      {{ with $.Site.Params.Logo.logoText }}{{ . }}{{ else }}Terminal{{ end }}
+    </span>
+    <span class="logo__prompt">
+      {{ $user := (default "user" $.Site.Params.owner) | lower }}{{ $host := "rabbit-hole" }}{{ printf "%s@%s:~$" $user $host }}
+      <span class="terminal-cursor" aria-hidden="true"></span>
+    </span>
+  </div>
+</a>

@@ -1,0 +1,23 @@
+<header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      {{ partial "logo.html" . }}
+    </div>
+    {{ if len $.Site.Menus }}
+      {{ partial "mobile-menu.html" . }}
+    {{ end }}
+    {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
+      {{ partial "language-menu.html" . }}
+    {{ end }}
+    {{ $user := (default "user" $.Site.Params.owner) | lower }}
+    {{ $host := "rabbit-hole" }}
+    <div class="header__status" aria-hidden="true">
+      <span class="status-item status-item--online">status: online</span>
+      <span class="status-item status-item--user">{{ printf "user: %s" $user }}</span>
+      <span class="status-item status-item--host">{{ printf "host: %s" $host }}</span>
+    </div>
+  </div>
+  {{ if len $.Site.Menus }}
+    {{ partial "menu.html" . }}
+  {{ end }}
+</header>

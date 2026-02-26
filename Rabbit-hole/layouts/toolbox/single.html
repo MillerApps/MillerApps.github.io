@@ -1,0 +1,41 @@
+{{ define "main" }}
+<article class="post post--toolbox">
+  {{ $user := (default "user" $.Site.Params.owner) | lower }}
+  {{ $host := "rabbit-hole" }}
+  {{ $path := "~/toolbox" }}
+  {{ $prompt := printf "%s@%s:%s$" $user $host $path }}
+  <div class="post-command-line">
+    <span class="post-command">
+      <span class="post-command__prompt">{{ $prompt }}</span>
+      <span class="post-command__verb">ls</span>
+      <span class="post-command__args">-la</span>
+      <span class="post-command__file">~/toolbox/</span>
+      <span class="post-command__caret">▊</span>
+    </span>
+  </div>
+  {{ $entries := .Params.ls }}
+  <div class="ls-output" role="table">
+    <div class="ls-header">total {{ len $entries }}</div>
+    {{ range $entries }}
+      {{ $name := .name }}
+      {{ $suffix := "" }}
+      {{ if eq .kind "dir" }}
+        {{ if and (ne $name ".") (ne $name "..") }}
+          {{ $suffix = "/" }}
+        {{ end }}
+      {{ end }}
+      <div class="ls-line ls-line--{{ .kind }}" role="row">
+        <span class="ls-perm" role="cell">{{ .perm }}</span>
+        <span class="ls-links" role="cell">{{ .links }}</span>
+        <span class="ls-user" role="cell">{{ .user }}</span>
+        <span class="ls-group" role="cell">{{ .group }}</span>
+        <span class="ls-size" role="cell">{{ .size }}</span>
+        <span class="ls-date" role="cell">{{ .date }}</span>
+        <span class="ls-name" role="cell">
+          {{ $name }}{{ $suffix }}{{ if .target }} <span class="ls-arrow">-&gt;</span> <span class="ls-target">{{ .target }}</span>{{ end }}
+        </span>
+      </div>
+    {{ end }}
+  </div>
+</article>
+{{ end }}

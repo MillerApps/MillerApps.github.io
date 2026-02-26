@@ -1,32 +1,127 @@
-# Whats in my toolbox?
-
-## Hardware:
-- 2023 M3 Pro 14" Macbook Pro, space black, 36GB Memory 1TB Storage
-- 27" Apple Studio Display
-- 27" LG 4k monitor
-- Dygma Defy Keyboard (still not great at typing efficiently)
-
-## Software:
-- Nix, Nix-Darwin, & Home manger:
-    - dotfiles
-    - system tools
-    - user tools
-    - settings
-- Homebrew:
-    - Mac apps
-- Ghostty:
-    - My terminal of choice
-- Neovim:
-    - text editor, ide 
-- Zed: 
-    - GUI text editor
-- lazygit
-    - TUI git client
-- Raycast:
-    - Spotlight replacement
-    - much more
-- Tailscale:
-    - mesh vpn to access home network from anywhere
-- Many more... more complete list of sorts can be found [here](https://github.com/millerapps/dotfiles)
-
-
+---
+title: Toolbox
+type: toolbox
+permalink: /toolbox/
+ls:
+  - perm: "drwxr-xr-x"
+    links: "14"
+    user: "millerapps"
+    group: "staff"
+    size: "448B"
+    date: "Feb 26 2026"
+    name: "."
+    kind: "dir"
+  - perm: "drwx------"
+    links: "10"
+    user: "millerapps"
+    group: "staff"
+    size: "320B"
+    date: "Feb 26 2026"
+    name: ".."
+    kind: "dir"
+  - perm: "-rw-r--r--"
+    links: "1"
+    user: "millerapps"
+    group: "staff"
+    size: "36G"
+    date: "Feb 26 2026"
+    name: "hw-macbook-pro-14in"
+    kind: "file"
+  - perm: "-rw-r--r--"
+    links: "1"
+    user: "millerapps"
+    group: "staff"
+    size: "5G"
+    date: "Feb 26 2026"
+    name: "hw-apple-studio-display"
+    kind: "file"
+  - perm: "-rw-r--r--"
+    links: "1"
+    user: "millerapps"
+    group: "staff"
+    size: "3G"
+    date: "Feb 26 2026"
+    name: "hw-lg-4k-monitor"
+    kind: "file"
+  - perm: "-rw-r--r--"
+    links: "1"
+    user: "millerapps"
+    group: "staff"
+    size: "256M"
+    date: "Feb 26 2026"
+    name: "hw-dygma-defy-keyboard"
+    kind: "file"
+  - perm: "drwxr-xr-x"
+    links: "2"
+    user: "millerapps"
+    group: "staff"
+    size: "64B"
+    date: "Feb 26 2026"
+    name: "sw-nix"
+    kind: "dir"
+  - perm: "drwxr-xr-x"
+    links: "2"
+    user: "millerapps"
+    group: "staff"
+    size: "64B"
+    date: "Feb 26 2026"
+    name: "sw-homebrew"
+    kind: "dir"
+  - perm: "drwxr-xr-x"
+    links: "2"
+    user: "millerapps"
+    group: "staff"
+    size: "64B"
+    date: "Feb 26 2026"
+    name: "sw-ghostty"
+    kind: "dir"
+  - perm: "drwxr-xr-x"
+    links: "2"
+    user: "millerapps"
+    group: "staff"
+    size: "64B"
+    date: "Feb 26 2026"
+    name: "sw-neovim"
+    kind: "dir"
+  - perm: "drwxr-xr-x"
+    links: "2"
+    user: "millerapps"
+    group: "staff"
+    size: "64B"
+    date: "Feb 26 2026"
+    name: "sw-zed"
+    kind: "dir"
+  - perm: "drwxr-xr-x"
+    links: "2"
+    user: "millerapps"
+    group: "staff"
+    size: "64B"
+    date: "Feb 26 2026"
+    name: "sw-lazygit"
+    kind: "dir"
+  - perm: "drwxr-xr-x"
+    links: "2"
+    user: "millerapps"
+    group: "staff"
+    size: "64B"
+    date: "Feb 26 2026"
+    name: "sw-raycast"
+    kind: "dir"
+  - perm: "drwxr-xr-x"
+    links: "2"
+    user: "millerapps"
+    group: "staff"
+    size: "64B"
+    date: "Feb 26 2026"
+    name: "sw-tailscale"
+    kind: "dir"
+  - perm: "lrwxr-xr-x"
+    links: "1"
+    user: "millerapps"
+    group: "staff"
+    size: "41B"
+    date: "Feb 26 2026"
+    name: "dotfiles"
+    target: "github.com/millerapps/dotfiles"
+    kind: "link"
+---
