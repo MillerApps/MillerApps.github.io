@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Swift on Rabbit Hole | MillerApps</title>
-    <link>http://localhost:1313/categories/swift/</link>
+    <link>https://millerapps.github.io/categories/swift/</link>
     <description>Recent content in Swift on Rabbit Hole | MillerApps</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Mon, 15 Jan 2024 05:36:45 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/swift/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://millerapps.github.io/categories/swift/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Swift KeyPaths</title>
-      <link>http://localhost:1313/post/2024/2024-01-15-swift-keypaths/</link>
+      <link>https://millerapps.github.io/post/2024/2024-01-15-swift-keypaths/</link>
       <pubDate>Mon, 15 Jan 2024 05:36:45 +0000</pubDate>
-      <guid>http://localhost:1313/post/2024/2024-01-15-swift-keypaths/</guid>
+      <guid>https://millerapps.github.io/post/2024/2024-01-15-swift-keypaths/</guid>
       <description>&lt;p&gt;So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;📘 Info&#xA;Please Note: I Am not an expert and this is more or less a way for me to help cement the basics of this concept in my own mind. If this is of any Value to you, thats just an added bonus!&#xA;{: .blockquote-info }&lt;/p&gt;</description>
     </item>
     <item>
       <title>The return</title>
-      <link>http://localhost:1313/post/2023/2023-12-17-return/</link>
+      <link>https://millerapps.github.io/post/2023/2023-12-17-return/</link>
       <pubDate>Sun, 17 Dec 2023 02:11:45 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/2023-12-17-return/</guid>
+      <guid>https://millerapps.github.io/post/2023/2023-12-17-return/</guid>
       <description>&lt;p&gt;Seven years have passed since I last engaged with this site and shared content. This platform remains a personal space where I post items that pique my interest or prove useful to me. During my hiatus, I ventured into construction, building and working with concrete. Before that, I had a stint in the oil fields, and even earlier in 2018, I contributed to an open-source project called Trust Wallet, which Binance eventually acquired.&lt;/p&gt;</description>
     </item>
   </channel>
