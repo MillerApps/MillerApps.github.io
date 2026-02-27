@@ -195,33 +195,43 @@
 
   <div class="content">
     
-<article class="post">
+<article class="post post--single">
   
   
   
   
-  
-  <div class="post-command-line">
-    <a class="post-command" href="https://millerapps.github.io/2025/">
-      <span class="post-command__prompt">millerapps@rabbit-hole:~/post/2025$</span>
-      <span class="post-command__verb">cat</span>
-      <span class="post-command__file">2025.md</span>
-      <span class="post-command__caret">▊</span>
-    </a>
-  </div>
-  <h1 class="post-title">
-    <a href="https://millerapps.github.io/2025/">2025</a>
-  </h1>
-  <div class="post-meta"><time class="post-date">02-02-2025</time><span class="post-author">Tyler Miller</span><span class="post-reading-time">3 min read (504 words)</span></div>
+  <div class="post-shell">
+    <div class="post-prompt post-prompt--single">
+      <div class="prompt-line prompt-line--top">
+        <span class="prompt-lead prompt-lead--top">╭─</span>
+        <span class="prompt-left">millerapps@rabbit-hole:~/post/2025</span>
+        <span class="prompt-fill" aria-hidden="true"></span>
+        <span class="prompt-right"><span class="prompt-label">at</span>
+            <span class="prompt-value">02-02-2025</span><span class="prompt-divider">·</span><span class="prompt-label">by</span>
+            <span class="prompt-value">Tyler Miller</span></span>
+      </div>
+      <div class="prompt-line prompt-line--lead">
+        <span class="prompt-lead">╰─❯</span>
+        <a class="prompt-command" href="https://millerapps.github.io/2025/">
+          <span class="prompt-command__verb">cat</span>
+          <span class="prompt-command__file">2025.md</span>
+          <span class="prompt-cursor" aria-hidden="true">▊</span>
+        </a>
+      </div>
+    </div><div class="post-meta post-meta--reading">
+        <span class="post-reading-time">3 min read (504 words)</span>
+      </div><h1 class="post-title">
+      <a href="https://millerapps.github.io/2025/">2025</a>
+    </h1>
 
-  
-  
+    
+    
 
 
-  
+    
 
-  <div class="post-content"><div>
-        <h1 id="thus-far">Thus Far<a href=\"#thus-far\" class=\"hanchor\" ariaLabel=\"Anchor\">#</a> </h1>
+    <div class="post-content post-content--framed"><div>
+          <h1 id="thus-far">Thus Far<a href=\"#thus-far\" class=\"hanchor\" ariaLabel=\"Anchor\">#</a> </h1>
 <h2 id="tldr">TL;DR<a href=\"#tldr\" class=\"hanchor\" ariaLabel=\"Anchor\">#</a> </h2>
 <ul>
 <li>I’ve been messing with Nix on macOS, probably not correctly.</li>
@@ -236,7 +246,7 @@
 <h3 id="my-nix-setup-probably-not-done-right">My Nix Setup (Probably Not Done Right)<a href=\"#my-nix-setup-probably-not-done-right\" class=\"hanchor\" ariaLabel=\"Anchor\">#</a> </h3>
 <p>I’ve been using nix-darwin to manage my macOS system declaratively—meaning instead of manually installing apps, setting preferences, and tweaking my environment, I define everything in configuration files. Sounds great, right? In theory, yes. In practice… I’m pretty sure I’ve done some things wrong. But it works (mostly), so I’ll count that as a win.</p>
 <h3 id="what-the-hell-is-nix">What the hell is Nix?<a href=\"#what-the-hell-is-nix\" class=\"hanchor\" ariaLabel=\"Anchor\">#</a> </h3>
-<p><img src="https://nixos.org/logo/nixos-logo-only-hires.png" alt="Nix Logo">
+<p><img src="/nix.svg" alt="Nix Logo">
 Now this is a great question—one that does not have a cut-and-dry answer. The basic explanation? A cross-platform package manager. That alone makes it a powerful tool, but Nix is also an OS and a functional programming language. It provides a way to make reproducible systems, environments, and so much more. Maybe I’ll take a deeper dive into this rabbit hole later.</p>
 <p>Here’s what I’ve attempted:</p>
 <ul>
@@ -252,7 +262,8 @@ Now this is a great question—one that does not have a cut-and-dry answer. The 
 <p>Next up, I want to dive into Go. I’m getting back into programming, and Go seems like a great starting point—simple syntax, great performance, and a strong ecosystem for building CLI tools. I don’t have a concrete project in mind yet—probably something small and useful for my workflow—but I’m excited to start learning.</p>
 <p>I’m sure I’ll keep refining my Nix setup, tweaking my website, and probably breaking things along the way. But that’s half the fun, right?</p>
 
-      </div></div>
+        </div></div>
+  </div>
 
   
     
@@ -271,10 +282,10 @@ Now this is a great question—one that does not have a cut-and-dry answer. The 
     
       
       <a href="https://millerapps.github.io/dns-fun/" class="pagination__command next">
-        <span class="post-command__prompt">millerapps@rabbit-hole:~/post/2025$</span>
         <span class="post-command__verb">cat</span>
         <span class="post-command__file">secure-dns-setup-with-pfsense-adguard-home-and-tailscale.md</span>
         <span class="post-command__caret">▊</span>
+        <span class="post-command__meta">millerapps@rabbit-hole:~/post</span>
       </a>
     
   </div>
@@ -315,7 +326,11 @@ Now this is a great question—one that does not have a cut-and-dry answer. The 
       <div class="copyright">
         <span>© 2026 Powered by <a href="https://gohugo.io">Hugo</a></span>
     
-      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+      <div class="footer-echo">
+        <span class="footer-echo__prompt">╰─❯</span>
+        <span class="footer-echo__command">echo</span>
+        <span class="footer-echo__text">"Thanks for visiting"</span>
       </div>
   </div>
 </footer>

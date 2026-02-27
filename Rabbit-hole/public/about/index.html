@@ -189,12 +189,17 @@
   
   
   
-  <div class="post-command-line">
-    <span class="post-command">
-      <span class="post-command__prompt">millerapps@rabbit-hole:~$</span>
-      <span class="post-command__verb">whoami</span>
-      <span class="post-command__caret">▊</span>
-    </span>
+  <div class="post-prompt">
+    <div class="prompt-line prompt-line--top">
+      <span class="prompt-lead prompt-lead--top">╭─</span>
+      <span class="prompt-left">millerapps@rabbit-hole:~/about</span></div>
+    <div class="prompt-line prompt-line--lead">
+      <span class="prompt-lead">╰─❯</span>
+      <span class="prompt-command">
+        <span class="prompt-command__verb">whoami</span>
+        <span class="prompt-cursor" aria-hidden="true">▊</span>
+      </span>
+    </div>
   </div>
 
   <div class="whoami-output">
@@ -230,7 +235,11 @@
       <div class="copyright">
         <span>© 2026 Powered by <a href="https://gohugo.io">Hugo</a></span>
     
-      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+      <div class="footer-echo">
+        <span class="footer-echo__prompt">╰─❯</span>
+        <span class="footer-echo__command">echo</span>
+        <span class="footer-echo__text">"Thanks for visiting"</span>
       </div>
   </div>
 </footer>

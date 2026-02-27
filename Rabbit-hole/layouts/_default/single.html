@@ -1,62 +1,74 @@
 {{ define "main" }}
-<article class="post">
+<article class="post post--single">
   {{ $file := printf "%s.md" (urlize .Title) }}
   {{ $user := (default "user" $.Site.Params.owner) | lower }}
   {{ $host := "rabbit-hole" }}
   {{ $path := printf "~/post/%s" (urlize .Title) }}
-  {{ $prompt := printf "%s@%s:%s$" $user $host $path }}
-  <div class="post-command-line">
-    <a class="post-command" href="{{ .Permalink }}">
-      <span class="post-command__prompt">{{ $prompt }}</span>
-      <span class="post-command__verb">cat</span>
-      <span class="post-command__file">{{ $file }}</span>
-      <span class="post-command__caret">▊</span>
-    </a>
-  </div>
-  <h1 class="post-title">
-    <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-  </h1>
-  <div class="post-meta">
-    {{- if .Date -}}
-      <time class="post-date">
-        {{- partial "post-date" . -}}
-        {{- if and $.Site.Params.showLastUpdated .Lastmod -}}
-          &nbsp;{{- partial "post-lastmod" . -}}
-        {{- end -}}
-      </time>
-    {{- end -}}
-    {{- with .Params.Author -}}
-      <span class="post-author">{{ . }}</span>
-    {{- end -}}
-    {{- if and (.Param "readingTime") (eq (.Param "readingTime") true) -}}
-      <span class="post-reading-time">{{ .ReadingTime }} {{ $.Site.Params.minuteReadingTime | default "min read" }} ({{ .WordCount }} {{ $.Site.Params.words | default "words" }})</span>
-    {{- end -}}
-  </div>
-
-  {{ if .Params.tags }}
-    <span class="post-tags">
-      {{ range .Params.tags }}
-      <a href="{{ (urlize (printf "tags/%s/" .)) | absLangURL }}">{{ . }}</a>
-      {{ end }}
-    </span>
-  {{ end }}
-  {{ partial "cover.html" . }}
-
-  {{ if (.Params.Toc | default .Site.Params.Toc) }}
-    <div class="table-of-contents">
-      <h2>
-        {{ (.Params.TocTitle | default .Site.Params.TocTitle) | default "Table of Contents" }}
-      </h2>
-      {{ .TableOfContents }}
+  <div class="post-shell">
+    <div class="post-prompt post-prompt--single">
+      <div class="prompt-line prompt-line--top">
+        <span class="prompt-lead prompt-lead--top">╭─</span>
+        <span class="prompt-left">{{ $user }}@{{ $host }}:{{ $path }}</span>
+        <span class="prompt-fill" aria-hidden="true"></span>
+        <span class="prompt-right">
+          {{- if .Date -}}
+            <span class="prompt-label">at</span>
+            <span class="prompt-value">{{- partial "post-date" . -}}</span>
+          {{- end -}}
+          {{- if and .Date .Params.Author -}}
+            <span class="prompt-divider">·</span>
+          {{- end -}}
+          {{- with .Params.Author -}}
+            <span class="prompt-label">by</span>
+            <span class="prompt-value">{{ . }}</span>
+          {{- end -}}
+        </span>
+      </div>
+      <div class="prompt-line prompt-line--lead">
+        <span class="prompt-lead">╰─❯</span>
+        <a class="prompt-command" href="{{ .Permalink }}">
+          <span class="prompt-command__verb">cat</span>
+          <span class="prompt-command__file">{{ $file }}</span>
+          <span class="prompt-cursor" aria-hidden="true">▊</span>
+        </a>
+      </div>
     </div>
-  {{ end }}
 
-  <div class="post-content">
-    {{- with .Content -}}
-      <div>
-        {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href=\"#${2}\" class=\"hanchor\" ariaLabel=\"Anchor\">#</a> ${3}` | safeHTML }}
+    {{- if and (.Param "readingTime") (eq (.Param "readingTime") true) -}}
+      <div class="post-meta post-meta--reading">
+        <span class="post-reading-time">{{ .ReadingTime }} {{ $.Site.Params.minuteReadingTime | default "min read" }} ({{ .WordCount }} {{ $.Site.Params.words | default "words" }})</span>
       </div>
     {{- end -}}
+
+    <h1 class="post-title">
+      <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+    </h1>
+
+    {{ if .Params.tags }}
+      <span class="post-tags">
+        {{ range .Params.tags }}
+        <a href="{{ (urlize (printf "tags/%s/" .)) | absLangURL }}">{{ . }}</a>
+        {{ end }}
+      </span>
+    {{ end }}
+    {{ partial "cover.html" . }}
+
+    {{ if (.Params.Toc | default .Site.Params.Toc) }}
+      <div class="table-of-contents">
+        <h2>
+          {{ (.Params.TocTitle | default .Site.Params.TocTitle) | default "Table of Contents" }}
+        </h2>
+        {{ .TableOfContents }}
+      </div>
+    {{ end }}
+
+    <div class="post-content post-content--framed">
+      {{- with .Content -}}
+        <div>
+          {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href=\"#${2}\" class=\"hanchor\" ariaLabel=\"Anchor\">#</a> ${3}` | safeHTML }}
+        </div>
+      {{- end -}}
+    </div>
   </div>
 
   {{ if eq .Type $.Site.Params.contentTypeName }}

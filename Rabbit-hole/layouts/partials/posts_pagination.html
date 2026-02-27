@@ -7,15 +7,15 @@
   <div class="pagination__buttons">
     {{ $user := (default "user" $.Site.Params.owner) | lower }}
     {{ $host := "rabbit-hole" }}
-    {{ $path := printf "~/post/%s" (urlize .Title) }}
-    {{ $prompt := printf "%s@%s:%s$" $user $host $path }}
+    {{ $path := "~/post" }}
+    {{ $metaPrefix := printf "%s@%s:%s" $user $host $path }}
     {{ if .NextInSection }}
       {{ $prevFile := printf "%s.md" (urlize .NextInSection.Title) }}
       <a href="{{ .NextInSection.Permalink }}" class="pagination__command prev">
-        <span class="post-command__prompt">{{ $prompt }}</span>
         <span class="post-command__verb">cat</span>
         <span class="post-command__file">{{ $prevFile }}</span>
         <span class="post-command__caret">▊</span>
+        <span class="post-command__meta">{{ $metaPrefix }}</span>
       </a>
     {{ end }}
     {{ if and .NextInSection .PrevInSection }}
@@ -24,10 +24,10 @@
     {{ if .PrevInSection }}
       {{ $nextFile := printf "%s.md" (urlize .PrevInSection.Title) }}
       <a href="{{ .PrevInSection.Permalink }}" class="pagination__command next">
-        <span class="post-command__prompt">{{ $prompt }}</span>
         <span class="post-command__verb">cat</span>
         <span class="post-command__file">{{ $nextFile }}</span>
         <span class="post-command__caret">▊</span>
+        <span class="post-command__meta">{{ $metaPrefix }}</span>
       </a>
     {{ end }}
   </div>

@@ -405,11 +405,46 @@ button {
 }
 
 .post.on-list {
-  padding: 24px 0;
+  padding: 18px 18px 16px;
+  overflow: hidden;
+  border: 1px dashed var(--panel-border);
+  background: color-mix(in srgb, var(--background) 88%, var(--ctp-sky) 12%);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.post--single .post-shell {
+  border: 1px dashed var(--panel-border);
+  background: color-mix(in srgb, var(--background) 88%, var(--ctp-sky) 12%);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 10%, transparent);
+  padding: 16px 18px 18px;
+}
+
+.post--single .post-prompt {
+  margin: -16px -18px 12px;
+  padding: 10px 12px;
+  border-bottom: 1px dashed var(--panel-border);
+  background: color-mix(in srgb, var(--background) 88%, var(--ctp-sky) 12%);
+}
+
+.post--single .post-meta--reading {
+  margin-top: 8px;
+}
+
+.post--single .post-content--framed {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--panel-border);
+}
+
+.post.on-list .post-prompt {
+  margin: -18px -18px 12px;
+  padding: 10px 12px;
+  border-bottom: 1px dashed var(--panel-border);
+  background: color-mix(in srgb, var(--background) 88%, var(--ctp-sky) 12%);
 }
 
 .post.on-list:not(:last-of-type) {
-  border-bottom: 1px solid var(--panel-border);
+  margin-bottom: 16px;
 }
 
 .post-command-line {
@@ -479,6 +514,15 @@ button {
 
 .post--toolbox .ls-output {
   border-top: 0;
+}
+
+.post--toolbox .post-prompt,
+.post--about .post-prompt {
+  border: 1px dashed var(--panel-border);
+  border-bottom: 0;
+  padding: 10px 12px;
+  background: color-mix(in srgb, var(--background) 88%, var(--ctp-sky) 12%);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 10%, transparent);
 }
 
 .ls-output h2 {
@@ -715,6 +759,146 @@ button {
   color: var(--muted);
 }
 
+.post-prompt {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.9em;
+  overflow: hidden;
+}
+
+.prompt-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8ch;
+  min-width: 0;
+}
+
+.prompt-left {
+  color: var(--ctp-sky);
+  white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prompt-right {
+  display: inline-flex;
+  gap: 0.6ch;
+  align-items: baseline;
+  color: var(--foreground);
+  white-space: nowrap;
+}
+
+.prompt-label {
+  color: var(--muted);
+}
+
+.prompt-sep,
+.prompt-divider {
+  color: var(--muted);
+}
+
+.prompt-value {
+  color: var(--foreground);
+}
+
+.prompt-fill {
+  flex: 1 1 auto;
+  height: 1px;
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 6px 1px;
+  background-repeat: repeat-x;
+  opacity: 0.35;
+  align-self: center;
+  min-width: 20px;
+}
+
+.prompt-line--lead {
+  margin-top: 4px;
+  align-items: center;
+}
+
+.prompt-lead {
+  color: var(--accent);
+}
+
+.prompt-lead--top {
+  color: var(--muted);
+}
+
+.prompt-command {
+  display: inline-flex;
+  gap: 0.6ch;
+  text-decoration: none;
+  color: var(--foreground);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.prompt-command__verb {
+  color: var(--ctp-peach);
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.prompt-command__args {
+  color: var(--ctp-yellow);
+}
+
+.prompt-command__file {
+  color: var(--foreground);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prompt-cursor {
+  color: var(--accent);
+  margin-left: 0.2ch;
+  display: inline-block;
+  animation: terminal-cursor-blink 1s steps(1, end) infinite;
+}
+
+.post-meta--reading {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.pagination__command {
+  align-items: baseline;
+}
+
+.post-command__meta {
+  color: var(--muted);
+  font-size: 0.85em;
+  margin-left: 0.6ch;
+}
+
+.prompt-command:hover,
+.prompt-command:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 70%, transparent);
+  text-underline-offset: 0.2em;
+}
+
+.post-content--summary {
+  margin-top: 6px;
+}
+
+.post.on-list .post-content--summary {
+  margin-top: 0;
+}
+
+.post.on-list .post-content--summary::after {
+  content: "";
+  display: block;
+  margin-top: 12px;
+  border-top: 1px dashed var(--panel-border);
+  opacity: 0.8;
+}
+
 .post-tags {
   display: flex;
   flex-wrap: wrap;
@@ -762,6 +946,35 @@ button {
 .footer {
   padding: 30px 0 40px;
   border-top: 1px solid var(--panel-border);
+}
+
+.footer-echo {
+  margin-top: 10px;
+  display: inline-flex;
+  gap: 0.6ch;
+  align-items: baseline;
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+.footer-echo__prompt {
+  color: var(--accent);
+}
+
+.footer-echo__command {
+  color: var(--ctp-peach);
+}
+
+.footer-echo__text {
+  color: var(--foreground);
+}
+
+.footer-echo__text::after {
+  content: "▊";
+  margin-left: 0.3ch;
+  color: var(--accent);
+  display: inline-block;
+  animation: terminal-cursor-blink 1s steps(1, end) infinite;
 }
 
 .logo::before {
@@ -920,6 +1133,27 @@ button {
     white-space: normal;
     word-break: break-word;
     overflow-wrap: anywhere;
+  }
+
+  .prompt-line {
+    flex-wrap: wrap;
+  }
+
+  .prompt-fill {
+    display: none;
+  }
+
+  .prompt-left,
+  .prompt-right {
+    white-space: normal;
+  }
+
+  .prompt-line--lead {
+    gap: 0.6ch;
+  }
+
+  .prompt-command {
+    white-space: normal;
   }
 }
 

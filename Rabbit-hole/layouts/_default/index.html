@@ -13,32 +13,42 @@
       {{ $PageContext = .Site }}
     {{ end }}
     {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
-    {{ $user := (default "user" $.Site.Params.owner) | lower }}
-    {{ $host := "rabbit-hole" }}
-    {{ $path := "~" }}
-    {{ $prompt := printf "%s@%s:%s$" $user $host $path }}
-
     {{ range $paginator.Pages }}
       <article class="post on-list">
         {{ $file := printf "%s.md" (urlize .Title) }}
-        <h2 class="post-command-line">
-          <a class="post-command" href="{{ .Permalink }}">
-            <span class="post-command__prompt">{{ $prompt }}</span>
-            <span class="post-command__verb">cat</span>
-            <span class="post-command__file">{{ $file }}</span>
-            <span class="post-command__caret">▊</span>
-          </a>
-        </h2>
-
-        <div class="post-meta">
-          {{- if .Date -}}
-            <time class="post-date">
-              {{- partial "post-date" . -}}
-            </time>
-          {{- end -}}
-          {{- with .Params.Author -}}
-            <span class="post-author">{{ . }}</span>
-          {{- end -}}
+        {{ $author := .Params.Author }}
+        {{ $hasAuthor := $author }}
+        {{ $hasDate := .Date }}
+        {{ $user := (default "user" $.Site.Params.owner) | lower }}
+        {{ $host := "rabbit-hole" }}
+        {{ $path := printf "~/post/%s" (urlize .Title) }}
+        <div class="post-prompt">
+          <div class="prompt-line prompt-line--top">
+            <span class="prompt-lead prompt-lead--top">╭─</span>
+            <span class="prompt-left">{{ $user }}@{{ $host }}:{{ $path }}</span>
+            <span class="prompt-fill" aria-hidden="true"></span>
+            <span class="prompt-right">
+              {{- if $hasDate -}}
+                <span class="prompt-label">at</span>
+                <span class="prompt-value">{{- partial "post-date" . -}}</span>
+              {{- end -}}
+              {{- if and $hasDate $hasAuthor -}}
+                <span class="prompt-divider">·</span>
+              {{- end -}}
+              {{- if $hasAuthor -}}
+                <span class="prompt-label">by</span>
+                <span class="prompt-value">{{ $author }}</span>
+              {{- end -}}
+            </span>
+          </div>
+          <div class="prompt-line prompt-line--lead">
+            <span class="prompt-lead">╰─❯</span>
+            <a class="prompt-command" href="{{ .Permalink }}">
+              <span class="prompt-command__verb">cat</span>
+              <span class="prompt-command__file">{{ $file }}</span>
+              <span class="prompt-cursor" aria-hidden="true">▊</span>
+            </a>
+          </div>
         </div>
 
         {{ if .Params.tags }}
@@ -53,21 +63,15 @@
 
         {{ partial "cover.html" . }}
 
-        <div class="post-content">
-          {{ if .Params.showFullContent }}
-            {{ .Content }}
-          {{ else if .Description }}
-            <p>{{ .Description | markdownify }}</p>
+        <div class="post-content post-content--summary">
+          {{ $summary := "" }}
+          {{ if .Description }}
+            {{ $summary = .Description | plainify }}
           {{ else }}
-            {{ .Summary }}
+            {{ $summary = .Summary | plainify }}
           {{ end }}
+          <p>{{ $summary | truncate 120 }}</p>
         </div>
-
-        {{ if not .Params.showFullContent }}
-          <div>
-            <a class="read-more button inline" href="{{ .RelPermalink }}">[{{ $.Site.Params.ReadMore }}]</a>
-          </div>
-        {{ end }}
       </article>
     {{ end }}
 

@@ -3,15 +3,27 @@
   {{ $user := (default "user" $.Site.Params.owner) | lower }}
   {{ $host := "rabbit-hole" }}
   {{ $path := "~/toolbox" }}
-  {{ $prompt := printf "%s@%s:%s$" $user $host $path }}
-  <div class="post-command-line">
-    <span class="post-command">
-      <span class="post-command__prompt">{{ $prompt }}</span>
-      <span class="post-command__verb">ls</span>
-      <span class="post-command__args">-la</span>
-      <span class="post-command__file">~/toolbox/</span>
-      <span class="post-command__caret">▊</span>
-    </span>
+  <div class="post-prompt">
+    <div class="prompt-line prompt-line--top">
+      <span class="prompt-lead prompt-lead--top">╭─</span>
+      <span class="prompt-left">{{ $user }}@{{ $host }}:{{ $path }}</span>
+      {{- if .Date -}}
+        <span class="prompt-fill" aria-hidden="true"></span>
+        <span class="prompt-right">
+          <span class="prompt-label">at</span>
+          <span class="prompt-value">{{- partial "post-date" . -}}</span>
+        </span>
+      {{- end -}}
+    </div>
+    <div class="prompt-line prompt-line--lead">
+      <span class="prompt-lead">╰─❯</span>
+      <span class="prompt-command">
+        <span class="prompt-command__verb">ls</span>
+        <span class="prompt-command__args">-la</span>
+        <span class="prompt-command__file">~/toolbox/</span>
+        <span class="prompt-cursor" aria-hidden="true">▊</span>
+      </span>
+    </div>
   </div>
   {{ $entries := .Params.ls }}
   <div class="ls-output" role="table">

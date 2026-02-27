@@ -2,13 +2,26 @@
 <article class="post post--about">
   {{ $user := (default "user" $.Site.Params.owner) | lower }}
   {{ $host := "rabbit-hole" }}
-  {{ $prompt := printf "%s@%s:~$" $user $host }}
-  <div class="post-command-line">
-    <span class="post-command">
-      <span class="post-command__prompt">{{ $prompt }}</span>
-      <span class="post-command__verb">whoami</span>
-      <span class="post-command__caret">▊</span>
-    </span>
+  {{ $path := "~/about" }}
+  <div class="post-prompt">
+    <div class="prompt-line prompt-line--top">
+      <span class="prompt-lead prompt-lead--top">╭─</span>
+      <span class="prompt-left">{{ $user }}@{{ $host }}:{{ $path }}</span>
+      {{- if .Date -}}
+        <span class="prompt-fill" aria-hidden="true"></span>
+        <span class="prompt-right">
+          <span class="prompt-label">at</span>
+          <span class="prompt-value">{{- partial "post-date" . -}}</span>
+        </span>
+      {{- end -}}
+    </div>
+    <div class="prompt-line prompt-line--lead">
+      <span class="prompt-lead">╰─❯</span>
+      <span class="prompt-command">
+        <span class="prompt-command__verb">whoami</span>
+        <span class="prompt-cursor" aria-hidden="true">▊</span>
+      </span>
+    </div>
   </div>
 
   <div class="whoami-output">
