@@ -1,402 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-    <title>Swift KeyPaths :: Rabbit Hole | MillerApps</title>
-  
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is.
+<!doctype html><html lang=en><head><title>Swift KeyPaths :: Rabbit Hole | MillerApps</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is.
 📘 Info Please Note: I Am not an expert and this is more or less a way for me to help cement the basics of this concept in my own mind. If this is of any Value to you, thats just an added bonus! {: .blockquote-info }
-" />
-<meta name="keywords" content="" />
-
-  <meta name="robots" content="noodp" />
-
-<link rel="canonical" href="https://millerapps.github.io/post/2024/2024-01-15-swift-keypaths/" />
-
-
-
-
-
-  
-  <link rel="stylesheet" href="https://millerapps.github.io/css/terminal.min.4884d799be9ea3adcc5f9a01e8a24e6e6a0276d50cf4fc8f4b3c8df158884c95.css">
-
-  
-  <link rel="stylesheet" href="https://millerapps.github.io/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
-
-  
-  <link rel="stylesheet" href="https://millerapps.github.io/css/code.min.4f0ccc8439f99bf7f7970298556b94011aabc1fcae743b6842fc3361a2da9ea3.css">
-
-  
-  <link rel="stylesheet" href="https://millerapps.github.io/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
-
-  
-  <link rel="stylesheet" href="https://millerapps.github.io/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
-
-  
-  <link rel="stylesheet" href="https://millerapps.github.io/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
-
-  
-  <link rel="stylesheet" href="https://millerapps.github.io/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
-
-  
-  <link rel="stylesheet" href="https://millerapps.github.io/css/main.min.15870410d15d02abd22fb5ef00996f65a00d04b3a7435e9f83831c7c2298de88.css">
-
-  
-  <link rel="stylesheet" href="https://millerapps.github.io/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
-
-  
-  <link rel="stylesheet" href="https://millerapps.github.io/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
-
-  
-  <link rel="stylesheet" href="https://millerapps.github.io/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
-
-  
-  <link rel="stylesheet" href="https://millerapps.github.io/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
-
-  
-  <link rel="stylesheet" href="https://millerapps.github.io/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
-
-
-<link rel="stylesheet" href="https://millerapps.github.io/terminal.css">
-
-
-
-
-<link rel="shortcut icon" href="https://millerapps.github.io/favicon.png">
-<link rel="apple-touch-icon" href="https://millerapps.github.io/apple-touch-icon.png">
-
-
-<meta name="twitter:card" content="summary" />
-
-  
-    <meta name="twitter:site" content="" />
-  
-    <meta name="twitter:creator" content="Tyler Miller" />
-
-
-
-<meta property="og:locale" content="en" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Swift KeyPaths">
-<meta property="og:description" content="So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is.
+"><meta name=keywords content><meta name=robots content="noodp"><link rel=canonical href=https://rabbithole.wiki/post/2024/2024-01-15-swift-keypaths/><link rel=stylesheet href=https://rabbithole.wiki/css/terminal.min.4884d799be9ea3adcc5f9a01e8a24e6e6a0276d50cf4fc8f4b3c8df158884c95.css><link rel=stylesheet href=https://rabbithole.wiki/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css><link rel=stylesheet href=https://rabbithole.wiki/css/code.min.4f0ccc8439f99bf7f7970298556b94011aabc1fcae743b6842fc3361a2da9ea3.css><link rel=stylesheet href=https://rabbithole.wiki/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css><link rel=stylesheet href=https://rabbithole.wiki/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css><link rel=stylesheet href=https://rabbithole.wiki/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css><link rel=stylesheet href=https://rabbithole.wiki/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css><link rel=stylesheet href=https://rabbithole.wiki/css/main.min.15870410d15d02abd22fb5ef00996f65a00d04b3a7435e9f83831c7c2298de88.css><link rel=stylesheet href=https://rabbithole.wiki/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css><link rel=stylesheet href=https://rabbithole.wiki/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css><link rel=stylesheet href=https://rabbithole.wiki/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css><link rel=stylesheet href=https://rabbithole.wiki/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css><link rel=stylesheet href=https://rabbithole.wiki/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css><link rel=stylesheet href=https://rabbithole.wiki/terminal.css><link rel="shortcut icon" href=https://rabbithole.wiki/favicon.png><link rel=apple-touch-icon href=https://rabbithole.wiki/apple-touch-icon.png><meta name=twitter:card content="summary"><meta name=twitter:site content><meta name=twitter:creator content="Tyler Miller"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="Swift KeyPaths"><meta property="og:description" content="So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is.
 📘 Info Please Note: I Am not an expert and this is more or less a way for me to help cement the basics of this concept in my own mind. If this is of any Value to you, thats just an added bonus! {: .blockquote-info }
-" />
-<meta property="og:url" content="https://millerapps.github.io/post/2024/2024-01-15-swift-keypaths/" />
-<meta property="og:site_name" content="Rabbit Hole | MillerApps" />
-
-  <meta property="og:image" content="https://millerapps.github.io/og-image.png">
-
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="627">
-
-  <meta property="article:section" content="neat" />
-
-  <meta property="article:section" content="things new to me" />
-
-  <meta property="article:section" content="software" />
-
-  <meta property="article:section" content="swift" />
-
-  <meta property="article:section" content="keypath" />
-
-
-  <meta property="article:published_time" content="2024-01-15 05:36:45 &#43;0000 UTC" />
-
-
-
-
-
-
-
-
-
-
-
-
-</head>
-
-<body class="page-post">
-
-
-<div class="container center">
-
-  <header class="header">
-  <div class="header__inner">
-    <div class="header__logo">
-      <a href="/">
-  <div class="logo">
-    <span class="logo__title">
-      Rabbit Hole | MillerApps
-    </span>
-    <span class="logo__prompt">
-      millerapps@rabbit-hole:~$
-      <span class="terminal-cursor" aria-hidden="true"></span>
-    </span>
-  </div>
-</a>
-
-    </div>
-    
-      <ul class="menu menu--mobile">
-  <li class="menu__trigger">Menu&nbsp;▾</li>
-  <li>
-    <ul class="menu__dropdown">
-      
-        
-          <li><a href="/about">About</a></li>
-        
-      
-        
-          <li><a href="https://github.com/MillerApps">Github</a></li>
-        
-      
-        
-          <li><a href="/toolbox">Toolbox</a></li>
-        
-      
-      
-    </ul>
-  </li>
-</ul>
-
-    
-    
-    
-    
-    <div class="header__status" aria-hidden="true">
-      <span class="status-item status-item--online">status: online</span>
-      <span class="status-item status-item--user">user: millerapps</span>
-      <span class="status-item status-item--host">host: rabbit-hole</span>
-    </div>
-  </div>
-  
-    <nav class="navigation-menu">
-  <ul class="navigation-menu__inner menu--desktop">
-    
-      
-        
-          <li><a href="/about" >About</a></li>
-        
-      
-        
-          <li><a href="https://github.com/MillerApps" >Github</a></li>
-        
-      
-        
-          <li><a href="/toolbox" >Toolbox</a></li>
-        
-      
-      
-    
-  </ul>
-</nav>
-
-  
-</header>
-
-
-  <div class="content">
-    
-<article class="post post--single">
-  
-  
-  
-  
-  <div class="post-shell">
-    <div class="post-prompt post-prompt--single">
-      <div class="prompt-line prompt-line--top">
-        <span class="prompt-lead prompt-lead--top">╭─</span>
-        <span class="prompt-left">millerapps@rabbit-hole:~/post/swift-keypaths</span>
-        <span class="prompt-fill" aria-hidden="true"></span>
-        <span class="prompt-right"><span class="prompt-label">at</span>
-            <span class="prompt-value">01-15-2024</span><span class="prompt-divider">·</span><span class="prompt-label">by</span>
-            <span class="prompt-value">Tyler Miller</span></span>
-      </div>
-      <div class="prompt-line prompt-line--lead">
-        <span class="prompt-lead">╰─❯</span>
-        <a class="prompt-command" href="https://millerapps.github.io/post/2024/2024-01-15-swift-keypaths/">
-          <span class="prompt-command__verb">cat</span>
-          <span class="prompt-command__file">swift-keypaths.md</span>
-          <span class="prompt-cursor" aria-hidden="true">▊</span>
-        </a>
-      </div>
-    </div><div class="post-meta post-meta--reading">
-        <span class="post-reading-time">3 min read (436 words)</span>
-      </div><h1 class="post-title">
-      <a href="https://millerapps.github.io/post/2024/2024-01-15-swift-keypaths/">Swift KeyPaths</a>
-    </h1>
-
-    
-    
-
-
-    
-
-    <div class="post-content post-content--framed"><div>
-          <p>So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is.</p>
-<blockquote>
-<p>📘 Info
+"><meta property="og:url" content="https://rabbithole.wiki/post/2024/2024-01-15-swift-keypaths/"><meta property="og:site_name" content="Rabbit Hole | MillerApps"><meta property="og:image" content="https://rabbithole.wiki/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="627"><meta property="article:section" content="neat"><meta property="article:section" content="things new to me"><meta property="article:section" content="software"><meta property="article:section" content="swift"><meta property="article:section" content="keypath"><meta property="article:published_time" content="2024-01-15 05:36:45 +0000 UTC"></head><body class=page-post><div class="container center"><header class=header><div class=header__inner><div class=header__logo><a href=/><div class=logo><span class=logo__title>Rabbit Hole | MillerApps
+</span><span class=logo__prompt>millerapps@rabbit-hole:~$
+<span class=terminal-cursor aria-hidden=true></span></span></div></a></div><ul class="menu menu--mobile"><li class=menu__trigger>Menu&nbsp;▾</li><li><ul class=menu__dropdown><li><a href=/about>About</a></li><li><a href=https://github.com/MillerApps>Github</a></li><li><a href=/toolbox>Toolbox</a></li></ul></li></ul><div class=header__status aria-hidden=true><span class="status-item status-item--online">status: online</span>
+<span class="status-item status-item--user">user: millerapps</span>
+<span class="status-item status-item--host">host: rabbit-hole</span></div></div><nav class=navigation-menu><ul class="navigation-menu__inner menu--desktop"><li><a href=/about>About</a></li><li><a href=https://github.com/MillerApps>Github</a></li><li><a href=/toolbox>Toolbox</a></li></ul></nav></header><div class=content><article class="post post--single"><div class=post-shell><div class="post-prompt post-prompt--single"><div class="prompt-line prompt-line--top"><span class="prompt-lead prompt-lead--top">╭─</span>
+<span class=prompt-left>millerapps@rabbit-hole:~/post/swift-keypaths</span>
+<span class=prompt-fill aria-hidden=true></span>
+<span class=prompt-right><span class=prompt-label>at</span>
+<span class=prompt-value>01-15-2024</span><span class=prompt-divider>·</span><span class=prompt-label>by</span>
+<span class=prompt-value>Tyler Miller</span></span></div><div class="prompt-line prompt-line--lead"><span class=prompt-lead>╰─❯</span>
+<a class=prompt-command href=https://rabbithole.wiki/post/2024/2024-01-15-swift-keypaths/><span class=prompt-command__verb>cat</span>
+<span class=prompt-command__file>swift-keypaths.md</span>
+<span class=prompt-cursor aria-hidden=true>▊</span></a></div></div><div class="post-meta post-meta--reading"><span class=post-reading-time>3 min read (436 words)</span></div><h1 class=post-title><a href=https://rabbithole.wiki/post/2024/2024-01-15-swift-keypaths/>Swift KeyPaths</a></h1><div class="post-content post-content--framed"><div><p>So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is.</p><blockquote><p>📘 Info
 Please Note: I Am not an expert and this is more or less a way for me to help cement the basics of this concept in my own mind. If this is of any Value to you, thats just an added bonus!
-{: .blockquote-info }</p>
-</blockquote>
-<p>To begin Apple defines a keyPath as follows:</p>
-<blockquote>
-<p><strong>A key path from a specific root type to a specific resulting value type.</strong></p>
-</blockquote>
-<p>Here&rsquo;s a bit more detailed definition:</p>
-<blockquote>
-<p><strong>A reference (&ldquo;path&rdquo;) to a property on a give Type. In Swift a &lsquo;KeyPath&rsquo; is expressed as &lsquo;<em>\Type.property</em>&rsquo;, &lsquo;<em>Type</em>&rsquo; is the struct or class. And &lsquo;<em>property</em>&rsquo; would be what you want to reference</strong></p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Superhero</span> {
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">var</span> alias: String
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">var</span> superpower: String
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Defining key paths for &#39;alias&#39; and &#39;superpower&#39; properties of the Superhero struct.</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// These constants allow indirect reference to the properties of any Superhero instance.</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> aliasKeyPath = <span style="color:#960050;background-color:#1e0010">\</span>Superhero.alias
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> superpowerKeyPath = <span style="color:#960050;background-color:#1e0010">\</span>Superhero.superpower
-</span></span></code></pre></div><blockquote>
-<p>We just created a simple struct and set constants which hold the KeyPath.</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Creating an instance of Superhero.</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// &#39;superhero&#39; is now an object with &#39;alias&#39; and &#39;superpower&#39; properties.</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> superhero = Superhero(alias: <span style="color:#e6db74">&#34;Spider-Bro&#34;</span>, superpower: <span style="color:#e6db74">&#34;Web-slinging&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Accessing property values using the key paths defined earlier.</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// This demonstrates how key paths can be used to read values from specific properties.</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> superheroAlias = superhero[keyPath: aliasKeyPath] <span style="color:#75715e">// Retrieves &#39;alias&#39; value: &#34;Spider-Bro&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> superheroPower = superhero[keyPath: superpowerKeyPath] <span style="color:#75715e">// Retrieves &#39;superpower&#39; value: &#34;Web-slinging&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Printing the accessed values.</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// It shows how to use the key paths to get property values in a readable and reusable manner.</span>
-</span></span><span style="display:flex;"><span>print(superheroAlias, superheroPower)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Accessing properties using shorthand key path syntax directly.</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// This is a more concise way to use key paths, especially when they are not reused elsewhere.</span>
-</span></span><span style="display:flex;"><span>print(superhero[keyPath: <span style="color:#960050;background-color:#1e0010">\</span>.alias], superhero[keyPath: <span style="color:#960050;background-color:#1e0010">\</span>.superpower])
-</span></span></code></pre></div><blockquote>
-<p>We instantiate a Superhero struct here, then we access the values in two manners.</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">// Modifying a property value using its key path.</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// This line demonstrates how key paths can also be used to set new values for specific properties.</span>
-</span></span><span style="display:flex;"><span>superhero[keyPath: <span style="color:#960050;background-color:#1e0010">\</span>.alias] = <span style="color:#e6db74">&#34;Spider-Pig&#34;</span> <span style="color:#75715e">// Changes &#39;alias&#39; property to &#39;Spider-Pig&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Printing the updated alias to demonstrate the change.</span>
-</span></span><span style="display:flex;"><span>print(superhero[keyPath: <span style="color:#960050;background-color:#1e0010">\</span>.alias])
-</span></span></code></pre></div><blockquote>
-<p>Finally, we see how to modify the property values</p>
-</blockquote>
-<p>These are the very basics of KeyPaths in Swift. I believe this should be enough to at least get you familiar with the concept to the point where SwiftUI will make a tad bit more sense when first getting started.</p>
-
-        </div></div>
-  </div>
-
-  
-    
-<div class="pagination">
-  <div class="pagination__title">
-    <span class="pagination__title-h">Read other posts</span>
-    <hr />
-  </div>
-  <div class="pagination__buttons">
-    
-    
-    
-    
-    
-      
-      <a href="https://millerapps.github.io/post/2024/2024-03-18-motivation/" class="pagination__command prev">
-        <span class="post-command__verb">cat</span>
-        <span class="post-command__file">motivation.md</span>
-        <span class="post-command__caret">▊</span>
-        <span class="post-command__meta">millerapps@rabbit-hole:~/post</span>
-      </a>
-    
-    
-      ::
-    
-    
-      
-      <a href="https://millerapps.github.io/post/2023/2023-12-17-return/" class="pagination__command next">
-        <span class="post-command__verb">cat</span>
-        <span class="post-command__file">the-return.md</span>
-        <span class="post-command__caret">▊</span>
-        <span class="post-command__meta">millerapps@rabbit-hole:~/post</span>
-      </a>
-    
-  </div>
-</div>
-
-
-  
-
-  
-    
-<script src="https://giscus.app/client.js"
-        data-repo="millerapps/MillerApps.github.io"
-        data-repo-id="MDEwOlJlcG9zaXRvcnkzNjUxNzI4NA=="
-        data-category="Rabbit hole"
-        data-category-id="DIC_kwDOAi01pM4CmmsL"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="catppuccin_mocha"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>
-
-
-  
-</article>
-
-  </div>
-
-  
-    <footer class="footer footer--custom">
-  <div class="footer__inner">
-    
-      <div class="copyright">
-        <span>© 2026 Powered by <a href="https://gohugo.io">Hugo</a></span>
-    
-      </div>
-      <div class="footer-echo">
-        <span class="footer-echo__prompt">╰─❯</span>
-        <span class="footer-echo__command">echo</span>
-        <span class="footer-echo__text">"Thanks for visiting"</span>
-      </div>
-  </div>
-</footer>
-
-
-
-
-
-
-<script type="text/javascript" src="/bundle.min.js"></script>
-
-
-
-
-
-  
-</div>
-<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('millerapps', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Donate',
-    'floating-chat.donateButton.background-color': '#ffffff',
-    'floating-chat.donateButton.text-color': '#323842'
-  });
-</script>
-</body>
-</html>
+{: .blockquote-info }</p></blockquote><p>To begin Apple defines a keyPath as follows:</p><blockquote><p><strong>A key path from a specific root type to a specific resulting value type.</strong></p></blockquote><p>Here&rsquo;s a bit more detailed definition:</p><blockquote><p><strong>A reference (&ldquo;path&rdquo;) to a property on a give Type. In Swift a &lsquo;KeyPath&rsquo; is expressed as &lsquo;<em>\Type.property</em>&rsquo;, &lsquo;<em>Type</em>&rsquo; is the struct or class. And &lsquo;<em>property</em>&rsquo; would be what you want to reference</strong></p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-swift data-lang=swift><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Superhero</span> {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>var</span> alias: String
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>var</span> superpower: String
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Defining key paths for &#39;alias&#39; and &#39;superpower&#39; properties of the Superhero struct.</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// These constants allow indirect reference to the properties of any Superhero instance.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> aliasKeyPath = <span style=color:#960050;background-color:#1e0010>\</span>Superhero.alias
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> superpowerKeyPath = <span style=color:#960050;background-color:#1e0010>\</span>Superhero.superpower
+</span></span></code></pre></div><blockquote><p>We just created a simple struct and set constants which hold the KeyPath.</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-swift data-lang=swift><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Creating an instance of Superhero.</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// &#39;superhero&#39; is now an object with &#39;alias&#39; and &#39;superpower&#39; properties.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> superhero = Superhero(alias: <span style=color:#e6db74>&#34;Spider-Bro&#34;</span>, superpower: <span style=color:#e6db74>&#34;Web-slinging&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Accessing property values using the key paths defined earlier.</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// This demonstrates how key paths can be used to read values from specific properties.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> superheroAlias = superhero[keyPath: aliasKeyPath] <span style=color:#75715e>// Retrieves &#39;alias&#39; value: &#34;Spider-Bro&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> superheroPower = superhero[keyPath: superpowerKeyPath] <span style=color:#75715e>// Retrieves &#39;superpower&#39; value: &#34;Web-slinging&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Printing the accessed values.</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// It shows how to use the key paths to get property values in a readable and reusable manner.</span>
+</span></span><span style=display:flex><span>print(superheroAlias, superheroPower)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Accessing properties using shorthand key path syntax directly.</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// This is a more concise way to use key paths, especially when they are not reused elsewhere.</span>
+</span></span><span style=display:flex><span>print(superhero[keyPath: <span style=color:#960050;background-color:#1e0010>\</span>.alias], superhero[keyPath: <span style=color:#960050;background-color:#1e0010>\</span>.superpower])
+</span></span></code></pre></div><blockquote><p>We instantiate a Superhero struct here, then we access the values in two manners.</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#75715e>// Modifying a property value using its key path.</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// This line demonstrates how key paths can also be used to set new values for specific properties.</span>
+</span></span><span style=display:flex><span>superhero[keyPath: <span style=color:#960050;background-color:#1e0010>\</span>.alias] = <span style=color:#e6db74>&#34;Spider-Pig&#34;</span> <span style=color:#75715e>// Changes &#39;alias&#39; property to &#39;Spider-Pig&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Printing the updated alias to demonstrate the change.</span>
+</span></span><span style=display:flex><span>print(superhero[keyPath: <span style=color:#960050;background-color:#1e0010>\</span>.alias])
+</span></span></code></pre></div><blockquote><p>Finally, we see how to modify the property values</p></blockquote><p>These are the very basics of KeyPaths in Swift. I believe this should be enough to at least get you familiar with the concept to the point where SwiftUI will make a tad bit more sense when first getting started.</p></div></div></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><a href=https://rabbithole.wiki/post/2024/2024-03-18-motivation/ class="pagination__command prev"><span class=post-command__verb>cat</span>
+<span class=post-command__file>motivation.md</span>
+<span class=post-command__caret>▊</span>
+<span class=post-command__meta>millerapps@rabbit-hole:~/post</span>
+</a>::
+<a href=https://rabbithole.wiki/post/2023/2023-12-17-return/ class="pagination__command next"><span class=post-command__verb>cat</span>
+<span class=post-command__file>the-return.md</span>
+<span class=post-command__caret>▊</span>
+<span class=post-command__meta>millerapps@rabbit-hole:~/post</span></a></div></div><script src=https://giscus.app/client.js data-repo=millerapps/MillerApps.github.io data-repo-id="MDEwOlJlcG9zaXRvcnkzNjUxNzI4NA==" data-category="Rabbit hole" data-category-id=DIC_kwDOAi01pM4CmmsL data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=bottom data-theme=catppuccin_mocha data-lang=en data-loading=lazy crossorigin=anonymous async></script></article></div><footer class="footer footer--custom"><div class=footer__inner><div class=copyright><span>© 2026 Powered by <a href=https://gohugo.io>Hugo</a></span></div><div class=footer-echo><span class=footer-echo__prompt>╰─❯</span>
+<span class=footer-echo__command>echo</span>
+<span class=footer-echo__text>"Thanks for visiting"</span></div></div></footer><script type=text/javascript src=/bundle.min.js></script></div><script src=https://storage.ko-fi.com/cdn/scripts/overlay-widget.js></script><script>kofiWidgetOverlay.draw("millerapps",{type:"floating-chat","floating-chat.donateButton.text":"Donate","floating-chat.donateButton.background-color":"#ffffff","floating-chat.donateButton.text-color":"#323842"})</script></body></html>

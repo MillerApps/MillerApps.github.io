@@ -37,15 +37,19 @@
         {{ end }}
       {{ end }}
       <div class="ls-line ls-line--{{ .kind }}" role="row">
-        <span class="ls-perm" role="cell">{{ .perm }}</span>
-        <span class="ls-links" role="cell">{{ .links }}</span>
-        <span class="ls-user" role="cell">{{ .user }}</span>
-        <span class="ls-group" role="cell">{{ .group }}</span>
-        <span class="ls-size" role="cell">{{ .size }}</span>
-        <span class="ls-date" role="cell">{{ .date }}</span>
-        <span class="ls-name" role="cell">
-          {{ $name }}{{ $suffix }}{{ if .target }} <span class="ls-arrow">-&gt;</span> <span class="ls-target">{{ .target }}</span>{{ end }}
-        </span>
+        <div class="ls-line__main">
+          <span class="ls-name" role="cell">
+            {{ $name }}{{ $suffix }}{{ if .target }} <span class="ls-arrow">-&gt;</span> <span class="ls-target">{{ .target }}</span>{{ end }}
+          </span>
+          <span class="ls-size" role="cell">{{ .size }}</span>
+        </div>
+        <div class="ls-line__meta">
+          <span class="ls-perm" role="cell">{{ .perm }}</span>
+          <span class="ls-links" role="cell">{{ .links }}</span>
+          <span class="ls-user" role="cell">{{ .user }}</span>
+          <span class="ls-group" role="cell">{{ .group }}</span>
+          <span class="ls-date" role="cell">{{ .date }}</span>
+        </div>
       </div>
     {{ end }}
   </div>
