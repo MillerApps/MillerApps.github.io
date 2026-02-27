@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article class="post post--about">
+  {{ $user := (default "user" $.Site.Params.owner) | lower }}
+  {{ $host := "rabbit-hole" }}
+  {{ $prompt := printf "%s@%s:~$" $user $host }}
+  <div class="post-command-line">
+    <span class="post-command">
+      <span class="post-command__prompt">{{ $prompt }}</span>
+      <span class="post-command__verb">whoami</span>
+      <span class="post-command__caret">▊</span>
+    </span>
+  </div>
+
+  <div class="whoami-output">
+    <div class="whoami-line"><span class="whoami-key">name</span><span class="whoami-sep">:</span><span class="whoami-value">Tyler Miller</span></div>
+    <div class="whoami-line"><span class="whoami-key">location</span><span class="whoami-sep">:</span><span class="whoami-value">Michigan, USA</span></div>
+    <div class="whoami-line"><span class="whoami-key">started</span><span class="whoami-sep">:</span><span class="whoami-value">2012</span></div>
+    <div class="whoami-line"><span class="whoami-key">background</span><span class="whoami-sep">:</span><span class="whoami-value">iOS (Swift, Objective-C)</span></div>
+    <div class="whoami-line"><span class="whoami-key">hiatus</span><span class="whoami-sep">:</span><span class="whoami-value">~7 years</span></div>
+    <div class="whoami-line"><span class="whoami-key">focus</span><span class="whoami-sep">:</span><span class="whoami-value">Go</span></div>
+    <div class="whoami-line"><span class="whoami-key">also</span><span class="whoami-sep">:</span><span class="whoami-value">Nix (Mac setup, dev environment)</span></div>
+    <div class="whoami-line"><span class="whoami-key">style</span><span class="whoami-sep">:</span><span class="whoami-value">Catppuccin palette</span></div>
+    <div class="whoami-line"><span class="whoami-key">shares</span><span class="whoami-sep">:</span><span class="whoami-value">Projects + topics that excite me</span></div>
+    <div class="whoami-line"><span class="whoami-key">contact</span><span class="whoami-sep">:</span><span class="whoami-value"><a href="https://github.com/millerapps">github.com/millerapps</a></span></div>
+  </div>
+
+  {{ if .Content }}
+    <div class="whoami-note">
+      {{ .Content }}
+    </div>
+  {{ end }}
+</article>
+{{ end }}
