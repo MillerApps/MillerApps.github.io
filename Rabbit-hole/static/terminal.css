@@ -699,48 +699,6 @@ button {
 }
 
 @media (max-width: 720px) {
-  .ls-line {
-    grid-template-columns: 9ch 4ch 9ch 7ch minmax(0, 1fr);
-    grid-template-areas:
-      "perm links user group name"
-      "size date date date name";
-    row-gap: 0.15rem;
-  }
-
-  .ls-output {
-    overflow-x: auto;
-  }
-
-  .ls-perm {
-    grid-area: perm;
-  }
-
-  .ls-links {
-    grid-area: links;
-  }
-
-  .ls-user {
-    grid-area: user;
-  }
-
-  .ls-size {
-    grid-area: size;
-  }
-
-  .ls-date {
-    grid-area: date;
-  }
-
-  .ls-group {
-    grid-area: group;
-  }
-
-  .ls-name {
-    grid-area: name;
-  }
-}
-
-@media (max-width: 420px) {
   .ls-output {
     overflow-x: auto;
   }
@@ -751,14 +709,8 @@ button {
     white-space: nowrap;
     font-size: 0.9em;
   }
-
-  .ls-size,
-  .ls-date,
-  .ls-group,
-  .ls-name {
-    grid-area: auto;
-  }
 }
+
 
 .post-command__file {
   color: var(--foreground);
