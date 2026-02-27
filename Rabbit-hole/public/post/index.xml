@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Rabbit Hole | MillerApps</title>
-    <link>https://millerapps.github.io/post/</link>
+    <link>http://localhost:1313/post/</link>
     <description>Recent content in Posts on Rabbit Hole | MillerApps</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://millerapps.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025</title>
-      <link>https://millerapps.github.io/2025/</link>
+      <link>http://localhost:1313/2025/</link>
       <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/2025/</guid>
+      <guid>http://localhost:1313/2025/</guid>
       <description>&lt;h1 id=&#34;thus-far&#34;&gt;Thus Far&lt;/h1&gt;&#xA;&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I’ve been messing with Nix on macOS, probably not correctly.&lt;/li&gt;&#xA;&lt;li&gt;Switched my website from Jekyll to Hugo because Jekyll felt abandoned.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Used a pre-made theme because making my own CSS sounded exhausting.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Want to learn Go and build some simple CLI tools.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;now-for-the-long-version&#34;&gt;Now, for the long version…&lt;/h2&gt;&#xA;&lt;h3 id=&#34;my-nix-setup-probably-not-done-right&#34;&gt;My Nix Setup (Probably Not Done Right)&lt;/h3&gt;&#xA;&lt;p&gt;I’ve been using nix-darwin to manage my macOS system declaratively—meaning instead of manually installing apps, setting preferences, and tweaking my environment, I define everything in configuration files. Sounds great, right? In theory, yes. In practice… I’m pretty sure I’ve done some things wrong. But it works (mostly), so I’ll count that as a win.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Secure DNS Setup with pfSense, AdGuard Home, and Tailscale</title>
-      <link>https://millerapps.github.io/dns-fun/</link>
+      <link>http://localhost:1313/dns-fun/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/dns-fun/</guid>
+      <guid>http://localhost:1313/dns-fun/</guid>
       <description>&lt;h2 id=&#34;current-setup-overview&#34;&gt;Current Setup Overview&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt;&lt;br&gt;&#xA;I am not an expert nor do I claim to be!&lt;br&gt;&#xA;I am simply a man who decided to learn more about networking and went down the rabbit hole of DNS and DNS encryption.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;This is my personal experience; use it as a starting point for your own explorations.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;My current setup involves the following components and configurations to ensure secure and private DNS resolution:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Client Device to pfSense:&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Motivation</title>
-      <link>https://millerapps.github.io/post/2024/2024-03-18-motivation/</link>
+      <link>http://localhost:1313/post/2024/2024-03-18-motivation/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/post/2024/2024-03-18-motivation/</guid>
+      <guid>http://localhost:1313/post/2024/2024-03-18-motivation/</guid>
       <description>&lt;h2 id=&#34;struggling-with-motivation-a-personal-journey&#34;&gt;Struggling with Motivation: A Personal Journey&lt;/h2&gt;&#xA;&lt;p&gt;The struggle for motivation is perhaps universal, but for me, it rings particularly true. Whether in my personal interests, such as gaming and watching movies, or in my professional pursuits, such as software development, maintaining focus has always been a challenge. This difficulty, I suspect, might be a consequence of untreated childhood ADHD.&lt;/p&gt;&#xA;&lt;p&gt;At 30 years old, I find my ability to persevere through tasks dwindling. Even things I deeply enjoy seem to lose my interest rapidly. As time goes on, this challenge appears to grow stronger. As I&amp;rsquo;m typing this, a part of me is already contemplating abandoning the task, forgetting that it was ever started. Ironic in a post that&amp;rsquo;s about lack of motivation, isn&amp;rsquo;t it?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Swift KeyPaths</title>
-      <link>https://millerapps.github.io/post/2024/2024-01-15-swift-keypaths/</link>
+      <link>http://localhost:1313/post/2024/2024-01-15-swift-keypaths/</link>
       <pubDate>Mon, 15 Jan 2024 05:36:45 +0000</pubDate>
-      <guid>https://millerapps.github.io/post/2024/2024-01-15-swift-keypaths/</guid>
+      <guid>http://localhost:1313/post/2024/2024-01-15-swift-keypaths/</guid>
       <description>&lt;p&gt;So what is a KeyPath in Swift? Lets try to answer this in a simply way, note this will not be in depth, but rather a very basic rundown of what a KeyPath is.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;📘 Info&#xA;Please Note: I Am not an expert and this is more or less a way for me to help cement the basics of this concept in my own mind. If this is of any Value to you, thats just an added bonus!&#xA;{: .blockquote-info }&lt;/p&gt;</description>
     </item>
     <item>
       <title>The return</title>
-      <link>https://millerapps.github.io/post/2023/2023-12-17-return/</link>
+      <link>http://localhost:1313/post/2023/2023-12-17-return/</link>
       <pubDate>Sun, 17 Dec 2023 02:11:45 +0000</pubDate>
-      <guid>https://millerapps.github.io/post/2023/2023-12-17-return/</guid>
+      <guid>http://localhost:1313/post/2023/2023-12-17-return/</guid>
       <description>&lt;p&gt;Seven years have passed since I last engaged with this site and shared content. This platform remains a personal space where I post items that pique my interest or prove useful to me. During my hiatus, I ventured into construction, building and working with concrete. Before that, I had a stint in the oil fields, and even earlier in 2018, I contributed to an open-source project called Trust Wallet, which Binance eventually acquired.&lt;/p&gt;</description>
     </item>
   </channel>
