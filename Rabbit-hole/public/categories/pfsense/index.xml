@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pfsense on Rabbit Hole | MillerApps</title>
-    <link>http://localhost:1313/categories/pfsense/</link>
+    <link>https://millerapps.github.io/categories/pfsense/</link>
     <description>Recent content in Pfsense on Rabbit Hole | MillerApps</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 20 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/pfsense/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://millerapps.github.io/categories/pfsense/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Secure DNS Setup with pfSense, AdGuard Home, and Tailscale</title>
-      <link>http://localhost:1313/dns-fun/</link>
+      <link>https://millerapps.github.io/dns-fun/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/dns-fun/</guid>
+      <guid>https://millerapps.github.io/dns-fun/</guid>
       <description>&lt;h2 id=&#34;current-setup-overview&#34;&gt;Current Setup Overview&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt;&lt;br&gt;&#xA;I am not an expert nor do I claim to be!&lt;br&gt;&#xA;I am simply a man who decided to learn more about networking and went down the rabbit hole of DNS and DNS encryption.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;This is my personal experience; use it as a starting point for your own explorations.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;My current setup involves the following components and configurations to ensure secure and private DNS resolution:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Client Device to pfSense:&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>

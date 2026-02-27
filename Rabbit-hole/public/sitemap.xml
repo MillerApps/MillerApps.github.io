@@ -2,88 +2,88 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/2025/</loc>
+    <loc>https://millerapps.github.io/2025/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://millerapps.github.io/categories/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/darwin/</loc>
+    <loc>https://millerapps.github.io/categories/darwin/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/neat/</loc>
+    <loc>https://millerapps.github.io/categories/neat/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/nix/</loc>
+    <loc>https://millerapps.github.io/categories/nix/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://millerapps.github.io/post/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://millerapps.github.io/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/things-new-to-me/</loc>
+    <loc>https://millerapps.github.io/categories/things-new-to-me/</loc>
     <lastmod>2025-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/dns/</loc>
+    <loc>https://millerapps.github.io/categories/dns/</loc>
     <lastmod>2024-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/it/</loc>
+    <loc>https://millerapps.github.io/categories/it/</loc>
     <lastmod>2024-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/networking/</loc>
+    <loc>https://millerapps.github.io/categories/networking/</loc>
     <lastmod>2024-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/pfsense/</loc>
+    <loc>https://millerapps.github.io/categories/pfsense/</loc>
     <lastmod>2024-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/dns-fun/</loc>
+    <loc>https://millerapps.github.io/dns-fun/</loc>
     <lastmod>2024-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/tailscale/</loc>
+    <loc>https://millerapps.github.io/categories/tailscale/</loc>
     <lastmod>2024-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/dev/</loc>
+    <loc>https://millerapps.github.io/categories/dev/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/focus/</loc>
+    <loc>https://millerapps.github.io/categories/focus/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/funk/</loc>
+    <loc>https://millerapps.github.io/categories/funk/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/motivation/</loc>
+    <loc>https://millerapps.github.io/categories/motivation/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2024/2024-03-18-motivation/</loc>
+    <loc>https://millerapps.github.io/post/2024/2024-03-18-motivation/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/software/</loc>
+    <loc>https://millerapps.github.io/categories/software/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/keypath/</loc>
+    <loc>https://millerapps.github.io/categories/keypath/</loc>
     <lastmod>2024-01-15T05:36:45+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/swift/</loc>
+    <loc>https://millerapps.github.io/categories/swift/</loc>
     <lastmod>2024-01-15T05:36:45+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2024/2024-01-15-swift-keypaths/</loc>
+    <loc>https://millerapps.github.io/post/2024/2024-01-15-swift-keypaths/</loc>
     <lastmod>2024-01-15T05:36:45+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/life/</loc>
+    <loc>https://millerapps.github.io/categories/life/</loc>
     <lastmod>2023-12-17T02:11:45+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2023/2023-12-17-return/</loc>
+    <loc>https://millerapps.github.io/post/2023/2023-12-17-return/</loc>
     <lastmod>2023-12-17T02:11:45+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/work/</loc>
+    <loc>https://millerapps.github.io/categories/work/</loc>
     <lastmod>2023-12-17T02:11:45+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://millerapps.github.io/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://millerapps.github.io/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/toolbox/</loc>
+    <loc>https://millerapps.github.io/toolbox/</loc>
   </url>
 </urlset>
