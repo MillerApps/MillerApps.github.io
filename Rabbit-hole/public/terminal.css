@@ -700,11 +700,27 @@ button {
 
 @media (max-width: 720px) {
   .ls-line {
-    grid-template-columns: 10ch 4ch 10ch 8ch minmax(0, 1fr);
+    grid-template-columns: 9ch 4ch 9ch 7ch minmax(0, 1fr);
     grid-template-areas:
       "perm links user group name"
       "size date date date name";
     row-gap: 0.15rem;
+  }
+
+  .ls-output {
+    overflow-x: auto;
+  }
+
+  .ls-perm {
+    grid-area: perm;
+  }
+
+  .ls-links {
+    grid-area: links;
+  }
+
+  .ls-user {
+    grid-area: user;
   }
 
   .ls-size {
