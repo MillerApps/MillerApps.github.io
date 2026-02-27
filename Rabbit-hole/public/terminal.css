@@ -899,6 +899,40 @@ button {
   opacity: 0.8;
 }
 
+.page-home .index-content {
+  padding: 22px 18px 18px;
+  border: 1px dashed var(--panel-border);
+  background: color-mix(in srgb, var(--background) 88%, var(--ctp-sky) 12%);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 10%, transparent);
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.page-home .index-content pre {
+  margin: 0;
+  padding: 16px 18px;
+  border: 1px dashed var(--panel-border);
+  background: color-mix(in srgb, var(--background) 86%, var(--ctp-mauve) 14%) !important;
+  color: var(--ctp-rosewater);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--accent) 10%, transparent),
+    0 0 24px color-mix(in srgb, var(--ctp-mauve) 20%, transparent);
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  text-shadow:
+    0 0 12px color-mix(in srgb, var(--ctp-rosewater) 45%, transparent),
+    0 0 24px color-mix(in srgb, var(--ctp-sky) 20%, transparent);
+}
+
+.page-home .index-content pre {
+  margin: 16px 0 0;
+  padding: 14px 16px;
+  border: 1px dashed var(--panel-border);
+  background: color-mix(in srgb, var(--background) 88%, var(--ctp-mauve) 12%) !important;
+  color: var(--foreground);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
 .post-tags {
   display: flex;
   flex-wrap: wrap;
@@ -946,15 +980,28 @@ button {
 .footer {
   padding: 30px 0 40px;
   border-top: 1px solid var(--panel-border);
+  opacity: 1 !important;
+}
+
+.footer.footer--custom {
+  opacity: 1 !important;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .footer-echo {
   margin-top: 10px;
-  display: inline-flex;
+  display: block;
   gap: 0.6ch;
   align-items: baseline;
   color: var(--muted);
   font-size: 0.9em;
+  display: inline-flex;
 }
 
 .footer-echo__prompt {
@@ -1033,6 +1080,9 @@ button {
   gap: 16px;
   flex-wrap: wrap;
   padding-right: 12px;
+  padding: 20px 16px 14px;
+  border: 1px dashed var(--panel-border);
+  background: color-mix(in srgb, var(--background) 86%, var(--ctp-sky) 14%);
   box-shadow: 0 0 22px color-mix(in srgb, var(--ctp-sky) 18%, transparent);
 }
 
@@ -1048,6 +1098,11 @@ button {
   );
   opacity: 0.35;
   z-index: 0;
+}
+
+.header__inner::after {
+  content: none;
+  background: none;
 }
 
 .header__inner > * {
@@ -1104,6 +1159,7 @@ button {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    padding: 18px 12px 12px;
   }
 
   .header__logo {

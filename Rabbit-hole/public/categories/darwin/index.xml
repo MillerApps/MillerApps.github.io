@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Darwin on Rabbit Hole | MillerApps</title>
-    <link>https://millerapps.github.io/categories/darwin/</link>
+    <link>http://localhost:1313/categories/darwin/</link>
     <description>Recent content in Darwin on Rabbit Hole | MillerApps</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://millerapps.github.io/categories/darwin/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/darwin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025</title>
-      <link>https://millerapps.github.io/2025/</link>
+      <link>http://localhost:1313/2025/</link>
       <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/2025/</guid>
+      <guid>http://localhost:1313/2025/</guid>
       <description>&lt;h1 id=&#34;thus-far&#34;&gt;Thus Far&lt;/h1&gt;&#xA;&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I’ve been messing with Nix on macOS, probably not correctly.&lt;/li&gt;&#xA;&lt;li&gt;Switched my website from Jekyll to Hugo because Jekyll felt abandoned.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Used a pre-made theme because making my own CSS sounded exhausting.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Want to learn Go and build some simple CLI tools.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;now-for-the-long-version&#34;&gt;Now, for the long version…&lt;/h2&gt;&#xA;&lt;h3 id=&#34;my-nix-setup-probably-not-done-right&#34;&gt;My Nix Setup (Probably Not Done Right)&lt;/h3&gt;&#xA;&lt;p&gt;I’ve been using nix-darwin to manage my macOS system declaratively—meaning instead of manually installing apps, setting preferences, and tweaking my environment, I define everything in configuration files. Sounds great, right? In theory, yes. In practice… I’m pretty sure I’ve done some things wrong. But it works (mostly), so I’ll count that as a win.&lt;/p&gt;</description>
     </item>
   </channel>

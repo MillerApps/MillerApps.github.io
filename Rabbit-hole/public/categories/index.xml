@@ -2,136 +2,136 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Rabbit Hole | MillerApps</title>
-    <link>https://millerapps.github.io/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Rabbit Hole | MillerApps</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://millerapps.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Darwin</title>
-      <link>https://millerapps.github.io/categories/darwin/</link>
+      <link>http://localhost:1313/categories/darwin/</link>
       <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/darwin/</guid>
+      <guid>http://localhost:1313/categories/darwin/</guid>
       <description></description>
     </item>
     <item>
       <title>Neat</title>
-      <link>https://millerapps.github.io/categories/neat/</link>
+      <link>http://localhost:1313/categories/neat/</link>
       <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/neat/</guid>
+      <guid>http://localhost:1313/categories/neat/</guid>
       <description></description>
     </item>
     <item>
       <title>Nix</title>
-      <link>https://millerapps.github.io/categories/nix/</link>
+      <link>http://localhost:1313/categories/nix/</link>
       <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/nix/</guid>
+      <guid>http://localhost:1313/categories/nix/</guid>
       <description></description>
     </item>
     <item>
       <title>Things New to Me</title>
-      <link>https://millerapps.github.io/categories/things-new-to-me/</link>
+      <link>http://localhost:1313/categories/things-new-to-me/</link>
       <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/things-new-to-me/</guid>
+      <guid>http://localhost:1313/categories/things-new-to-me/</guid>
       <description></description>
     </item>
     <item>
       <title>Dns</title>
-      <link>https://millerapps.github.io/categories/dns/</link>
+      <link>http://localhost:1313/categories/dns/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/dns/</guid>
+      <guid>http://localhost:1313/categories/dns/</guid>
       <description></description>
     </item>
     <item>
       <title>It</title>
-      <link>https://millerapps.github.io/categories/it/</link>
+      <link>http://localhost:1313/categories/it/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/it/</guid>
+      <guid>http://localhost:1313/categories/it/</guid>
       <description></description>
     </item>
     <item>
       <title>Networking</title>
-      <link>https://millerapps.github.io/categories/networking/</link>
+      <link>http://localhost:1313/categories/networking/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/networking/</guid>
+      <guid>http://localhost:1313/categories/networking/</guid>
       <description></description>
     </item>
     <item>
       <title>Pfsense</title>
-      <link>https://millerapps.github.io/categories/pfsense/</link>
+      <link>http://localhost:1313/categories/pfsense/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/pfsense/</guid>
+      <guid>http://localhost:1313/categories/pfsense/</guid>
       <description></description>
     </item>
     <item>
       <title>Tailscale</title>
-      <link>https://millerapps.github.io/categories/tailscale/</link>
+      <link>http://localhost:1313/categories/tailscale/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/tailscale/</guid>
+      <guid>http://localhost:1313/categories/tailscale/</guid>
       <description></description>
     </item>
     <item>
       <title>Dev</title>
-      <link>https://millerapps.github.io/categories/dev/</link>
+      <link>http://localhost:1313/categories/dev/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/dev/</guid>
+      <guid>http://localhost:1313/categories/dev/</guid>
       <description></description>
     </item>
     <item>
       <title>Focus</title>
-      <link>https://millerapps.github.io/categories/focus/</link>
+      <link>http://localhost:1313/categories/focus/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/focus/</guid>
+      <guid>http://localhost:1313/categories/focus/</guid>
       <description></description>
     </item>
     <item>
       <title>Funk</title>
-      <link>https://millerapps.github.io/categories/funk/</link>
+      <link>http://localhost:1313/categories/funk/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/funk/</guid>
+      <guid>http://localhost:1313/categories/funk/</guid>
       <description></description>
     </item>
     <item>
       <title>Motivation</title>
-      <link>https://millerapps.github.io/categories/motivation/</link>
+      <link>http://localhost:1313/categories/motivation/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/motivation/</guid>
+      <guid>http://localhost:1313/categories/motivation/</guid>
       <description></description>
     </item>
     <item>
       <title>Software</title>
-      <link>https://millerapps.github.io/categories/software/</link>
+      <link>http://localhost:1313/categories/software/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/software/</guid>
+      <guid>http://localhost:1313/categories/software/</guid>
       <description></description>
     </item>
     <item>
       <title>Keypath</title>
-      <link>https://millerapps.github.io/categories/keypath/</link>
+      <link>http://localhost:1313/categories/keypath/</link>
       <pubDate>Mon, 15 Jan 2024 05:36:45 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/keypath/</guid>
+      <guid>http://localhost:1313/categories/keypath/</guid>
       <description></description>
     </item>
     <item>
       <title>Swift</title>
-      <link>https://millerapps.github.io/categories/swift/</link>
+      <link>http://localhost:1313/categories/swift/</link>
       <pubDate>Mon, 15 Jan 2024 05:36:45 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/swift/</guid>
+      <guid>http://localhost:1313/categories/swift/</guid>
       <description></description>
     </item>
     <item>
       <title>Life</title>
-      <link>https://millerapps.github.io/categories/life/</link>
+      <link>http://localhost:1313/categories/life/</link>
       <pubDate>Sun, 17 Dec 2023 02:11:45 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/life/</guid>
+      <guid>http://localhost:1313/categories/life/</guid>
       <description></description>
     </item>
     <item>
       <title>Work</title>
-      <link>https://millerapps.github.io/categories/work/</link>
+      <link>http://localhost:1313/categories/work/</link>
       <pubDate>Sun, 17 Dec 2023 02:11:45 +0000</pubDate>
-      <guid>https://millerapps.github.io/categories/work/</guid>
+      <guid>http://localhost:1313/categories/work/</guid>
       <description></description>
     </item>
   </channel>
